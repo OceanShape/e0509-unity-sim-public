@@ -1,0 +1,594 @@
+<?xml version="1.0" ?>
+<!-- e0509 Unity 시뮬레이터용 URDF. scripts/make_unity_urdf.py 가 만든다. 손으로 고치지 말 것. -->
+<!-- 원천: ~/strawberry_grasp_environment/robot.urdf (Isaac 용 URDF) -->
+<!--   딸기 리포 HEAD 2797bb5 · robot.urdf 마지막 커밋 a2e9bb5 · sha256 31518983405e61b26012fbc9ab3472b4c797590a3fe4a0ffbf3af9d471965a01 -->
+<!--   메쉬 저장소 src/doosan_robot2 @ ec92425 -->
+<!--   메쉬 저장소 src/RH-P12-RN @ 58d06e7 -->
+<!-- 원천 대비 바꾼 것: 메쉬 절대 경로 → package:// : 40곳 / 중복 world 링크 + world_fixed(→ rh_p12_rn_base) 삭제: 1곳 / rh_r2 upper 1.0 → 1.1 rad / rh_l2 upper 1.0 → 1.1 rad / ros2_control 블록 삭제: 1개 / transmission 블록 삭제: 10개 / gazebo 블록 삭제: 15개 -->
+<robot name="strawberry_grasp_environment_robot">
+  <material name="black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  <material name="orange">
+    <color rgba="1.0 0.4 0.0 1.0"/>
+  </material>
+  <material name="dr_gray">
+    <color rgba="0.490 0.490 0.486 1.0"/>
+  </material>
+  <material name="dr_white">
+    <color rgba="0.941 0.941 0.941 1.0"/>
+  </material>
+  <material name="dr_blue">
+    <color rgba="0 0 0.15 1"/>
+  </material>
+  <link name="base_link">
+    <inertial>
+      <mass value="1.803"/>
+      <origin xyz="2.7e-05   -0.002651    0.035122"/>
+      <inertia ixx="0.010608" ixy="1.7706e-06" ixz="6.6982e-06" iyy="0.0092656" iyz="-4.7833e-05" izz="0.0092125"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_0_0.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_0_0.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+  </link>
+  <!-- joint 1 -->
+  <joint name="joint_1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <origin rpy="0 0 0" xyz="0 0 0.2045"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="194" lower="-6.2832" upper="6.2832" velocity="3.1416"/>
+    <dynamics friction="0"/>
+  </joint>
+  <link name="link_1">
+    <inertial>
+      <mass value="5.75"/>
+      <origin xyz="1e-06    0.049633   -0.049635"/>
+      <inertia ixx="0.046214" ixy="1.4982e-05" ixz="1.281e-05" iyy="0.032573" iyz="-0.013997" izz="0.030999"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_1_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_1_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_1_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_1_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_1_3.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_1_3.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_1_4.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_1_4.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+  </link>
+  <!-- joint2 -->
+  <joint name="joint_2" type="revolute">
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <origin rpy="0 -1.5708 -1.5708" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <!-- [D1 2026-09-14] joint_2 ±360 -> ±95 deg (=1.6581 rad). 실기 cuRobo 설정(e0509_gripper.urdf)의 운용 범위.
+         시뮬 로봇이 실기가 못 가는 자세를 허용하면 안 된다 (docs/e0509_spec_audit.md D1). 속도는 공식·실기 동일 (D2). -->
+    <limit effort="194" lower="-1.6581" upper="1.6581" velocity="3.1416"/>
+    <dynamics friction="0"/>
+  </joint>
+  <link name="link_2">
+    <inertial>
+      <mass value="3.461"/>
+      <origin xyz="0.18647 -1.1418e-17     0.17311"/>
+      <inertia ixx="0.012039" ixy="7.7771e-06" ixz="3.7559e-06" iyy="0.091203" iyz="3.1825e-06" izz="0.094721"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_2_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_2_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_2_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_2_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+  </link>
+  <!-- joint3 -->
+  <joint name="joint_3" type="revolute">
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <origin rpy="0 0 1.5708" xyz="0.373 0 0"/>
+    <axis xyz="0 0 1"/>
+    <!-- [D1 2026-09-14] joint_3 ±155 -> ±135 deg (=2.3562 rad). 실기 cuRobo 설정(e0509_gripper.urdf)의 운용 범위.
+         시뮬 로봇이 실기가 못 가는 자세를 허용하면 안 된다 (docs/e0509_spec_audit.md D1). 속도는 공식·실기 동일 (D2). -->
+    <limit effort="194" lower="-2.3562" upper="2.3562" velocity="3.1416"/>
+    <dynamics friction="0"/>
+  </joint>
+  <link name="link_3">
+    <inertial>
+      <mass value="4.582"/>
+      <origin xyz="1.2e-05    -0.02919    0.062355"/>
+      <inertia ixx="0.032606" ixy="6.548e-06" ixz="-6.9939e-07" iyy="0.024211" iyz="-0.0079929" izz="0.019284"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_3_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_3_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_3_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_3_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+  </link>
+  <!-- joint4 -->
+  <joint name="joint_4" type="revolute">
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <origin rpy="1.5708 0 0" xyz="0 -0.373 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="66" lower="-6.2832" upper="6.2832" velocity="3.927"/>
+    <dynamics friction="0"/>
+  </joint>
+  <link name="link_4">
+    <inertial>
+      <mass value="2.207"/>
+      <origin xyz="4e-06    0.095573    -0.12813"/>
+      <inertia ixx="0.03547" ixy="8.0794e-06" ixz="7.9905e-06" iyy="0.030841" iyz="-0.011996" izz="0.019615"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_4_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_4_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_4_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_4_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+  </link>
+  <!-- joint5 -->
+  <joint name="joint_5" type="revolute">
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    <origin rpy="-1.5708 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <!-- [D1 2026-09-14] J5 ±360 -> ±135 (=2.3562 rad). 공식 URDF 는 ±360, 카탈로그는 ±155,
+         실기 cuRobo 설정(e0509_gripper.urdf)은 ±135 로 가장 좁다. 시뮬 로봇이 실기가 못 가는
+         자세를 허용하면 안 되므로 실기 값을 쓴다 (docs/e0509_spec_audit.md D1).
+         속도 3.927(225deg/s)는 공식·실기 동일이라 그대로 (D2). -->
+    <limit effort="66" lower="-2.3562" upper="2.3562" velocity="3.927"/>
+    <dynamics friction="0"/>
+  </joint>
+  <link name="link_5">
+    <inertial>
+      <mass value="3.545"/>
+      <origin xyz="-3e-06 -0.038009 0.043841"/>
+      <inertia ixx="0.023526" ixy="9.9368e-06" ixz="7.6673e-06" iyy="0.018415" iyz="-0.0059939" izz="0.014249"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_5_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_5_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_5_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_5_2.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+  </link>
+  <!-- joint6 -->
+  <joint name="joint_6" type="revolute">
+    <parent link="link_5"/>
+    <child link="link_6"/>
+    <origin rpy="1.5708 0 0" xyz="0 -0.1725 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="66" lower="-6.2832" upper="6.2832" velocity="3.927"/>
+    <dynamics friction="0"/>
+  </joint>
+  <link name="link_6">
+    <inertial>
+      <mass value="0.721"/>
+      <origin xyz="5.4e-05   -0.000114   -0.032091"/>
+      <inertia ixx="0.0048272" ixy="5.6302e-06" ixz="5.5274e-06" iyy="0.0046772" iyz="3.9598e-06" izz="0.0079424"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_collision/E0509_6_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dsr_description2/meshes/e0509_white/E0509_6_1.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dr_white"/>
+    </visual>
+  </link>
+  <!-- Transmission 1 -->
+  <!-- Transmission 2 -->
+  <!-- Transmission 3 -->
+  <!-- Transmission 4 -->
+  <!-- Transmission 5 -->
+  <!-- Transmission 6 -->
+  <!-- ros_control plugin -->
+  <!-- Base -->
+  <!-- Link1 -->
+  <!-- Link2 -->
+  <!-- Link3 -->
+  <!-- Link4 -->
+  <!-- Link5 -->
+  <!-- Link6 -->
+  <!-- World -->
+  <link name="world"/>
+  <joint name="world_fixed" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+  <!-- ros_control plugin -->
+  <!-- World -->
+  <!-- rh_p12_rn_base -->
+  <!-- rh_p12_rn_r1 -->
+  <!-- rh_p12_rn_r2 -->
+  <!-- rh_p12_rn_l1 -->
+  <!-- rh_p12_rn_l2 -->
+  <material name="black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+  <material name="blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+  <material name="green">
+    <color rgba="0.0 0.8 0.0 1.0"/>
+  </material>
+  <material name="grey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+  <material name="orange">
+    <color rgba="1.0 0.4235294117647059 0.0392156862745098 1.0"/>
+  </material>
+  <material name="brown">
+    <color rgba="0.8705882352941177 0.8117647058823529 0.7647058823529411 1.0"/>
+  </material>
+  <material name="red">
+    <color rgba="0.8 0.0 0.0 1.0"/>
+  </material>
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  <!-- base -->
+  <link name="rh_p12_rn_base">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000 0.000 0.032"/>
+      <mass value="0.236"/>
+      <!--<inertia ixx="0.00017" ixy="0.0" ixz="0.0" iyy="0.00011" iyz="0.0" izz="0.00017" />-->
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <!-- Joint -->
+  <joint name="rh_p12_rn" type="revolute">
+    <parent link="rh_p12_rn_base"/>
+    <child link="rh_p12_rn_r1"/>
+    <origin rpy="0 0 0" xyz="0.0 0.008 0.048"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="1000" lower="0.0" upper="1.1" velocity="6.5"/>
+    <dynamics damping="0.7"/>
+  </joint>
+  <!-- rh_p12_rn_r1 -->
+  <link name="rh_p12_rn_r1">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/r1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/r1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000 0.034 0.004"/>
+      <mass value="0.068"/>
+      <!--<inertia ixx="0.00004" ixy="0.0" ixz="0.0" iyy="0.00002" iyz="-0.00001" izz="0.00002" />-->
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <!-- Right Joint 2 -->
+  <joint name="rh_r2" type="revolute">
+    <parent link="rh_p12_rn_r1"/>
+    <child link="rh_p12_rn_r2"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0493634 0.0285"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1000" lower="0.0" upper="1.1" velocity="6.5"/>
+    <dynamics damping="0.7"/>
+  </joint>
+  <!-- rh_p12_rn_r2 -->
+  <link name="rh_p12_rn_r2">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/r2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/r2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000 0.006 0.011"/>
+      <mass value="0.022"/>
+      <!--<inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.0" />-->
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <!-- Left Joint 1 -->
+  <joint name="rh_l1" type="revolute">
+    <parent link="rh_p12_rn_base"/>
+    <child link="rh_p12_rn_l1"/>
+    <origin rpy="0 0 0" xyz="0.0 -0.008 0.048"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1000" lower="0.0" upper="1.1" velocity="6.5"/>
+    <dynamics damping="0.7"/>
+  </joint>
+  <!-- rh_p12_rn_l1 -->
+  <link name="rh_p12_rn_l1">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/l1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/l1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000 -0.034 0.004"/>
+      <mass value="0.068"/>
+      <!--<inertia ixx="0.00004" ixy="0.0" ixz="0.0" iyy="0.00002" iyz="0.00001" izz="0.00002" />-->
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <!-- Left Joint 2 -->
+  <joint name="rh_l2" type="revolute">
+    <parent link="rh_p12_rn_l1"/>
+    <child link="rh_p12_rn_l2"/>
+    <origin rpy="0 0 0" xyz="0.0 -0.0493634 0.0285"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="1000" lower="0.0" upper="1.1" velocity="6.5"/>
+    <dynamics damping="0.7"/>
+  </joint>
+  <!-- rh_p12_rn_l2 -->
+  <link name="rh_p12_rn_l2">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/l2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_description/meshes/l2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000 -0.006 0.011"/>
+      <mass value="0.022"/>
+      <!--<inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.0" />-->
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <!-- Joint connecting arm to gripper -->
+  <!-- The z offset and rotation should be adjusted based on the real hardware mount -->
+  <joint name="arm_to_gripper" type="fixed">
+    <parent link="link_6"/>
+    <child link="rh_p12_rn_base"/>
+    <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+  </joint>
+  <!-- ========================================== -->
+  <!-- 3. Custom 3D Printed Gripper Parts -->
+  <!-- ========================================== -->
+  <!-- 
+    The user can modify these origins and collision primitives later. 
+    The stl file is assumed to be in strawberry_grasp_environment_description/meshes/gripper_parts.stl
+  -->
+  <!-- Left Custom Part -->
+  <link name="left_custom_part">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="-1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="-1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <!-- Replace this with the correct mesh if it's mirrored, or use scale="-1 1 1" etc. -->
+        <mesh filename="package://strawberry_grasp_environment_description/meshes/gripper_parts.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="l2_to_left_custom_part" type="fixed">
+    <parent link="rh_p12_rn_l2"/>
+    <child link="left_custom_part"/>
+    <origin rpy="-1.5707963267948966 0 -1.5707963267948966" xyz="0.02090 0.00498 0.00058"/>
+  </joint>
+  <!-- Right Custom Part -->
+  <link name="right_custom_part">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <!-- Using the same mesh. You might need to flip it if it's asymmetrical -->
+        0
+        
+        <mesh filename="package://strawberry_grasp_environment_description/meshes/gripper_parts.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="r2_to_right_custom_part" type="fixed">
+    <parent link="rh_p12_rn_r2"/>
+    <child link="right_custom_part"/>
+    <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="-0.02090 -0.00499 0.00058"/>
+  </joint>
+</robot>

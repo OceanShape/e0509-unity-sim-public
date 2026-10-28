@@ -1,0 +1,24 @@
+# 2026-10-22 16:07:19  unity_batch 29 render_after_d455_box  rc=0  7s
+# 인자: -executeMethod SimEnvironment.RenderPreview
+# 전체 로그: logs/unity/29_render_after_d455_box.log
+
+328:[SimSetup] 미리보기 자세 부호 +1: TCP (-0.2151, 0.6426, 0.0226) 기대 (-0.2151, 0.6426, 0.0226) 오차 0.1 mm
+339:[SimSetup] 미리보기 자세 부호 -1: TCP (-0.2151, 0.6426, -0.0226) 기대 (-0.2151, 0.6426, 0.0226) 오차 45.2 mm
+350:[SimSetup] 미리보기 자세: overview, 부호 +1, TCP 오차 0.1 mm
+361:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/1_isaac_long.png (1600×900, 세로 화각 27.59°)
+372:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/2_isaac_record_close.png (1600×900, 세로 화각 27.59°)
+383:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/3_isaac_side_s.png (1600×900, 세로 화각 19.12°)
+394:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/4_isaac_pair_a2.png (1600×900, 세로 화각 28.81°)
+405:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/5_isaac_pair_a3.png (1600×900, 세로 화각 38.23°)
+416:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/6_robot_close.png (1600×900, 세로 화각 39.98°)
+427:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/1_isaac_long_4x3.png (1200×900, 세로 화각 27.59°)
+438:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/1_isaac_long_1x1.png (1000×1000, 세로 화각 27.59°)
+449:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/carton_top.png (1200×900, 세로 화각 40.00°)
+460:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/carton_front.png (1200×900, 세로 화각 40.00°)
+471:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/carton_long_dir.png (1200×900, 세로 화각 40.00°)
+482:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/gripper_d455.png (1200×900, 세로 화각 35.00°)
+493:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/wrist_camera.png (640×480, 세로 화각 63.83°)
+504:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/board_hl_q1_ne.png (1600×900, 세로 화각 27.59°)
+515:[SimSetup] 렌더 → /home/oceanshape/e0509_unity_sim/logs/render/board_hl_home.png (1600×900, 세로 화각 27.59°)
+526:[SimSetup] RenderPreview OK (그래픽 장치 OpenGLCore)
+869:Exiting batchmode successfully now!

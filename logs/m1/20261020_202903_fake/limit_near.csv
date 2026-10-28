@@ -1,0 +1,2 @@
+session,joint,side,enter_time_s,exit_time_s,duration_s,closest_value_deg,limit_deg,remaining_deg_min,samples,ros_stamp_enter
+2026-10-20 20:29:09,joint_2,lower,0.1000,0.2667,0.1667,-94.9200,-95.0000,0.0800,10,

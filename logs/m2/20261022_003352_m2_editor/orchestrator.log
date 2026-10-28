@@ -1,0 +1,11 @@
+[run_m2] 00:33:52 플랜트 editor  ROS_DOMAIN_ID=0  노드 인자: (D-7 60/90)  상한 25분
+[run_m2] 00:33:53 엔드포인트 준비
+[run_m2] 00:33:53 에디터 플랜트: 다른 터미널에서 bash scripts/open_editor.sh command 를 실행하세요 (에디터가 열리고 Command 모드로 Play 될 때까지 최대 10분 대기)
+[run_m2] 00:33:54 플랜트 overview 확인 (1차)
+[run_m2] 00:33:54 딸기 노드 시작
+[run_m2] 00:34:08 딸기 노드 기동 대조 전부 정합
+[run_m2] 00:34:11 플랜트 overview 확인 (2차) → 트리거
+response:
+std_srvs.srv.Trigger_Response(success=True, message='traversal mode all cells accepted')
+
+[run_m2] 00:35:47 정리 시작 (결과: unknown)

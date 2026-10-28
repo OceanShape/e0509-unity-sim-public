@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 16:43:42Z" end-time="2026-10-21 16:44:16Z" duration="34.2734662">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 16:43:42Z" end-time="2026-10-21 16:44:16Z" duration="34.273466" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1015" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 16:43:42Z" end-time="2026-10-21 16:44:16Z" duration="34.267271" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="91945" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1013" name="M2PlantRun" fullname="M2PlantRun" classname="M2PlantRun" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 16:43:42Z" end-time="2026-10-21 16:44:16Z" duration="34.266211" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1014" name="Plant" fullname="M2PlantRun.Plant" methodname="Plant" classname="M2PlantRun" runstate="Runnable" seed="1342781608" result="Passed" start-time="2026-10-21 16:43:42Z" end-time="2026-10-21 16:44:16Z" duration="34.258593" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1800000" />
+          </properties>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[WristCamera] 그래픽 장치 없음(-nographics) — 손목 카메라 렌더 끔
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 unity_measured. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름). 궤적 꺼짐 (P)
+[JointStateMirror] 구독 /joint_command  mode=Command
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개(붙은·수확된 과실 뺌), 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[HarvestHud] 라벨 45개 (Resources/HudLabels), 뷰 파일 /tmp/e0509_hud_view.json, 그리퍼 카메라 있음. G 로 켜고 끈다
+[GraspFollower] 익은 과실 8개(화면 8), 안 익은 4개: strawberry_ripe_01↔(-0.25,0.7828,0.74) 1.6mm, strawberry_ripe_02↔(-0.12,0.7828,0.76) 1.6mm, strawberry_ripe_03↔(0.20,0.7828,0.74) 1.6mm, strawberry_ripe_04↔(-0.22,0.7828,0.56) 1.6mm, strawberry_ripe_05↔(-0.10,0.7828,0.44) 1.6mm, strawberry_ripe_06↔(-0.25,0.7828,0.50) 1.6mm, strawberry_ripe_07↔(-0.38,0.7828,0.72) 1.6mm, strawberry_ripe_08↔(0.28,0.7828,0.70) 1.6mm
+[GraspFollower] 트레이 상자 x[-0.155, 0.171] z[0.602, 0.828] y≤0.300 (Unity world, egg_carton 경계 + 여유)
+[GraspFollower] 구독 /sim/grasp_event (mode=Command)
+[StrawberryPublisher] 발행 과실 -1 → 8개
+[HarvestHud] 뷰 파일이 이번 Play 전에 쓰였다(747 s 전) — 이전 런의 것이라 그리지 않는다
+[M2PlantRun] 플랜트 시작: mode=Command, 정지 파일 /home/oceanshape/e0509_unity_sim/logs/m2/20261022_014336_m2_headless/stop_plant, 최대 1620 s
+[M2PlantRun] t=10s connected=True 명령 0 상태 발행 602 (61 Hz) 위반 0 근처 0
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[M2PlantRun] t=20s connected=True 명령 1 상태 발행 1202 (61 Hz) 위반 0 근처 0
+[M2PlantRun] t=30s connected=True 명령 572 상태 발행 1802 (60 Hz) 위반 0 근처 1
+[M2PlantRun] 보고서 → /home/oceanshape/e0509_unity_sim/logs/m2/20261022_014336_m2_headless/unity_plant_report.json
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

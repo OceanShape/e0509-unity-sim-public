@@ -1,0 +1,48 @@
+[make_unity_urdf] 2026-10-20 15:50
+  원천 /home/oceanshape/strawberry_grasp_environment/robot.urdf
+    딸기 리포 HEAD 2797bb5 · robot.urdf 마지막 커밋 a2e9bb5 · 작업 트리 변경 없음
+    sha256 31518983405e61b26012fbc9ab3472b4c797590a3fe4a0ffbf3af9d471965a01
+    메쉬 저장소 src/doosan_robot2 @ ec92425
+    메쉬 저장소 src/RH-P12-RN @ 58d06e7
+  결과 /home/oceanshape/e0509_unity_sim/assets_src/e0509
+  변경: 메쉬 절대 경로 → package:// : 40곳
+  변경: 중복 world 링크 + world_fixed(→ rh_p12_rn_base) 삭제: 1곳
+  변경: rh_r2 upper 1.0 → 1.1 rad
+  변경: rh_l2 upper 1.0 → 1.1 rad
+  변경: ros2_control 블록 삭제: 1개
+  변경: transmission 블록 삭제: 10개
+  변경: gazebo 블록 삭제: 15개
+검증
+  [PASS] 트리: 링크 15·관절 14 — 링크 15·관절 14
+  [PASS] 트리: 링크 이름 중복 없음
+  [PASS] 트리: 부모가 둘인 링크 없음
+  [PASS] 트리: 루트 하나 = world — 루트 ['world']
+  [PASS] ros2_control·transmission·gazebo 없음
+  [PASS] 원천 대비 관절: 그리퍼 상한 2곳 말고는 같음 — 14개 비교
+  [PASS] 원천 대비 관절: 빠진 것은 world_fixed→rh_p12_rn_base 하나 — 빠진 것 ['world_fixed→rh_p12_rn_base']
+  [PASS] 원천 대비 링크: 관성·visual·collision 같음(메쉬 경로 표기만 다름) — 15개 비교
+  [PASS] 원천 대비 최상위 material 같음 — 14개
+  [PASS] 한계 = Isaac 합성값 (CONTRACT §2-4) — 10개 관절
+         joint_1 [-360.00, 360.00]° 180.0°/s
+         joint_2 [-95.00, 95.00]° 180.0°/s
+         joint_3 [-135.00, 135.00]° 180.0°/s
+         joint_4 [-360.00, 360.00]° 225.0°/s
+         joint_5 [-135.00, 135.00]° 225.0°/s
+         joint_6 [-360.00, 360.00]° 225.0°/s
+         rh_p12_rn [0.00, 63.03]° 372.4°/s
+         rh_r2 [0.00, 63.03]° 372.4°/s
+         rh_l1 [0.00, 63.03]° 372.4°/s
+         rh_l2 [0.00, 63.03]° 372.4°/s
+  [PASS] 메쉬 참조 전부 package:// — 40곳
+  [PASS] URDF 속성에 절대 경로·file:// 없음
+  [PASS] 메쉬 확장자 .dae/.stl/.obj 만 — 34개 파일
+  [PASS] 메쉬 파일 전부 있음(URDF 옆 패키지 폴더)
+  [PASS] 메쉬 복사본 = 원본 (sha256)
+  [PASS] 심볼릭 링크 없음
+  [PASS] 결과 폴더에 다른 파일 없음 — 35개 파일
+  [PASS] FK 영점: rh_p12_rn_base z = 1.123 m — z 1.123000
+  [PASS] FK 영점: TCP = (0, 0, 1.359) ±10 µm — (0.0000, 0.0000, 1.3590)
+  [PASS] FK 시작 자세: TCP ≈ (0.0226, 0.2151, 0.6426) ±0.5 mm — (0.0226, 0.2151, 0.6426)
+  [PASS] xmllint 문법 검사
+  [PASS] 원천 robot.urdf 그대로 (sha256 전후 같음)
+[make_unity_urdf] 전부 통과 (22건)

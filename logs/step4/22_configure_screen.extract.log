@@ -1,0 +1,14 @@
+# 2026-10-21 20:03:23  unity_batch 22 configure_screen  rc=0  8s
+# 인자: -executeMethod SimSetup.ConfigureProject
+# 전체 로그: logs/unity/22_configure_screen.log
+
+357:[SimSetup] ConfigureProject 시작  Unity 2022.3.62f2  batch=True  cwd=/home/oceanshape/e0509_unity_sim/UnityProject
+367:[SimSetup] 정의 심볼 [Standalone] 이미 ROS2 포함: 'ROS2'
+378:[SimSetup] 이 컴파일(Assembly-CSharp-Editor)에서 ROS2 가 이미 활성
+402:[SimSetup] ROSConnection 프리팹: 127.0.0.1:10000, ConnectOnStart, 커넥터 HUD 끔, TF 구독 끔
+413:[SimSetup] Fixed Timestep 0.01667 → 0.01667 s (60 Hz)
+424:[SimSetup] PlayerSettings.runInBackground = true
+435:[SimSetup] 물리 풀이기 TGS → TGS (Isaac 과 같게)
+446:[SimSetup] 화질: 품질 단계 6개 모두 MSAA 4x, soft 그림자 VeryHigh, 그림자 거리 8 m
+457:[SimSetup] ConfigureProject OK. ROS2 정의는 다음 실행(재컴파일)부터 적용된다 → BuildScene 은 별도 실행.
+813:Exiting batchmode successfully now!

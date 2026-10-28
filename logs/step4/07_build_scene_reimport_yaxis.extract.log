@@ -1,0 +1,75 @@
+# 2026-10-21 09:25:44  unity_batch 07 build_scene_reimport_yaxis  rc=0  9s
+# 인자: -executeMethod SimSetup.BuildScene
+# 전체 로그: logs/unity/07_build_scene_reimport_yaxis.log
+
+317:[SimSetup] BuildScene 시작  Unity 2022.3.62f2  batch=True  nographics=True  cwd=/home/oceanshape/e0509_unity_sim/UnityProject
+327:[SimSetup] ROS2 정의 활성 (커넥터가 ROS2 프로토콜로 컴파일됨)
+337:[SimSetup] 기존 씬 열기: Assets/Scenes/E0509Sim.unity
+361:[SimSetup] WARN SIM_FORCE_REIMPORT=1: 기존 UrdfRobot 'strawberry_grasp_environment_robot' 을 지우고 다시 임포트한다
+372:[SimSetup] 메쉬 사전 점검 통과: 34개 (.dae 28, .stl 6)
+384:[SimSetup] URDF 임포트 시작: /home/oceanshape/e0509_unity_sim/UnityProject/Assets/URDF/e0509/e0509.urdf  axis=yAxis convex=unity
+395:Couldn't create a Convex Mesh from source mesh "E0509_0" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+410:Couldn't create a Convex Mesh from source mesh "E0509_1_2" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+425:Couldn't create a Convex Mesh from source mesh "E0509_1_3" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+440:Couldn't create a Convex Mesh from source mesh "E0509_2_1" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+455:Couldn't create a Convex Mesh from source mesh "E0509_3_1" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+470:Couldn't create a Convex Mesh from source mesh "E0509_3_2" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+485:Couldn't create a Convex Mesh from source mesh "E0509_4_1" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+500:Couldn't create a Convex Mesh from source mesh "E0509_5_1" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+515:Couldn't create a Convex Mesh from source mesh "E0509_5_2" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+530:Couldn't create a Convex Mesh from source mesh "E0509_6" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+545:[SimSetup] 임포트 완료: 'strawberry_grasp_environment_robot' 링크 15/15
+556:[SimSetup] 후처리: 컨트롤 컴포넌트 제거 1, ArticulationBody 14(루트 1, immovable·useGravity=false, 강성 100000 감쇠 1000), Collider 비활성 19
+567:[SimSetup]     [zAxis] base_link        visual bounds c=(-0.043, 0.000, -0.013) s=(0.145, 0.224, 0.251) ∋ joint_1@(0.000, 0.205, 0.000) → X
+579:[SimSetup]     [zAxis] link_1           visual bounds c=(0.030, 0.204, 0.030) s=(0.239, 0.180, 0.239) ∋ joint_2@(0.000, 0.205, 0.000) → O
+591:[SimSetup]     [zAxis] link_2           visual bounds c=(-0.187, 0.204, 0.175) s=(0.553, 0.200, 0.181) ∋ joint_3@(0.000, 0.578, 0.000) → X
+603:[SimSetup]     [zAxis] link_3           visual bounds c=(0.000, 0.545, -0.022) s=(0.180, 0.223, 0.224) ∋ joint_4@(0.000, 0.951, 0.000) → X
+615:[SimSetup]     [zAxis] link_4           visual bounds c=(0.109, 0.950, 0.070) s=(0.378, 0.177, 0.300) ∋ joint_5@(0.000, 0.951, 0.000) → O
+627:[SimSetup]     [zAxis] link_5           visual bounds c=(0.000, 0.920, -0.027) s=(0.160, 0.220, 0.214) ∋ joint_6@(0.000, 1.123, 0.000) → X
+639:[SimSetup]     [zAxis] link_6           visual bounds c=(0.034, 1.123, 0.000) s=(0.128, 0.160, 0.160) ∋ arm_to_gripper@(0.000, 1.123, 0.000) → O
+651:[SimSetup]     [zAxis] rh_p12_rn_base   visual bounds c=(0.000, 1.123, -0.029) s=(0.140, 0.114, 0.119) ∋ rh_l1@(0.000, 1.171, 0.008) → O
+663:[SimSetup]     [zAxis] rh_p12_rn_l1     visual bounds c=(0.030, 1.171, 0.006) s=(0.128, 0.086, 0.121) ∋ rh_l2@(0.000, 1.200, 0.057) → O
+675:[SimSetup]     [zAxis] rh_p12_rn_l2     visual bounds c=(0.007, 1.199, 0.045) s=(0.082, 0.086, 0.115) ∋ l2_to_left_custom_part@(-0.021, 1.200, 0.052) → O
+687:[SimSetup]     [zAxis] rh_p12_rn_base   visual bounds c=(0.000, 1.123, -0.029) s=(0.140, 0.114, 0.119) ∋ rh_p12_rn@(0.000, 1.171, -0.008) → O
+699:[SimSetup]     [zAxis] rh_p12_rn_r1     visual bounds c=(-0.030, 1.171, -0.010) s=(0.128, 0.086, 0.121) ∋ rh_r2@(0.000, 1.200, -0.057) → O
+711:[SimSetup]     [zAxis] rh_p12_rn_r2     visual bounds c=(-0.007, 1.200, -0.070) s=(0.082, 0.086, 0.115) ∋ r2_to_right_custom_part@(0.021, 1.200, -0.052) → O
+723:[SimSetup] 축 후보 zAxis: 자식 관절 원점을 포함하는 링크 9/13, 전체 bounds size=(0.702, 1.318, 0.444) center=(-0.082, 0.577, 0.013)
+734:[SimSetup]     [yAxis] base_link        visual bounds c=(0.013, 0.043, 0.000) s=(0.251, 0.145, 0.224) ∋ joint_1@(0.000, 0.205, 0.000) → X
+746:[SimSetup]     [yAxis] link_1           visual bounds c=(-0.030, 0.175, 0.000) s=(0.239, 0.239, 0.180) ∋ joint_2@(0.000, 0.205, 0.000) → O
+758:[SimSetup]     [yAxis] link_2           visual bounds c=(-0.175, 0.391, 0.000) s=(0.181, 0.553, 0.200) ∋ joint_3@(0.000, 0.578, 0.000) → X
+770:[SimSetup]     [yAxis] link_3           visual bounds c=(-0.032, 0.599, 0.000) s=(0.223, 0.224, 0.180) ∋ joint_4@(0.000, 0.951, 0.000) → X
+782:[SimSetup]     [yAxis] link_4           visual bounds c=(-0.070, 0.841, 0.000) s=(0.300, 0.378, 0.177) ∋ joint_5@(0.000, 0.951, 0.000) → O
+794:[SimSetup]     [yAxis] link_5           visual bounds c=(-0.030, 0.977, 0.000) s=(0.220, 0.214, 0.160) ∋ joint_6@(0.000, 1.123, 0.000) → X
+806:[SimSetup]     [yAxis] link_6           visual bounds c=(0.000, 1.089, 0.000) s=(0.160, 0.128, 0.160) ∋ arm_to_gripper@(0.000, 1.123, 0.000) → O
+818:[SimSetup]     [yAxis] rh_p12_rn_base   visual bounds c=(0.000, 1.153, 0.000) s=(0.114, 0.119, 0.140) ∋ rh_l1@(0.000, 1.171, 0.008) → O
+830:[SimSetup]     [yAxis] rh_p12_rn_l1     visual bounds c=(0.000, 1.173, 0.038) s=(0.086, 0.121, 0.128) ∋ rh_l2@(0.000, 1.200, 0.057) → O
+842:[SimSetup]     [yAxis] rh_p12_rn_l2     visual bounds c=(0.000, 1.212, 0.064) s=(0.086, 0.115, 0.082) ∋ l2_to_left_custom_part@(-0.021, 1.200, 0.052) → O
+854:[SimSetup]     [yAxis] rh_p12_rn_base   visual bounds c=(0.000, 1.153, 0.000) s=(0.114, 0.119, 0.140) ∋ rh_p12_rn@(0.000, 1.171, -0.008) → O
+866:[SimSetup]     [yAxis] rh_p12_rn_r1     visual bounds c=(0.000, 1.173, -0.038) s=(0.086, 0.121, 0.128) ∋ rh_r2@(0.000, 1.200, -0.057) → O
+878:[SimSetup]     [yAxis] rh_p12_rn_r2     visual bounds c=(0.000, 1.212, -0.064) s=(0.086, 0.115, 0.082) ∋ r2_to_right_custom_part@(0.021, 1.200, -0.052) → O
+890:[SimSetup] 축 후보 yAxis: 자식 관절 원점을 포함하는 링크 9/13, 전체 bounds size=(0.344, 1.357, 0.164) center=(-0.063, 0.679, 0.000)
+901:[SimSetup] 시각 메쉬 축 = yAxis 선택 (포함 9/13). 브리프의 'Z-axis' 와 다르면 PROGRESS 에 근거를 적는다.
+912:[SimSetup] WARN 어느 축에서도 모든 링크가 자식 관절 원점을 포함하지는 않는다 (9/13) — 에디터에서 눈으로 확인(H3)
+923:[SimSetup] 검증: 링크 15(기대 15) 관절 14(기대 14) 회전관절 10(기대 10) AB 14(기대 14)
+934:[SimSetup]   joint world_fixed                FixedJoint     link=base_link            isRoot=True  immovable=True  gravity=False damp=0.05 
+945:[SimSetup]   joint joint_1                    RevoluteJoint  link=link_1               isRoot=False immovable=False gravity=False damp=0.00 [-360.0009, 360.0009]° force=3.403E+38 maxAngVel=3.1416 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+956:[SimSetup]   joint joint_2                    RevoluteJoint  link=link_2               isRoot=False immovable=False gravity=False damp=0.00 [-95.0021, 95.0021]° force=3.403E+38 maxAngVel=3.1416 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+967:[SimSetup]   joint joint_3                    RevoluteJoint  link=link_3               isRoot=False immovable=False gravity=False damp=0.00 [-135.0003, 135.0003]° force=3.403E+38 maxAngVel=3.1416 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+978:[SimSetup]   joint joint_4                    RevoluteJoint  link=link_4               isRoot=False immovable=False gravity=False damp=0.00 [-360.0009, 360.0009]° force=3.403E+38 maxAngVel=3.9270 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+989:[SimSetup]   joint joint_5                    RevoluteJoint  link=link_5               isRoot=False immovable=False gravity=False damp=0.00 [-135.0003, 135.0003]° force=3.403E+38 maxAngVel=3.9270 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+1000:[SimSetup]   joint joint_6                    RevoluteJoint  link=link_6               isRoot=False immovable=False gravity=False damp=0.00 [-360.0009, 360.0009]° force=3.403E+38 maxAngVel=3.9270 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+1011:[SimSetup]   joint arm_to_gripper             FixedJoint     link=rh_p12_rn_base       isRoot=False immovable=False gravity=False damp=0.05 
+1022:[SimSetup]   joint rh_l1                      RevoluteJoint  link=rh_p12_rn_l1         isRoot=False immovable=False gravity=False damp=0.70 [0.0000, 63.0254]° force=3.403E+38 maxAngVel=6.5000 k=100000 c=1000 axis(anchor X)=(0.000, 0.000, 1.000)
+1033:[SimSetup]   joint rh_p12_rn                  RevoluteJoint  link=rh_p12_rn_r1         isRoot=False immovable=False gravity=False damp=0.70 [0.0000, 63.0254]° force=3.403E+38 maxAngVel=6.5000 k=100000 c=1000 axis(anchor X)=(0.000, 0.000, -1.000)
+1044:[SimSetup]   joint rh_l2                      RevoluteJoint  link=rh_p12_rn_l2         isRoot=False immovable=False gravity=False damp=0.70 [0.0000, 63.0254]° force=3.403E+38 maxAngVel=6.5000 k=100000 c=1000 axis(anchor X)=(0.000, 0.000, -1.000)
+1055:[SimSetup]   joint rh_r2                      RevoluteJoint  link=rh_p12_rn_r2         isRoot=False immovable=False gravity=False damp=0.70 [0.0000, 63.0254]° force=3.403E+38 maxAngVel=6.5000 k=100000 c=1000 axis(anchor X)=(0.000, 0.000, 1.000)
+1066:[SimSetup]   joint l2_to_left_custom_part     FixedJoint     link=left_custom_part     isRoot=False immovable=False gravity=False damp=0.05 
+1077:[SimSetup]   joint r2_to_right_custom_part    FixedJoint     link=right_custom_part    isRoot=False immovable=False gravity=False damp=0.05 
+1088:[SimSetup] 영점 FK: rh_p12_rn_base world=(0.0000, 1.1230, 0.0000) (기대 Unity y≈1.123) → OK
+1099:[SimSetup] 루트 링크 'world': AB 없음(기대); 루트 AB = base_link
+1110:[SimSetup] TCP 영점 world=(0.0000, 1.3590, 0.0000) (기대 y≈1.359) → OK
+1121:[SimSetup] Renderer 21개, 전체 bounds center=(-0.063, 0.679, 0.000) size=(0.344, 1.357, 0.164) (정상: 높이 ≈1.2–1.5 m)
+1132:[SimSetup] 'Sim' 컴포넌트: 새로 붙임 [] 이미 있음 [JointStateMirror, SimHud, TcpTrail, JointLimitMonitor] 타입 없음 []
+1143:[SimSetup] 카메라 (1.70, 1.58, -2.10) → (0.00, 0.68, 0.00), 방향광 (50,-30,0)
+1159:[SimSetup] BuildScene OK → Assets/Scenes/E0509Sim.unity (Build Settings 등록). TCP 자식 'tcp' @ rh_p12_rn_base
+1529:Exiting batchmode successfully now!

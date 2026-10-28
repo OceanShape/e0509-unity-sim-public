@@ -1,0 +1,968 @@
+[run_strawberry_nodes] check_params.py 통과
+[run_strawberry_nodes] 로그 logs/m2/20261021_184458_m2_headless  ROS_DOMAIN_ID=0  스캔 MoveJoint 60.0/90.0
+[vision]  [INFO] [1792575905.312600590] [fake_vision_node]: Fake Vision Node initialized. (Mocking strawberry_fusion_node) quadrant_filter=True subcell_view=True
+[vision]  [harvest_probe] 계측 부착: role=vision -> /tmp/harvest_hud_vision.json
+[vision]  [WARN] [1792575906.193886317] [fake_vision_node]: BERRY_GEOMETRY: n=8  y=782.8~782.8mm  (기대 782.8mm, 편차 0.0mm)
+[bridge]  [INFO] [1792575907.283592118] [sim_executor_bridge_node]: Sim Executor Bridge Node initializing...
+[bridge]  [WARN] [1792575907.698938096] [sim_executor_bridge_node]: MOVELINE_COLLISION_WORLD: ['whiteboard'] loaded from /home/oceanshape/strawberry_grasp_environment/install/e0509_gripper_description/share/e0509_gripper_description/config/environment.yaml
+[bridge]  [INFO] [1792575908.052790016] [sim_executor_bridge_node]: cuRobo IK Solver successfully initialized for MoveLine.
+[bridge]  [WARN] [1792575908.053066599] [sim_executor_bridge_node]: GRASP_JUDGE_MODEL: tool_tcp_offset=236mm capture_radius=38mm enabled=True sim_speed_scale=1.0 gripper_close=1.080rad arm_arrival_tol=0.30deg — planner 의 ee_to_tcp_offset_m 과 반드시 같아야 한다 (다르면 전 타겟 GRASP_EMPTY)
+[bridge]  [WARN] [1792575908.053279886] [sim_executor_bridge_node]: DOOSAN_MOVEIT_REF: vel=[120, 120, 150, 225, 225, 225] acc=[120, 120, 150, 225, 225, 225] deg/s,deg/s^2 (dsr_moveit_config_e0509/config/joint_limits.yaml) — 초과해도 자르지 않고 기록만 (D3)
+[bridge]  [INFO] [1792575908.053448689] [sim_executor_bridge_node]: Sim Executor Bridge Node Ready! (Listening to Doosan & Gripper services)
+[bridge]  [harvest_probe] 계측 부착: role=controller -> /tmp/harvest_hud_controller.json
+
+[run_strawberry_nodes] cuRobo Planner warmup 대기 중 (수십 초)...
+[scan]    [INFO] [1792575911.044072524] [scan_executor_node]: Loaded 4 scan targets from /home/oceanshape/strawberry_grasp_environment/install/strawberry_motion/share/strawberry_motion/config/scan_pose_candidates_refit_candidate.yaml
+[scan]    [INFO] [1792575911.044487360] [scan_executor_node]: MoveJoint speeds: scan vel=60.0 acc=90.0, overview return vel=60.0 acc=90.0
+[scan]    [INFO] [1792575911.044845597] [scan_executor_node]: MoveJoint service dispatch timeout: 30.0s; arrival is verified from /joint_states
+[planner] [WARN] [1792575911.067167867] [curobo_planner_node]: EE_TO_TCP_OFFSET_OVERRIDE: 160mm -> 236mm (profile=legacy_160mm)
+[scan]    [INFO] [1792575911.602005169] [scan_executor_node]: SUBDIVIDE_IK_READY min_candidates=3 max_joint_delta=60deg seeds=32 init=0.6s subcell_ee_y=0.433
+[scan]    [INFO] [1792575911.614164980] [scan_executor_node]: scan_executor_node ready; explicit /strawberry/scan/start required
+[scan]    [harvest_probe] 계측 부착: role=scan -> /tmp/harvest_hud_scan.json
+[planner] [INFO] [1792575918.712646919] [curobo_planner_node]: cuRobo MotionGen warmed up!
+[planner] [INFO] [1792575918.730243075] [curobo_planner_node]: cuRobo Planner Ready!
+[planner] [INFO] [1792575918.730428731] [curobo_planner_node]: Runtime JSONL: /home/oceanshape/e0509_unity_sim/logs/runtime/2026-10-21/curobo_planner_node_20261021T184511-15f010d0.jsonl
+[planner] [INFO] [1792575918.730941631] [curobo_planner_node]:   ENV_CUBOIDS=1  SELF_COLLISION=False
+[planner] [WARN] [1792575918.731118666] [curobo_planner_node]: Leaf/stem geometry is not in the cuRobo world; visually occluded targets require reobserve/skip instead of forced approach
+[planner] [INFO] [1792575918.731277819] [curobo_planner_node]:   WALL_QUAT_WXYZ=[0.497, -0.497, 0.503, 0.503] approach_dir=[0.0, 1.0, -0.0] elevation=-0.0deg  variants=4
+[planner] [INFO] [1792575918.731424614] [curobo_planner_node]:   LEFTMOST horizontal fallback x_corr=+5mm offsets_mm=[15, 20, 25] extra_request=0mm wall_margin=-30mm wall_override=False pre_approach=60mm
+[planner] [WARN] [1792575918.731587114] [curobo_planner_node]:   TOOL_GEOMETRY_LEGACY: planner offset=160mm, measured grasp center=260mm (model shortfall=100mm).
+[planner] [INFO] [1792575918.731718597] [curobo_planner_node]:   environment loaded: /home/oceanshape/strawberry_grasp_environment/src/e0509_gripper_description/config/environment.yaml
+[planner] [INFO] [1792575918.731854508] [curobo_planner_node]:   marker place: enabled=True release=True taught_slot0_reference=True taught_place_via_tray_view=False hold_after_slot0=False hold_on_failure=False open_stem_descent=True straight_reverse_retreat=True slot_sequence=[0, 1, 3, 4, 6, 7, 9, 10] slot_step=1 skip_row2=False orthogonalize_taught_grid=False taught_grid_shift_y_m=0.0000 taught_grid_pitch_override_m=0.0000 allow_generated_slot_release=True allow_unverified_grasp=False max_age=3600s
+[planner] [INFO] [1792575918.731985191] [curobo_planner_node]:   SafeGrasp: enabled=False target=700 max_current=400 delta_threshold=40 timeout=5.0s contact_pos<=685 empty_pos>=695
+[planner] [INFO] [1792575918.732114056] [curobo_planner_node]:   grasp verification: position-only (contact <= 685, empty >= 695; current is logged only)
+[planner] [harvest_probe] 계측 부착: role=planner -> /tmp/harvest_hud_planner.json
+──────────────────────────────────────────────────────────
+ 기동 로그 대조 (딸기 run_nodes.sh 와 같은 항목, 속도만 D-7)
+──────────────────────────────────────────────────────────
+  OK   MoveLine 충돌월드 로드
+  OK   브릿지 TCP 오프셋 236mm
+  OK   도착 판정 허용오차 0.30deg
+  OK   플래너 TCP 오프셋 160→236mm
+  OK   열린 조우 하강 단계
+  OK   진입 역순 후퇴 단계
+  OK   배치 이송 = 실기 시연과 같은 직행
+  OK   배치 슬롯 0,1,3,4,6,7,9,10
+  OK   배치 격자 = 실기 티칭 그대로
+  OK   배치 격자 간격 = 실기 티칭
+  OK   배치 격자 평행이동 없음
+  OK   scan_executor 기동
+  OK   적응 분할 IK 솔버
+  OK   스캔·overview 복귀 MoveJoint 60.0/90.0
+  OK   cuRobo Planner Ready!
+──────────────────────────────────────────────────────────
+ 전부 정합. 플랜트(Unity Play 또는 Isaac)가 overview 자세로 /dsr01/joint_states 를 내는지 확인한 뒤:
+   ros2 service call /strawberry/scan/start std_srvs/srv/Trigger
+──────────────────────────────────────────────────────────
+[bridge]  [INFO] [1792575920.733361790] [sim_executor_bridge_node]: SetPosition called to 600
+[scan]    [INFO] [1792575924.578673229] [scan_executor_node]: START_ACCEPTED explicit request; initial pose verified
+[scan]    [INFO] [1792575924.579711028] [scan_executor_node]: TRAVERSAL_SCAN_STARTED cells=['root/nw', 'root/ne', 'root/se', 'root/sw'] (4/4 quadrants)
+[scan]    [INFO] [1792575924.580343770] [scan_executor_node]: OVERVIEW_SCAN_STARTED — scene_positions 로 분면별 익은 과실 판정, 최대 3.0s
+[scan]    [INFO] [1792575927.584202313] [scan_executor_node]: OVERVIEW_SCAN nw:3  ne:2  se:0  sw:3
+[scan]    [INFO] [1792575927.584659445] [scan_executor_node]: TRAVERSAL_PRUNED skip=['root/se'] — overview 1차 스캔에서 익은 과실 0개
+[vision]  [INFO] [1792575927.584710037] [fake_vision_node]: SCAN_CELL root/se (SCANNED_EMPTY) -> 시야 = x[0.050,0.595] z[0.265,0.660]
+[vision]  [INFO] [1792575927.585299177] [fake_vision_node]: SCAN_CELL root/nw (SCANNING) -> 시야 = x[-0.495,0.050] z[0.660,1.055]
+[scan]    [INFO] [1792575927.585402773] [scan_executor_node]: MOVING_TO root/nw  endpoint_deg=[144.1 22.9 -1.0 -238.5 -75.3 108.7]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792575927.585808922] [scan_executor_node]: Joint equivalent rewrite J4 -238.5 -> 121.5 deg (current 175.9, shorter by 360.0 deg)
+[scan]    [INFO] [1792575927.586221795] [scan_executor_node]: Joint equivalent rewrite J4 -238.5 -> 121.5 deg (current 175.9, shorter by 360.0 deg)
+[bridge]  [INFO] [1792575927.587002225] [sim_executor_bridge_node]: MoveJoint called to [144.1, 22.9, -1.0, 121.5, -75.3, 108.7] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792575930.436502300] [sim_executor_bridge_node]: MoveJoint profile: span 130.9deg / 2.85s (570 steps)
+[bridge]  [INFO] [1792575930.583970491] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.29deg (손끝 1.5mm) / 대기 0.14s
+[scan]    [INFO] [1792575930.590825341] [scan_executor_node]: MoveJoint response: success=True  target=[144.1 22.9 -1.0 121.5 -75.3 108.7]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792575930.591472643] [scan_executor_node]: AT_SCAN_POSE root/nw joints_deg=[144.0 22.7 -0.8 121.6 -75.2 108.7] — adaptive detection wait up to 3.0s
+[scan]    [INFO] [1792575933.596415031] [scan_executor_node]: TARGET_FOUND root/nw 9 pick candidate(s) detected
+[scan]    [INFO] [1792575933.597058002] [scan_executor_node]: SUBCELL_SCAN_ORDER root/nw root/nw/sw:2  root/nw/se:1  root/nw/nw:0  root/nw/ne:0
+[scan]    [INFO] [1792575933.597673206] [scan_executor_node]: SUBDIVIDE root/nw candidates=3 >= 3 cells=['sw', 'se'] — 후보 있는 세부 칸만 세부 자세로 방문
+[scan]    [INFO] [1792575934.282296370] [scan_executor_node]: SUBCELL_POSE root/nw/sw tier=lab_plane dJ_max=19.6deg dJ=[0 9 12 7 10 20] ee_mm=[-225.5, 339.0, 902.3] -> [-361.7, 433.0, 803.5] joints_deg=[144.6 31.8 10.9 -245.6 -65.7 128.3] (실기 깊이 2 평면 y=0.433 로 이동, 부모 시드 IK)
+[scan]    [INFO] [1792575934.282724879] [scan_executor_node]: MOVING_TO root/nw/sw  endpoint_deg=[144.6 31.8 10.9 -245.6 -65.7 128.3]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792575934.282919779] [scan_executor_node]: Joint equivalent rewrite J4 -245.6 -> 114.4 deg (current 121.5, shorter by 360.0 deg)
+[scan]    [INFO] [1792575934.283118915] [scan_executor_node]: Joint equivalent rewrite J4 -245.6 -> 114.4 deg (current 121.5, shorter by 360.0 deg)
+[bridge]  [INFO] [1792575934.283918480] [sim_executor_bridge_node]: MoveJoint called to [144.6, 31.8, 10.9, 114.4, -65.7, 128.3] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792575935.218474967] [sim_executor_bridge_node]: MoveJoint profile: span 19.6deg / 0.93s (187 steps)
+[bridge]  [INFO] [1792575935.360107367] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.28deg (손끝 2.6mm) / 대기 0.14s
+[scan]    [INFO] [1792575935.385471740] [scan_executor_node]: MoveJoint response: success=True  target=[144.6 31.8 10.9 114.4 -65.7 128.3]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792575935.386208023] [scan_executor_node]: AT_SCAN_POSE root/nw/sw joints_deg=[144.6 31.8 10.8 114.5 -65.8 128.1] — adaptive detection wait up to 3.0s
+[vision]  [INFO] [1792575935.386257215] [fake_vision_node]: SCAN_CELL root/nw/sw (VIEWING) -> 시야 = x[-0.495,-0.223] z[0.660,0.857]
+[scan]    [INFO] [1792575938.390900057] [scan_executor_node]: SUBCELL_SCAN root/nw/sw raw=6 in_cell=6 unique=2 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792575938.391570819] [scan_executor_node]: PICK_SEQUENCE_START root/nw/sw — 2 candidate targets (raw=2 skipped_attempted=0)
+[scan]    [INFO] [1792575938.391941830] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/nw/sw timeout=60s max_total_picks=0
+[scan]    [INFO] [1792575938.392339355] [scan_executor_node]: PICK_ATTEMPT_BLACKLIST_ADD pos=(-380,783,720)mm radius=25mm
+[scan]    [INFO] [1792575938.392784346] [scan_executor_node]: PICK_TRIGGER root/nw/sw 1/2 pos=(-380,783,720)mm
+[planner] [INFO] [1792575938.443499569] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792575938.444428866] [curobo_planner_node]: === PICK 딸기 raw=(-380,783,720)mm grasp=(-380,783,755)mm det_y=783mm x_bias=+0mm z_bias=+35mm ===
+[planner] [INFO] [1792575938.445082621] [curobo_planner_node]: 1 open gripper for stem descent: set_position=600
+[bridge]  [INFO] [1792575938.446178991] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792575938.503045398] [curobo_planner_node]: World updated (neighbor obstacles registered): static=1 dynamic=0 neighbor_spheres=1
+[planner] [INFO] [1792575938.503539553] [curobo_planner_node]: Registered 1 neighbor sphere obstacle(s); self-excluded 1 within 50mm of target
+[planner] [INFO] [1792575938.504352067] [curobo_planner_node]: 2 grasp (CuRobo 2-step 6cm pre) — trying 3 offsets × 4 quats | target=(-375,783,755)mm | start_J1=144.6°
+[planner] [ERROR] [1792575939.079955139] [curobo_planner_node]: Plan FAIL 575ms | status=MotionGenStatus.IK_FAIL | goal=['-375', '491', '836']mm | start_J=[144.6, 31.8, 10.9, 114.4, -65.7, 128.3]deg
+[planner] [ERROR] [1792575939.244504039] [curobo_planner_node]: Plan FAIL 164ms | status=MotionGenStatus.IK_FAIL | goal=['-375', '488', '811']mm | start_J=[144.6, 31.8, 10.9, 114.4, -65.7, 128.3]deg
+[planner] [ERROR] [1792575939.394973891] [curobo_planner_node]: Plan FAIL 150ms | status=MotionGenStatus.IK_FAIL | goal=['-375', '487', '785']mm | start_J=[144.6, 31.8, 10.9, 114.4, -65.7, 128.3]deg
+[planner] [INFO] [1792575940.285820392] [curobo_planner_node]: Plan OK 890ms 31pts 0.56s | goal=['-375', '488', '759']mm | end_J=[139.9, 30.1, 24.3, 111.7, -55.0, 140.1]deg
+[planner] [ERROR] [1792575940.684463212] [curobo_planner_node]: Plan FAIL 398ms | status=MotionGenStatus.IK_FAIL | goal=['-375', '533', '763']mm | start_J=[139.9, 30.1, 24.3, 111.7, -55.0, 140.1]deg
+[planner] [INFO] [1792575941.599351113] [curobo_planner_node]: Plan OK 913ms 31pts 0.56s | goal=['-375', '528', '763']mm | end_J=[136.5, 43.6, -0.0, 121.2, -57.3, 127.0]deg
+[planner] [INFO] [1792575941.600253001] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['139.9', '30.1', '24.3', '111.7', '-55.0', '140.1']deg
+[bridge]  [INFO] [1792575941.601317490] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792575942.408945044] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 1.4mm) / 대기 0.22s
+[bridge]  [INFO] [1792575942.409156929] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[139.9 30.1 24.3 111.7 -55.0 140.1]deg
+[planner] [INFO] [1792575942.451953251] [curobo_planner_node]: PRE_APPROACH_REACHED — settling 0.3s before 40mm straight approach
+[planner] [INFO] [1792575942.752714503] [curobo_planner_node]: FINAL_APPROACH_STRAIGHT TOOL +Z 40.0mm vel=60.0mm/s
+[bridge]  [INFO] [1792575942.753640099] [sim_executor_bridge_node]: MoveLine called (pos=[ 0.  0. 40.  0.  0.  0.], ref=1, mode=1)
+[bridge]  [INFO] [1792575946.156931288] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.29deg (손끝 1.0mm) / 대기 0.08s
+[bridge]  [INFO] [1792575946.157398666] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-2.6mm lateral=2.4mm |err|=3.5mm (명령 40mm, TOOL)
+[bridge]  [INFO] [1792575946.157579655] [sim_executor_bridge_node]: MoveLine 실이동 37.5mm / 명령 40mm
+[bridge]  [INFO] [1792575946.157738773] [sim_executor_bridge_node]: MoveLine ok: 40mm / 20 steps / 계획 0.67s 실소요 3.40s (worst step joint delta 3.5deg)
+[planner] [INFO] [1792575946.208517017] [curobo_planner_node]: GRASP_POSE_REACHED — offset=+0.020m pre=6cm+40mm+0mm variant=('base', [1, 0, 0], 5.0) elevation=+5.0deg (attempt 11/12)
+[planner] [WARN] [1792575946.209135762] [curobo_planner_node]: OPEN_DESCENT_DYNAMIC: kp1_z=755mm reached_z=783mm overshoot=28mm extra_below_kp1=0mm -> descent=28mm
+[planner] [INFO] [1792575946.209605984] [curobo_planner_node]: OPEN_STEM_DESCENT — gripper=600, BASE -Z 28mm to KP1
+[planner] [INFO] [1792575946.210084492] [curobo_planner_node]: OPEN_STEM_DESCENT BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-28.3)]mm dist=28.3mm vel=40.0mm/s
+[bridge]  [INFO] [1792575946.211419463] [sim_executor_bridge_node]: MoveLine called (pos=[  0.           0.         -28.25754239   0.           0.
+[bridge]     0.        ], ref=0, mode=1)
+[bridge]  [INFO] [1792575948.583369488] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.26deg (손끝 0.5mm) / 대기 0.14s
+[bridge]  [INFO] [1792575948.583812467] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.5mm lateral=0.0mm |err|=0.5mm (명령 28mm, BASE)
+[bridge]  [INFO] [1792575948.583991583] [sim_executor_bridge_node]: MoveLine 실이동 27.8mm / 명령 28mm
+[bridge]  [INFO] [1792575948.584150260] [sim_executor_bridge_node]: MoveLine ok: 28mm / 15 steps / 계획 0.71s 실소요 2.37s (worst step joint delta 6.5deg)
+[planner] [INFO] [1792575948.614447174] [curobo_planner_node]: 3 close gripper + verify grasp
+[bridge]  [INFO] [1792575948.615542873] [sim_executor_bridge_node]: SetPosition called to 700
+[bridge]  [INFO] [1792575948.617166449] [sim_executor_bridge_node]: GRASP_JUDGE 줄기기준 along=+22.1mm(조우 -6~27) lateral=6.0mm(허용20) | 과실기준 d_tcp=40.8mm -> CONTACT
+[bridge]  [INFO] [1792575948.617404739] [sim_executor_bridge_node]: GRASP_ATTACH 과실 (-380, 783, 720)mm -> /sim/grasp_event
+[planner] [INFO] [1792575949.016531640] [curobo_planner_node]: VERIFY_GRASP: GRASP_CONTACT_DETECTED present_pos=670 current_raw=200 — jaw stopped before calibrated contact threshold (pos=670 <= 685); position-based grasp detected
+[planner] [INFO] [1792575949.017067281] [curobo_planner_node]: 4 detach pull — BASE -Z 40mm at 50mm/s
+[bridge]  [INFO] [1792575949.018477940] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -40.   0.   0.   0.], ref=0, mode=1)
+[bridge]  [INFO] [1792575952.138199376] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.28deg (손끝 1.0mm) / 대기 0.08s
+[bridge]  [INFO] [1792575952.138643322] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.0mm lateral=0.0mm |err|=1.0mm (명령 40mm, BASE)
+[bridge]  [INFO] [1792575952.138798811] [sim_executor_bridge_node]: MoveLine 실이동 39.0mm / 명령 40mm
+[bridge]  [INFO] [1792575952.138939335] [sim_executor_bridge_node]: MoveLine ok: 40mm / 20 steps / 계획 0.80s 실소요 3.12s (worst step joint delta 0.9deg)
+[planner] [INFO] [1792575952.172173196] [curobo_planner_node]: DETACH_PULL_DOWN: BASE -Z 40mm -> OK
+[planner] [INFO] [1792575952.173271484] [curobo_planner_node]: RETREAT TOOL -Z 40.0mm vel=80.0mm/s
+[bridge]  [INFO] [1792575952.174654590] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -40.   0.   0.   0.], ref=1, mode=1)
+[bridge]  [INFO] [1792575954.785784400] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.26deg (손끝 1.4mm) / 대기 0.06s
+[bridge]  [INFO] [1792575954.786220121] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.4mm lateral=0.0mm |err|=1.4mm (명령 40mm, TOOL)
+[bridge]  [INFO] [1792575954.786402200] [sim_executor_bridge_node]: MoveLine 실이동 38.6mm / 명령 40mm
+[bridge]  [INFO] [1792575954.786563556] [sim_executor_bridge_node]: MoveLine ok: 40mm / 20 steps / 계획 0.50s 실소요 2.61s (worst step joint delta 0.5deg)
+[planner] [WARN] [1792575955.128934107] [curobo_planner_node]: TAUGHT_TRAY_GRID_PLACE active: slot=0; fixed tray pose only; marker localization is bypassed
+[planner] [INFO] [1792575955.129963243] [curobo_planner_node]: TAUGHT_TRAY_SLOT0_ABOVE generated from Slot0 FK + grid offset: clearance=120mm goal_mm=[519.9, 52.3, 185.6]
+[planner] [INFO] [1792575955.180622265] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792575956.487607141] [curobo_planner_node]: Cartesian plan joint equivalent rewrite: J6 107.6~274.7 -> -133.0~222.6
+[planner] [WARN] [1792575956.487937607] [curobo_planner_node]: Cartesian plan rejected: J6 spline jump 355.7deg > 270.0deg at waypoint 38 (limit boundary crossing - normalize discontinuity)
+[planner] [ERROR] [1792575956.488404960] [curobo_planner_node]: TAUGHT_TRAY_SLOT0_PLACE_BLOCKED: above plan failed; holding fruit
+[planner] [harvest_probe] 결과 바 1번째 = place_failed (배치 실패, place_status=failed)
+[planner] [INFO] [1792575956.489359242] [curobo_planner_node]: World updated (neighbor obstacles cleared): static=1 dynamic=0 neighbor_spheres=0
+[bridge]  [INFO] [1792575956.490616345] [sim_executor_bridge_node]: SetPosition called to 600
+[bridge]  [INFO] [1792575956.491030680] [sim_executor_bridge_node]: GRASP_RELEASE -> /sim/grasp_event
+[planner] [WARN] [1792575956.541546256] [curobo_planner_node]: PICK_SEQUENCE_CONTINUE place_status=failed: released fruit here and continuing to the next target (hold_on_place_failure=false)
+[planner] [INFO] [1792575956.542189136] [curobo_planner_node]: 7 return to pick-start scan pose
+[planner] [INFO] [1792575961.237864204] [curobo_planner_node]: pick-start scan pose after pick/place JS Plan OK 4695ms 41pts 0.74s | goal=['144.6', '31.8', '10.9', '114.4', '-65.7', '128.3']deg
+[planner] [INFO] [1792575961.238605033] [curobo_planner_node]: Spline 12pts plan=0.74s exec=0.64s -> end=['144.6', '31.8', '10.9', '114.4', '-65.7', '128.3']deg
+[bridge]  [INFO] [1792575961.240125748] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792575962.258387113] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.29deg (손끝 0.6mm) / 대기 0.36s
+[bridge]  [INFO] [1792575962.258769931] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.64s -> end=[144.6 31.8 10.9 114.4 -65.7 128.3]deg
+[bridge]  [INFO] [1792575962.291054858] [sim_executor_bridge_node]: SetPosition called to 600
+[scan]    [INFO] [1792575962.341947449] [scan_executor_node]: PICK_ATTEMPT_DONE root/nw/sw 1/2 — planner sequence ended (success is verified by gripper/manual KPI, not this Empty topic)
+[scan]    [INFO] [1792575962.342387104] [scan_executor_node]: PICK_ATTEMPT_SETTLE 1.0s before next target
+[planner] [INFO] [1792575962.343098281] [curobo_planner_node]: === PICK COMPLETE (DETACH_SUCCESS_UNVERIFIED) ===
+[scan]    [INFO] [1792575963.343859778] [scan_executor_node]: PICK_ATTEMPT_BLACKLIST_ADD pos=(-250,783,740)mm radius=25mm
+[scan]    [INFO] [1792575963.344416949] [scan_executor_node]: PICK_TRIGGER root/nw/sw 2/2 pos=(-250,783,740)mm
+[planner] [INFO] [1792575963.395478945] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792575963.396074560] [curobo_planner_node]: === PICK 딸기 raw=(-250,783,740)mm grasp=(-250,783,775)mm det_y=783mm x_bias=+0mm z_bias=+35mm ===
+[planner] [INFO] [1792575963.396303546] [curobo_planner_node]: 1 open gripper for stem descent: set_position=600
+[bridge]  [INFO] [1792575963.397134931] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792575963.448157538] [curobo_planner_node]: World updated (neighbor obstacles registered): static=1 dynamic=0 neighbor_spheres=1
+[planner] [INFO] [1792575963.448489917] [curobo_planner_node]: Registered 1 neighbor sphere obstacle(s); self-excluded 1 within 50mm of target
+[planner] [INFO] [1792575963.448875902] [curobo_planner_node]: 2 grasp (CuRobo 2-step 6cm pre) — trying 3 offsets × 4 quats | target=(-250,783,775)mm | start_J1=144.6°
+[planner] [ERROR] [1792575963.965426786] [curobo_planner_node]: Plan FAIL 516ms | status=MotionGenStatus.IK_FAIL | goal=['-250', '491', '856']mm | start_J=[144.6, 31.8, 10.9, 114.4, -65.7, 128.3]deg
+[planner] [ERROR] [1792575964.102952167] [curobo_planner_node]: Plan FAIL 137ms | status=MotionGenStatus.IK_FAIL | goal=['-250', '488', '831']mm | start_J=[144.6, 31.8, 10.9, 114.4, -65.7, 128.3]deg
+[planner] [INFO] [1792575965.056878364] [curobo_planner_node]: Plan OK 953ms 31pts 0.56s | goal=['-250', '487', '805']mm | end_J=[128.5, 19.3, 28.9, 130.0, -54.3, 125.6]deg
+[planner] [INFO] [1792575966.336539213] [curobo_planner_node]: Plan OK 1279ms 31pts 0.56s | goal=['-250', '532', '805']mm | end_J=[124.8, 31.0, 10.1, 137.3, -57.3, 117.2]deg
+[planner] [INFO] [1792575966.337283021] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['128.5', '19.3', '28.9', '130.0', '-54.3', '125.6']deg
+[bridge]  [INFO] [1792575966.338231431] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792575967.187118174] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.22deg (손끝 1.5mm) / 대기 0.26s
+[bridge]  [INFO] [1792575967.187534579] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[128.5 19.3 28.9 130.0 -54.3 125.6]deg
+[planner] [INFO] [1792575967.188886099] [curobo_planner_node]: PRE_APPROACH_REACHED — settling 0.3s before 45mm straight approach
+[planner] [INFO] [1792575967.489624360] [curobo_planner_node]: FINAL_APPROACH_STRAIGHT TOOL +Z 45.0mm vel=60.0mm/s
+[bridge]  [INFO] [1792575967.490604846] [sim_executor_bridge_node]: MoveLine called (pos=[ 0.  0. 45.  0.  0.  0.], ref=1, mode=1)
+[bridge]  [INFO] [1792575970.860199328] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.30deg (손끝 0.4mm) / 대기 0.18s
+[bridge]  [INFO] [1792575970.860634424] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.4mm lateral=0.0mm |err|=0.4mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792575970.860800643] [sim_executor_bridge_node]: MoveLine 실이동 44.6mm / 명령 45mm
+[bridge]  [INFO] [1792575970.860952301] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.75s 실소요 3.37s (worst step joint delta 1.5deg)
+[planner] [INFO] [1792575970.895174296] [curobo_planner_node]: GRASP_POSE_REACHED — offset=+0.015m pre=6cm+45mm+0mm variant=('base', [1, 0, 0], 0.0) elevation=-0.0deg (attempt 7/12)
+[planner] [WARN] [1792575970.895537963] [curobo_planner_node]: OPEN_DESCENT_DYNAMIC: kp1_z=775mm reached_z=805mm overshoot=30mm extra_below_kp1=0mm -> descent=30mm
+[planner] [INFO] [1792575970.895738632] [curobo_planner_node]: OPEN_STEM_DESCENT — gripper=600, BASE -Z 30mm to KP1
+[planner] [INFO] [1792575970.896014671] [curobo_planner_node]: OPEN_STEM_DESCENT BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-30.0)]mm dist=30.0mm vel=40.0mm/s
+[bridge]  [INFO] [1792575970.897291153] [sim_executor_bridge_node]: MoveLine called (pos=[  0.        0.      -30.00054   0.        0.        0.     ], ref=0, mode=1)
+[bridge]  [INFO] [1792575973.503419412] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.25deg (손끝 0.5mm) / 대기 0.12s
+[bridge]  [INFO] [1792575973.503862944] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.5mm lateral=0.0mm |err|=0.5mm (명령 30mm, BASE)
+[bridge]  [INFO] [1792575973.504015682] [sim_executor_bridge_node]: MoveLine 실이동 29.5mm / 명령 30mm
+[bridge]  [INFO] [1792575973.504155627] [sim_executor_bridge_node]: MoveLine ok: 30mm / 16 steps / 계획 0.75s 실소요 2.61s (worst step joint delta 2.3deg)
+[planner] [INFO] [1792575973.550572438] [curobo_planner_node]: 3 close gripper + verify grasp
+[bridge]  [INFO] [1792575973.551720260] [sim_executor_bridge_node]: SetPosition called to 700
+[bridge]  [INFO] [1792575973.552963238] [sim_executor_bridge_node]: GRASP_JUDGE 줄기기준 along=+15.3mm(조우 -6~27) lateral=0.4mm(허용20) | 과실기준 d_tcp=38.5mm -> CONTACT
+[bridge]  [INFO] [1792575973.553167881] [sim_executor_bridge_node]: GRASP_ATTACH 과실 (-250, 783, 740)mm -> /sim/grasp_event
+[planner] [INFO] [1792575973.951554265] [curobo_planner_node]: VERIFY_GRASP: GRASP_CONTACT_DETECTED present_pos=670 current_raw=200 — jaw stopped before calibrated contact threshold (pos=670 <= 685); position-based grasp detected
+[planner] [INFO] [1792575973.951887933] [curobo_planner_node]: 4 detach pull — BASE -Z 40mm at 50mm/s
+[bridge]  [INFO] [1792575973.953271972] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -40.   0.   0.   0.], ref=0, mode=1)
+[bridge]  [INFO] [1792575976.935309752] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.30deg (손끝 1.0mm) / 대기 0.08s
+[bridge]  [INFO] [1792575976.935773209] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.0mm lateral=0.0mm |err|=1.0mm (명령 40mm, BASE)
+[bridge]  [INFO] [1792575976.935939948] [sim_executor_bridge_node]: MoveLine 실이동 39.0mm / 명령 40mm
+[bridge]  [INFO] [1792575976.936089200] [sim_executor_bridge_node]: MoveLine ok: 40mm / 20 steps / 계획 0.80s 실소요 2.98s (worst step joint delta 0.9deg)
+[planner] [INFO] [1792575976.956567565] [curobo_planner_node]: DETACH_PULL_DOWN: BASE -Z 40mm -> OK
+[planner] [INFO] [1792575976.956977036] [curobo_planner_node]: RETREAT TOOL -Z 45.0mm vel=80.0mm/s
+[bridge]  [INFO] [1792575976.957816728] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -45.   0.   0.   0.], ref=1, mode=1)
+[bridge]  [INFO] [1792575979.955973786] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.28deg (손끝 1.7mm) / 대기 0.04s
+[bridge]  [INFO] [1792575979.956434184] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.7mm lateral=0.0mm |err|=1.7mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792575979.956612905] [sim_executor_bridge_node]: MoveLine 실이동 43.3mm / 명령 45mm
+[bridge]  [INFO] [1792575979.956776023] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.56s 실소요 3.00s (worst step joint delta 0.4deg)
+[planner] [WARN] [1792575980.263072221] [curobo_planner_node]: TAUGHT_TRAY_GRID_PLACE active: slot=0; fixed tray pose only; marker localization is bypassed
+[planner] [INFO] [1792575980.264204161] [curobo_planner_node]: TAUGHT_TRAY_SLOT0_ABOVE generated from Slot0 FK + grid offset: clearance=120mm goal_mm=[519.9, 52.3, 185.6]
+[planner] [INFO] [1792575980.314846511] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792575981.540734987] [curobo_planner_node]: Plan OK 1225ms 57pts 1.02s | goal=['520', '52', '186']mm | end_J=[4.4, 31.0, 123.9, 175.6, 64.6, 94.7]deg
+[planner] [INFO] [1792575981.541483657] [curobo_planner_node]: Spline 12pts plan=1.02s exec=0.89s -> end=['4.4', '31.0', '123.9', '175.6', '64.6', '94.7']deg
+[bridge]  [INFO] [1792575981.543054642] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792575983.012133478] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 2.5mm) / 대기 0.40s
+[bridge]  [INFO] [1792575983.012511744] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.05s -> end=[4.4 31.0 123.9 175.6 64.6 94.7]deg
+[planner] [INFO] [1792575983.044532934] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE -Z 120mm
+[planner] [INFO] [1792575983.044919023] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-120.0)]mm dist=120.0mm vel=40.0mm/s
+[bridge]  [INFO] [1792575983.046066604] [sim_executor_bridge_node]: MoveLine called (pos=[   0.    0. -120.    0.    0.    0.], ref=0, mode=1)
+[bridge]  [INFO] [1792575983.047644642] [sim_executor_bridge_node]: MoveLine 120mm: 60 -> 24 steps (5.0mm/step, 자유공간 이송)
+[bridge]  [INFO] [1792575987.590642231] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.27deg (손끝 1.6mm) / 대기 0.08s
+[bridge]  [INFO] [1792575987.591186782] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.6mm lateral=0.0mm |err|=1.6mm (명령 120mm, BASE)
+[bridge]  [INFO] [1792575987.591400185] [sim_executor_bridge_node]: MoveLine 실이동 118.4mm / 명령 120mm
+[bridge]  [INFO] [1792575987.591592780] [sim_executor_bridge_node]: MoveLine ok: 120mm / 24 steps / 계획 2.00s 실소요 4.54s (worst step joint delta 0.9deg)
+[planner] [WARN] [1792575987.602519723] [curobo_planner_node]: TAUGHT_TRAY_SLOT0_PLACE_RELEASE: position_cmd=600
+[bridge]  [INFO] [1792575987.603226193] [sim_executor_bridge_node]: SetPosition called to 600
+[bridge]  [INFO] [1792575987.603446155] [sim_executor_bridge_node]: GRASP_RELEASE -> /sim/grasp_event
+[planner] [INFO] [1792575987.653062937] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_ASCEND joint-space return to above pose (avoid raw BASE +Z branch/limit jump after release)
+[planner] [INFO] [1792575988.694811816] [curobo_planner_node]: Plan OK 1041ms 31pts 0.56s | goal=['520', '52', '186']mm | end_J=[4.4, 31.0, 123.9, 175.6, 64.6, 94.7]deg
+[planner] [INFO] [1792575988.695602247] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['4.4', '31.0', '123.9', '175.6', '64.6', '94.7']deg
+[bridge]  [INFO] [1792575988.697094693] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792575989.543766862] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.28deg (손끝 1.5mm) / 대기 0.26s
+[bridge]  [INFO] [1792575989.544142467] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[4.4 31.0 123.9 175.6 64.6 94.7]deg
+[planner] [harvest_probe] 결과 바 2번째 = placed (배치 성공, place_status=success)
+[planner] [WARN] [1792575989.547884066] [curobo_planner_node]: TAUGHT_TRAY_SLOT_SEQUENCE: slot 0 -> 1 (sequence=[0, 1, 3, 4, 6, 7, 9, 10])
+[planner] [INFO] [1792575989.548136819] [curobo_planner_node]: 7 return to pick-start scan pose
+[planner] [INFO] [1792575991.310978192] [curobo_planner_node]: pick-start scan pose after pick/place JS Plan OK 1762ms 82pts 1.46s | goal=['144.6', '31.8', '10.9', '114.4', '-65.7', '128.3']deg
+[planner] [INFO] [1792575991.311794667] [curobo_planner_node]: Spline 12pts plan=1.46s exec=1.27s -> end=['144.6', '31.8', '10.9', '114.4', '-65.7', '128.3']deg
+[bridge]  [INFO] [1792575991.313428511] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792575993.195870100] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 2.3mm) / 대기 0.36s
+[bridge]  [INFO] [1792575993.196256877] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.50s -> end=[144.6 31.8 10.9 114.4 -65.7 128.3]deg
+[planner] [INFO] [1792575993.217893055] [curobo_planner_node]: World updated (neighbor obstacles cleared): static=1 dynamic=0 neighbor_spheres=0
+[bridge]  [INFO] [1792575993.218911900] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792575993.268782762] [curobo_planner_node]: === PICK COMPLETE (DETACH_SUCCESS_UNVERIFIED) ===
+[scan]    [INFO] [1792575993.269540257] [scan_executor_node]: PICK_ATTEMPT_DONE root/nw/sw 2/2 — planner sequence ended (success is verified by gripper/manual KPI, not this Empty topic)
+[scan]    [INFO] [1792575993.269969219] [scan_executor_node]: PICK_ATTEMPT_SETTLE 1.0s before next target
+[scan]    [INFO] [1792575994.270871821] [scan_executor_node]: PICK_SEQUENCE_DONE root/nw/sw — 2/2 attempted
+[vision]  [INFO] [1792575994.271383912] [fake_vision_node]: SCAN_CELL root/nw/sw (PICK_ATTEMPTED) -> 시야 = x[-0.495,0.050] z[0.660,1.055]
+[scan]    [INFO] [1792575994.512757631] [scan_executor_node]: SUBCELL_POSE root/nw/se tier=lab_plane dJ_max=56.9deg dJ=[34 31 57 37 16 20] ee_mm=[-225.5, 339.0, 902.3] -> [-89.2, 433.0, 803.5] joints_deg=[109.8 54.1 -57.9 -201.4 -90.9 88.7] (실기 깊이 2 평면 y=0.433 로 이동, 부모 시드 IK)
+[scan]    [INFO] [1792575994.513188554] [scan_executor_node]: MOVING_TO root/nw/se  endpoint_deg=[109.8 54.1 -57.9 -201.4 -90.9 88.7]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792575994.513395308] [scan_executor_node]: Joint equivalent rewrite J4 -201.4 -> 158.6 deg (current 114.4, shorter by 271.6 deg)
+[scan]    [INFO] [1792575994.513619005] [scan_executor_node]: Joint equivalent rewrite J4 -201.4 -> 158.6 deg (current 114.4, shorter by 271.6 deg)
+[bridge]  [INFO] [1792575994.514662121] [sim_executor_bridge_node]: MoveJoint called to [109.8, 54.1, -57.9, 158.6, -90.9, 88.7] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792575996.328876107] [sim_executor_bridge_node]: MoveJoint profile: span 68.8deg / 1.81s (363 steps)
+[bridge]  [INFO] [1792575996.470791466] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.26deg (손끝 1.0mm) / 대기 0.14s
+[scan]    [INFO] [1792575996.517667888] [scan_executor_node]: MoveJoint response: success=True  target=[109.8 54.1 -57.9 158.6 -90.9 88.7]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792575996.518186165] [scan_executor_node]: AT_SCAN_POSE root/nw/se joints_deg=[109.9 54.0 -57.8 158.5 -90.8 88.8] — adaptive detection wait up to 3.0s
+[vision]  [INFO] [1792575996.518242453] [fake_vision_node]: SCAN_CELL root/nw/se (VIEWING) -> 시야 = x[-0.223,0.050] z[0.660,0.857]
+[scan]    [INFO] [1792575999.522955630] [scan_executor_node]: SUBCELL_SCAN root/nw/se raw=3 in_cell=3 unique=1 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792575999.523502792] [scan_executor_node]: PICK_SEQUENCE_START root/nw/se — 1 candidate targets (raw=1 skipped_attempted=0)
+[scan]    [INFO] [1792575999.523715025] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/nw/se timeout=60s max_total_picks=0
+[scan]    [INFO] [1792575999.523912337] [scan_executor_node]: PICK_ATTEMPT_BLACKLIST_ADD pos=(-120,783,760)mm radius=25mm
+[scan]    [INFO] [1792575999.524144013] [scan_executor_node]: PICK_TRIGGER root/nw/se 1/1 pos=(-120,783,760)mm
+[planner] [INFO] [1792575999.574906514] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792575999.575462424] [curobo_planner_node]: === PICK 딸기 raw=(-120,783,760)mm grasp=(-120,783,795)mm det_y=783mm x_bias=+0mm z_bias=+35mm ===
+[planner] [INFO] [1792575999.575678605] [curobo_planner_node]: 1 open gripper for stem descent: set_position=600
+[bridge]  [INFO] [1792575999.576393577] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792575999.627703566] [curobo_planner_node]: World updated (neighbor obstacles registered): static=1 dynamic=0 neighbor_spheres=0
+[planner] [INFO] [1792575999.628230746] [curobo_planner_node]: Registered 0 neighbor sphere obstacle(s); self-excluded 1 within 50mm of target
+[planner] [INFO] [1792575999.629001100] [curobo_planner_node]: 2 grasp (CuRobo 2-step 6cm pre) — trying 3 offsets × 4 quats | target=(-120,783,795)mm | start_J1=109.8°
+[planner] [ERROR] [1792576000.042347570] [curobo_planner_node]: Plan FAIL 413ms | status=MotionGenStatus.IK_FAIL | goal=['-120', '491', '876']mm | start_J=[109.8, 54.1, -57.9, 158.6, -90.9, 88.7]deg
+[planner] [INFO] [1792576000.927264031] [curobo_planner_node]: Plan OK 884ms 32pts 0.57s | goal=['-120', '488', '851']mm | end_J=[110.8, 32.4, -10.7, 158.5, -74.7, 98.5]deg
+[planner] [ERROR] [1792576001.368868652] [curobo_planner_node]: Plan FAIL 441ms | status=MotionGenStatus.IK_FAIL | goal=['-120', '533', '847']mm | start_J=[110.8, 32.4, -10.7, 158.5, -74.7, 98.5]deg
+[planner] [ERROR] [1792576001.499139005] [curobo_planner_node]: Plan FAIL 130ms | status=MotionGenStatus.IK_FAIL | goal=['-120', '528', '847']mm | start_J=[110.8, 32.4, -10.7, 158.5, -74.7, 98.5]deg
+[planner] [ERROR] [1792576001.648768801] [curobo_planner_node]: Plan FAIL 149ms | status=MotionGenStatus.IK_FAIL | goal=['-120', '523', '848']mm | start_J=[110.8, 32.4, -10.7, 158.5, -74.7, 98.5]deg
+[planner] [INFO] [1792576002.924891850] [curobo_planner_node]: Plan OK 1275ms 31pts 0.56s | goal=['-120', '487', '825']mm | end_J=[110.9, 47.4, -37.8, 158.8, -81.1, 94.1]deg
+[planner] [INFO] [1792576004.219013139] [curobo_planner_node]: Plan OK 1293ms 31pts 0.56s | goal=['-120', '532', '825']mm | end_J=[108.5, 44.4, -25.9, 160.6, -72.5, 96.7]deg
+[planner] [INFO] [1792576004.219748895] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['110.9', '47.4', '-37.8', '158.8', '-81.1', '94.1']deg
+[bridge]  [INFO] [1792576004.220883020] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576005.070144737] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.25deg (손끝 0.7mm) / 대기 0.26s
+[bridge]  [INFO] [1792576005.070348212] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[110.9 47.4 -37.8 158.8 -81.1 94.1]deg
+[planner] [INFO] [1792576005.071783215] [curobo_planner_node]: PRE_APPROACH_REACHED — settling 0.3s before 45mm straight approach
+[planner] [INFO] [1792576005.372828123] [curobo_planner_node]: FINAL_APPROACH_STRAIGHT TOOL +Z 45.0mm vel=60.0mm/s
+[bridge]  [INFO] [1792576005.373910836] [sim_executor_bridge_node]: MoveLine called (pos=[ 0.  0. 45.  0.  0.  0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576008.713660705] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.26deg (손끝 0.8mm) / 대기 0.12s
+[bridge]  [INFO] [1792576008.714102591] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.8mm lateral=0.0mm |err|=0.8mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576008.714266942] [sim_executor_bridge_node]: MoveLine 실이동 44.2mm / 명령 45mm
+[bridge]  [INFO] [1792576008.714420067] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.75s 실소요 3.34s (worst step joint delta 0.7deg)
+[planner] [INFO] [1792576008.728768882] [curobo_planner_node]: GRASP_POSE_REACHED — offset=+0.015m pre=6cm+45mm+0mm variant=('base', [1, 0, 0], 0.0) elevation=-0.0deg (attempt 7/12)
+[planner] [WARN] [1792576008.729193970] [curobo_planner_node]: OPEN_DESCENT_DYNAMIC: kp1_z=795mm reached_z=825mm overshoot=30mm extra_below_kp1=0mm -> descent=30mm
+[planner] [INFO] [1792576008.729446945] [curobo_planner_node]: OPEN_STEM_DESCENT — gripper=600, BASE -Z 30mm to KP1
+[planner] [INFO] [1792576008.729775998] [curobo_planner_node]: OPEN_STEM_DESCENT BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-30.0)]mm dist=30.0mm vel=40.0mm/s
+[bridge]  [INFO] [1792576008.730706805] [sim_executor_bridge_node]: MoveLine called (pos=[  0.        0.      -30.00054   0.        0.        0.     ], ref=0, mode=1)
+[bridge]  [INFO] [1792576011.223033843] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.29deg (손끝 0.8mm) / 대기 0.08s
+[bridge]  [INFO] [1792576011.223836233] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.8mm lateral=0.0mm |err|=0.8mm (명령 30mm, BASE)
+[bridge]  [INFO] [1792576011.224200097] [sim_executor_bridge_node]: MoveLine 실이동 29.2mm / 명령 30mm
+[bridge]  [INFO] [1792576011.224563548] [sim_executor_bridge_node]: MoveLine ok: 30mm / 16 steps / 계획 0.75s 실소요 2.49s (worst step joint delta 1.1deg)
+[planner] [INFO] [1792576011.234280253] [curobo_planner_node]: 3 close gripper + verify grasp
+[bridge]  [INFO] [1792576011.235497257] [sim_executor_bridge_node]: SetPosition called to 700
+[bridge]  [INFO] [1792576011.237106032] [sim_executor_bridge_node]: GRASP_JUDGE 줄기기준 along=+15.7mm(조우 -6~27) lateral=0.6mm(허용20) | 과실기준 d_tcp=38.9mm -> CONTACT
+[bridge]  [INFO] [1792576011.237324323] [sim_executor_bridge_node]: GRASP_ATTACH 과실 (-120, 783, 760)mm -> /sim/grasp_event
+[planner] [INFO] [1792576011.635451463] [curobo_planner_node]: VERIFY_GRASP: GRASP_CONTACT_DETECTED present_pos=670 current_raw=200 — jaw stopped before calibrated contact threshold (pos=670 <= 685); position-based grasp detected
+[planner] [INFO] [1792576011.635802514] [curobo_planner_node]: 4 detach pull — BASE -Z 40mm at 50mm/s
+[bridge]  [INFO] [1792576011.636954469] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -40.   0.   0.   0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576014.675413155] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.26deg (손끝 0.9mm) / 대기 0.08s
+[bridge]  [INFO] [1792576014.675867950] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.9mm lateral=0.0mm |err|=0.9mm (명령 40mm, BASE)
+[bridge]  [INFO] [1792576014.676047866] [sim_executor_bridge_node]: MoveLine 실이동 39.1mm / 명령 40mm
+[bridge]  [INFO] [1792576014.676217255] [sim_executor_bridge_node]: MoveLine ok: 40mm / 20 steps / 계획 0.80s 실소요 3.04s (worst step joint delta 0.8deg)
+[planner] [INFO] [1792576014.690378055] [curobo_planner_node]: DETACH_PULL_DOWN: BASE -Z 40mm -> OK
+[planner] [INFO] [1792576014.691077780] [curobo_planner_node]: RETREAT TOOL -Z 45.0mm vel=80.0mm/s
+[bridge]  [INFO] [1792576014.692116599] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -45.   0.   0.   0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576017.684641349] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.29deg (손끝 1.9mm) / 대기 0.04s
+[bridge]  [INFO] [1792576017.685265004] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.6mm lateral=0.0mm |err|=1.6mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576017.685456786] [sim_executor_bridge_node]: MoveLine 실이동 43.4mm / 명령 45mm
+[bridge]  [INFO] [1792576017.685627044] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.56s 실소요 2.99s (worst step joint delta 0.4deg)
+[planner] [WARN] [1792576017.997053706] [curobo_planner_node]: TAUGHT_TRAY_GRID_PLACE active: slot=1; fixed tray pose only; marker localization is bypassed
+[planner] [INFO] [1792576017.998181428] [curobo_planner_node]: TAUGHT_TRAY_SLOT1_ABOVE generated from Slot0 FK + grid offset: clearance=120mm goal_mm=[460.2, 55.8, 186.5]
+[planner] [INFO] [1792576018.048860905] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576019.303245342] [curobo_planner_node]: Plan OK 1253ms 66pts 1.19s | goal=['460', '56', '186']mm | end_J=[186.0, -26.4, -134.0, 177.4, -70.0, -86.3]deg
+[planner] [INFO] [1792576019.304358156] [curobo_planner_node]: Spline 12pts plan=1.19s exec=1.04s -> end=['186.0', '-26.4', '-134.0', '177.4', '-70.0', '-86.3']deg
+[bridge]  [INFO] [1792576019.305955163] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576021.214710403] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 1.7mm) / 대기 0.40s
+[bridge]  [INFO] [1792576021.214905571] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.48s -> end=[186.0 -26.4 -134.0 177.4 -70.0 -86.3]deg
+[planner] [INFO] [1792576021.258436692] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE -Z 120mm
+[planner] [INFO] [1792576021.259084567] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-120.0)]mm dist=120.0mm vel=40.0mm/s
+[bridge]  [INFO] [1792576021.260417774] [sim_executor_bridge_node]: MoveLine called (pos=[   0.    0. -120.    0.    0.    0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576021.261633746] [sim_executor_bridge_node]: MoveLine 120mm: 60 -> 24 steps (5.0mm/step, 자유공간 이송)
+[bridge]  [INFO] [1792576025.859178281] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.26deg (손끝 1.3mm) / 대기 0.10s
+[bridge]  [INFO] [1792576025.859668114] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.3mm lateral=0.0mm |err|=1.3mm (명령 120mm, BASE)
+[bridge]  [INFO] [1792576025.859830127] [sim_executor_bridge_node]: MoveLine 실이동 118.7mm / 명령 120mm
+[bridge]  [INFO] [1792576025.859978292] [sim_executor_bridge_node]: MoveLine ok: 120mm / 24 steps / 계획 2.00s 실소요 4.60s (worst step joint delta 1.0deg)
+[planner] [WARN] [1792576025.866199985] [curobo_planner_node]: TAUGHT_TRAY_SLOT1_PLACE_RELEASE: position_cmd=600
+[bridge]  [INFO] [1792576025.867608608] [sim_executor_bridge_node]: SetPosition called to 600
+[bridge]  [INFO] [1792576025.867826524] [sim_executor_bridge_node]: GRASP_RELEASE -> /sim/grasp_event
+[planner] [INFO] [1792576025.916961283] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_ASCEND joint-space return to above pose (avoid raw BASE +Z branch/limit jump after release)
+[planner] [INFO] [1792576026.900980095] [curobo_planner_node]: Plan OK 981ms 47pts 0.84s | goal=['460', '56', '186']mm | end_J=[186.0, -26.4, -134.0, 177.4, -70.0, -86.3]deg
+[planner] [INFO] [1792576026.902168615] [curobo_planner_node]: Spline 12pts plan=0.84s exec=0.73s -> end=['186.0', '-26.4', '-134.0', '177.4', '-70.0', '-86.3']deg
+[bridge]  [INFO] [1792576026.903130241] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576027.898358463] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.29deg (손끝 1.7mm) / 대기 0.26s
+[bridge]  [INFO] [1792576027.898556338] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.73s -> end=[186.0 -26.4 -134.0 177.4 -70.0 -86.3]deg
+[planner] [harvest_probe] 결과 바 3번째 = placed (배치 성공, place_status=success)
+[planner] [WARN] [1792576027.904327015] [curobo_planner_node]: TAUGHT_TRAY_SLOT_SEQUENCE: slot 1 -> 3 (sequence=[0, 1, 3, 4, 6, 7, 9, 10])
+[planner] [INFO] [1792576027.904544023] [curobo_planner_node]: 7 return to pick-start scan pose
+[planner] [INFO] [1792576029.453444314] [curobo_planner_node]: pick-start scan pose after pick/place JS Plan OK 1548ms 70pts 1.25s | goal=['109.8', '54.1', '-57.9', '158.6', '-90.9', '88.7']deg
+[planner] [INFO] [1792576029.454258603] [curobo_planner_node]: Spline 12pts plan=1.25s exec=1.09s -> end=['109.8', '54.1', '-57.9', '158.6', '-90.9', '88.7']deg
+[bridge]  [INFO] [1792576029.455608448] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576031.346794537] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 2.0mm) / 대기 0.40s
+[bridge]  [INFO] [1792576031.347186265] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.46s -> end=[109.8 54.1 -57.9 158.6 -90.9 88.7]deg
+[bridge]  [INFO] [1792576031.358331512] [sim_executor_bridge_node]: SetPosition called to 600
+[scan]    [INFO] [1792576031.410314772] [scan_executor_node]: PICK_ATTEMPT_DONE root/nw/se 1/1 — planner sequence ended (success is verified by gripper/manual KPI, not this Empty topic)
+[scan]    [INFO] [1792576031.410531909] [scan_executor_node]: PICK_ATTEMPT_SETTLE 1.0s before next target
+[planner] [INFO] [1792576031.410622144] [curobo_planner_node]: === PICK COMPLETE (DETACH_SUCCESS_UNVERIFIED) ===
+[scan]    [INFO] [1792576032.411572040] [scan_executor_node]: PICK_SEQUENCE_DONE root/nw/se — 1/1 attempted
+[scan]    [INFO] [1792576032.411794122] [scan_executor_node]: SUBCELL_EMPTY root/nw/nw no pick candidate — 2단 가지치기
+[scan]    [INFO] [1792576032.411967965] [scan_executor_node]: SUBCELL_EMPTY root/nw/ne no pick candidate — 2단 가지치기
+[vision]  [INFO] [1792576032.412047793] [fake_vision_node]: SCAN_CELL root/nw/se (PICK_ATTEMPTED) -> 시야 = x[-0.495,0.050] z[0.660,1.055]
+[scan]    [INFO] [1792576032.412296130] [scan_executor_node]: INTER_CELL_DIRECT — no overview reset; continuing to next cell
+[scan]    [INFO] [1792576032.412471072] [scan_executor_node]: CELL_RESCAN_AFTER_PICK root/nw pass=1 — checking remaining targets
+[scan]    [INFO] [1792576032.412787500] [scan_executor_node]: MOVING_TO root/nw  endpoint_deg=[144.1 22.9 -1.0 -238.5 -75.3 108.7]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576032.413159473] [scan_executor_node]: Joint equivalent rewrite J4 -238.5 -> 121.5 deg (current 158.6, shorter by 360.0 deg)
+[scan]    [INFO] [1792576032.413527032] [scan_executor_node]: Joint equivalent rewrite J4 -238.5 -> 121.5 deg (current 158.6, shorter by 360.0 deg)
+[bridge]  [INFO] [1792576032.414912533] [sim_executor_bridge_node]: MoveJoint called to [144.1, 22.9, -1.0, 121.5, -75.3, 108.7] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576034.031110047] [sim_executor_bridge_node]: MoveJoint profile: span 56.9deg / 1.62s (324 steps)
+[bridge]  [INFO] [1792576034.172640034] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.27deg (손끝 0.9mm) / 대기 0.14s
+[scan]    [INFO] [1792576034.216826892] [scan_executor_node]: MoveJoint response: success=True  target=[144.1 22.9 -1.0 121.5 -75.3 108.7]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576034.218486030] [scan_executor_node]: AT_SCAN_POSE root/nw joints_deg=[144.0 23.0 -1.2 121.6 -75.4 108.6] — adaptive detection wait up to 3.0s
+[scan]    [INFO] [1792576037.222715338] [scan_executor_node]: TARGET_FOUND root/nw 9 pick candidate(s) detected
+[scan]    [INFO] [1792576037.223210051] [scan_executor_node]: SUBCELL_SCAN_ORDER root/nw root/nw/sw:2  root/nw/se:1  root/nw/nw:0  root/nw/ne:0
+[scan]    [INFO] [1792576037.223717214] [scan_executor_node]: SUBDIVIDE root/nw candidates=3 >= 3 cells=['sw', 'se'] — 후보 있는 세부 칸만 세부 자세로 방문
+[scan]    [INFO] [1792576037.362462547] [scan_executor_node]: SUBCELL_POSE root/nw/sw tier=lab_plane dJ_max=19.6deg dJ=[0 9 12 7 10 20] ee_mm=[-225.5, 339.0, 902.3] -> [-361.7, 433.0, 803.5] joints_deg=[144.6 31.8 10.9 -245.6 -65.7 128.3] (실기 깊이 2 평면 y=0.433 로 이동, 부모 시드 IK)
+[scan]    [INFO] [1792576037.362894313] [scan_executor_node]: MOVING_TO root/nw/sw  endpoint_deg=[144.6 31.8 10.9 -245.6 -65.7 128.3]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576037.363097119] [scan_executor_node]: Joint equivalent rewrite J4 -245.6 -> 114.4 deg (current 121.5, shorter by 360.0 deg)
+[scan]    [INFO] [1792576037.363308597] [scan_executor_node]: Joint equivalent rewrite J4 -245.6 -> 114.4 deg (current 121.5, shorter by 360.0 deg)
+[bridge]  [INFO] [1792576037.364341495] [sim_executor_bridge_node]: MoveJoint called to [144.6, 31.8, 10.9, 114.4, -65.7, 128.3] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576038.298788665] [sim_executor_bridge_node]: MoveJoint profile: span 19.6deg / 0.93s (187 steps)
+[bridge]  [INFO] [1792576038.440135012] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.27deg (손끝 2.5mm) / 대기 0.14s
+[scan]    [INFO] [1792576038.464991796] [scan_executor_node]: MoveJoint response: success=True  target=[144.6 31.8 10.9 114.4 -65.7 128.3]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576038.465354737] [scan_executor_node]: AT_SCAN_POSE root/nw/sw joints_deg=[144.6 31.7 10.7 114.5 -65.8 128.1] — adaptive detection wait up to 3.0s
+[vision]  [INFO] [1792576038.465822150] [fake_vision_node]: SCAN_CELL root/nw/sw (VIEWING) -> 시야 = x[-0.495,-0.223] z[0.660,0.857]
+[scan]    [INFO] [1792576041.470328777] [scan_executor_node]: SUBCELL_SCAN root/nw/sw raw=6 in_cell=6 unique=2 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792576041.470757139] [scan_executor_node]: PICK_SKIP_ATTEMPTED root/nw/sw pos=(-380,783,720)mm
+[scan]    [INFO] [1792576041.471032039] [scan_executor_node]: PICK_SKIP_ATTEMPTED root/nw/sw pos=(-250,783,740)mm
+[scan]    [INFO] [1792576041.471367049] [scan_executor_node]: PICK_SEQUENCE_START root/nw/sw — 0 candidate targets (raw=2 skipped_attempted=2)
+[scan]    [INFO] [1792576041.471590284] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/nw/sw timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576041.471834423] [scan_executor_node]: PICK_SEQUENCE_DONE root/nw/sw — 0/0 attempted
+[vision]  [INFO] [1792576041.472383834] [fake_vision_node]: SCAN_CELL root/nw/sw (SCANNED_EMPTY) -> 시야 = x[-0.495,0.050] z[0.660,1.055]
+[scan]    [INFO] [1792576041.601437129] [scan_executor_node]: SUBCELL_POSE root/nw/se tier=lab_plane dJ_max=56.9deg dJ=[34 31 57 37 16 20] ee_mm=[-225.5, 339.0, 902.3] -> [-89.2, 433.0, 803.5] joints_deg=[109.8 54.1 -57.9 -201.4 -90.9 88.7] (실기 깊이 2 평면 y=0.433 로 이동, 부모 시드 IK)
+[scan]    [INFO] [1792576041.601922236] [scan_executor_node]: MOVING_TO root/nw/se  endpoint_deg=[109.8 54.1 -57.9 -201.4 -90.9 88.7]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576041.602179699] [scan_executor_node]: Joint equivalent rewrite J4 -201.4 -> 158.6 deg (current 114.4, shorter by 271.7 deg)
+[scan]    [INFO] [1792576041.602408267] [scan_executor_node]: Joint equivalent rewrite J4 -201.4 -> 158.6 deg (current 114.4, shorter by 271.7 deg)
+[bridge]  [INFO] [1792576041.603234870] [sim_executor_bridge_node]: MoveJoint called to [109.8, 54.1, -57.9, 158.6, -90.9, 88.7] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576043.417297900] [sim_executor_bridge_node]: MoveJoint profile: span 68.8deg / 1.81s (363 steps)
+[bridge]  [INFO] [1792576043.559134082] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.27deg (손끝 1.0mm) / 대기 0.14s
+[scan]    [INFO] [1792576043.606412930] [scan_executor_node]: MoveJoint response: success=True  target=[109.8 54.1 -57.9 158.6 -90.9 88.7]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576043.607093274] [scan_executor_node]: AT_SCAN_POSE root/nw/se joints_deg=[109.9 54.0 -57.8 158.5 -90.8 88.8] — adaptive detection wait up to 3.0s
+[vision]  [INFO] [1792576043.607198796] [fake_vision_node]: SCAN_CELL root/nw/se (VIEWING) -> 시야 = x[-0.223,0.050] z[0.660,0.857]
+[scan]    [INFO] [1792576046.612022490] [scan_executor_node]: SUBCELL_SCAN root/nw/se raw=3 in_cell=3 unique=1 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792576046.612389707] [scan_executor_node]: PICK_SKIP_ATTEMPTED root/nw/se pos=(-120,783,760)mm
+[scan]    [INFO] [1792576046.612680477] [scan_executor_node]: PICK_SEQUENCE_START root/nw/se — 0 candidate targets (raw=1 skipped_attempted=1)
+[scan]    [INFO] [1792576046.612873736] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/nw/se timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576046.613079262] [scan_executor_node]: PICK_SEQUENCE_DONE root/nw/se — 0/0 attempted
+[scan]    [INFO] [1792576046.613277628] [scan_executor_node]: SUBCELL_EMPTY root/nw/nw no pick candidate — 2단 가지치기
+[scan]    [INFO] [1792576046.613459110] [scan_executor_node]: SUBCELL_EMPTY root/nw/ne no pick candidate — 2단 가지치기
+[scan]    [INFO] [1792576046.613791516] [scan_executor_node]: INTER_CELL_DIRECT — no overview reset; continuing to next cell
+[vision]  [INFO] [1792576046.613798759] [fake_vision_node]: SCAN_CELL root/nw/se (SCANNED_EMPTY) -> 시야 = x[-0.495,0.050] z[0.660,1.055]
+[scan]    [INFO] [1792576046.614133836] [scan_executor_node]: MOVING_TO root/ne  endpoint_deg=[18.9 26.0 1.0 74.6 78.2 -115.6]  (direct MoveJoint, YAML pose)
+[vision]  [INFO] [1792576046.614859596] [fake_vision_node]: SCAN_CELL root/ne (SCANNING) -> 시야 = x[0.050,0.595] z[0.660,1.055]
+[bridge]  [INFO] [1792576046.615181099] [sim_executor_bridge_node]: MoveJoint called to [18.9, 26.0, 1.0, 74.6, 78.2, -115.6] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576050.688301419] [sim_executor_bridge_node]: MoveJoint profile: span 204.3deg / 4.07s (815 steps)
+[bridge]  [INFO] [1792576050.829982474] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.29deg (손끝 1.4mm) / 대기 0.14s
+[scan]    [INFO] [1792576050.871139282] [scan_executor_node]: MoveJoint response: success=True  target=[18.9 26.0 1.0 74.6 78.2 -115.6]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576050.871736645] [scan_executor_node]: AT_SCAN_POSE root/ne joints_deg=[19.0 26.0 0.9 74.6 78.0 -115.4] — adaptive detection wait up to 3.0s
+[scan]    [INFO] [1792576053.876596014] [scan_executor_node]: TARGET_FOUND root/ne 6 pick candidate(s) detected
+[scan]    [INFO] [1792576053.876952806] [scan_executor_node]: SUBCELL_SCAN_ORDER root/ne root/ne/sw:2  root/ne/se:0  root/ne/nw:0  root/ne/ne:0
+[scan]    [INFO] [1792576053.877156149] [scan_executor_node]: SUBDIVIDE_SKIP root/ne candidates=2 < 3 — 잎(leaf), 부모 자세에서 pick
+[scan]    [INFO] [1792576053.877611636] [scan_executor_node]: PICK_SEQUENCE_START root/ne/sw — 2 candidate targets (raw=2 skipped_attempted=0)
+[scan]    [INFO] [1792576053.877802114] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/ne/sw timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576053.878001910] [scan_executor_node]: PICK_ATTEMPT_BLACKLIST_ADD pos=(280,783,700)mm radius=25mm
+[scan]    [INFO] [1792576053.878236221] [scan_executor_node]: PICK_TRIGGER root/ne/sw 1/2 pos=(280,783,700)mm
+[planner] [INFO] [1792576053.929495295] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576053.930115209] [curobo_planner_node]: === PICK 딸기 raw=(280,783,700)mm grasp=(280,783,735)mm det_y=783mm x_bias=+0mm z_bias=+35mm ===
+[planner] [INFO] [1792576053.930377142] [curobo_planner_node]: 1 open gripper for stem descent: set_position=600
+[bridge]  [INFO] [1792576053.931283660] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792576053.985122228] [curobo_planner_node]: World updated (neighbor obstacles registered): static=1 dynamic=0 neighbor_spheres=1
+[planner] [INFO] [1792576053.985501691] [curobo_planner_node]: Registered 1 neighbor sphere obstacle(s); self-excluded 1 within 50mm of target
+[planner] [INFO] [1792576053.985983122] [curobo_planner_node]: 2 grasp (CuRobo 2-step 6cm pre) — trying 5 offsets × 4 quats | target=(280,783,735)mm | start_J1=18.9°
+[planner] [ERROR] [1792576054.395223224] [curobo_planner_node]: Plan FAIL 409ms | status=MotionGenStatus.IK_FAIL | goal=['280', '491', '816']mm | start_J=[18.9, 26.0, 1.0, 74.6, 78.2, -115.6]deg
+[planner] [INFO] [1792576055.306590275] [curobo_planner_node]: Plan OK 910ms 31pts 0.56s | goal=['280', '488', '791']mm | end_J=[48.5, 25.1, 19.9, 48.3, 62.2, -121.3]deg
+[planner] [ERROR] [1792576055.690884363] [curobo_planner_node]: Plan FAIL 384ms | status=MotionGenStatus.IK_FAIL | goal=['280', '578', '783']mm | start_J=[48.5, 25.1, 19.9, 48.3, 62.2, -121.3]deg
+[planner] [ERROR] [1792576055.824991355] [curobo_planner_node]: Plan FAIL 133ms | status=MotionGenStatus.IK_FAIL | goal=['280', '548', '786']mm | start_J=[48.5, 25.1, 19.9, 48.3, 62.2, -121.3]deg
+[planner] [INFO] [1792576056.720558506] [curobo_planner_node]: Plan OK 895ms 31pts 0.56s | goal=['280', '533', '787']mm | end_J=[52.2, 36.9, 1.0, 42.1, 65.1, -113.7]deg
+[planner] [INFO] [1792576056.721319224] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['48.5', '25.1', '19.9', '48.3', '62.2', '-121.3']deg
+[bridge]  [INFO] [1792576056.722672811] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576057.614987148] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.29deg (손끝 2.4mm) / 대기 0.30s
+[bridge]  [INFO] [1792576057.615172669] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[48.5 25.1 19.9 48.3 62.2 -121.3]deg
+[planner] [INFO] [1792576057.623064338] [curobo_planner_node]: PRE_APPROACH_REACHED — settling 0.3s before 45mm straight approach
+[planner] [INFO] [1792576057.923896552] [curobo_planner_node]: FINAL_APPROACH_STRAIGHT TOOL +Z 45.0mm vel=60.0mm/s
+[bridge]  [INFO] [1792576057.924880674] [sim_executor_bridge_node]: MoveLine called (pos=[ 0.  0. 45.  0.  0.  0.], ref=1, mode=1)
+[bridge]  [WARN] [1792576061.538575949] [sim_executor_bridge_node]: MoveLine IK Failed at step 23/23 (45/45mm, best delta=infdeg)
+[planner] [ERROR] [1792576061.580000666] [curobo_planner_node]: FINAL_APPROACH_STRAIGHT MoveLine failed/timeout>30.0s
+[planner] [ERROR] [1792576061.580584541] [curobo_planner_node]: ABORT: 직선 진입 실패
+[planner] [INFO] [1792576061.581892489] [curobo_planner_node]: World updated (neighbor obstacles cleared): static=1 dynamic=0 neighbor_spheres=0
+[bridge]  [INFO] [1792576061.582911936] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792576063.165893666] [curobo_planner_node]: pick-start scan pose after abort JS Plan OK 1533ms 31pts 0.56s | goal=['18.9', '26.0', '1.0', '74.6', '78.2', '-115.6']deg
+[planner] [INFO] [1792576063.166599183] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['18.9', '26.0', '1.0', '74.6', '78.2', '-115.6']deg
+[bridge]  [INFO] [1792576063.168176181] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576064.079811920] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 1.8mm) / 대기 0.32s
+[bridge]  [INFO] [1792576064.080009235] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[18.9 26.0 1.0 74.6 78.2 -115.6]deg
+[planner] [INFO] [1792576064.118656367] [curobo_planner_node]: RETURN_TO_SCAN_OK (abort) -> [18.9 26.0 1.0 74.6 78.2 -115.6]deg
+[planner] [harvest_probe] 결과 바 4번째 = detach_failed (분리 실패, straight_entry)
+[scan]    [INFO] [1792576064.119355424] [scan_executor_node]: PICK_ATTEMPT_DONE root/ne/sw 1/2 — planner sequence ended (success is verified by gripper/manual KPI, not this Empty topic)
+[scan]    [INFO] [1792576064.119549926] [scan_executor_node]: PICK_ATTEMPT_SETTLE 1.0s before next target
+[scan]    [INFO] [1792576065.120775132] [scan_executor_node]: PICK_ATTEMPT_BLACKLIST_ADD pos=(200,783,740)mm radius=25mm
+[scan]    [INFO] [1792576065.121402016] [scan_executor_node]: PICK_TRIGGER root/ne/sw 2/2 pos=(200,783,740)mm
+[planner] [INFO] [1792576065.172558794] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576065.173469925] [curobo_planner_node]: === PICK 딸기 raw=(200,783,740)mm grasp=(200,783,775)mm det_y=783mm x_bias=+0mm z_bias=+35mm ===
+[planner] [INFO] [1792576065.173899787] [curobo_planner_node]: 1 open gripper for stem descent: set_position=600
+[bridge]  [INFO] [1792576065.175058164] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792576065.227166362] [curobo_planner_node]: World updated (neighbor obstacles registered): static=1 dynamic=0 neighbor_spheres=1
+[planner] [INFO] [1792576065.227666149] [curobo_planner_node]: Registered 1 neighbor sphere obstacle(s); self-excluded 1 within 50mm of target
+[planner] [INFO] [1792576065.228413298] [curobo_planner_node]: 2 grasp (CuRobo 2-step 6cm pre) — trying 3 offsets × 4 quats | target=(200,783,775)mm | start_J1=18.9°
+[planner] [ERROR] [1792576065.671861669] [curobo_planner_node]: Plan FAIL 443ms | status=MotionGenStatus.IK_FAIL | goal=['200', '491', '856']mm | start_J=[18.9, 26.0, 1.0, 74.6, 78.2, -115.6]deg
+[planner] [INFO] [1792576066.662685695] [curobo_planner_node]: Plan OK 990ms 31pts 0.56s | goal=['200', '488', '831']mm | end_J=[57.7, 24.7, 11.2, 36.0, 65.0, -109.5]deg
+[planner] [ERROR] [1792576067.104033379] [curobo_planner_node]: Plan FAIL 441ms | status=MotionGenStatus.IK_FAIL | goal=['200', '533', '827']mm | start_J=[57.7, 24.7, 11.2, 36.0, 65.0, -109.5]deg
+[planner] [ERROR] [1792576067.271615554] [curobo_planner_node]: Plan FAIL 167ms | status=MotionGenStatus.IK_FAIL | goal=['200', '528', '827']mm | start_J=[57.7, 24.7, 11.2, 36.0, 65.0, -109.5]deg
+[planner] [ERROR] [1792576067.412746467] [curobo_planner_node]: Plan FAIL 141ms | status=MotionGenStatus.IK_FAIL | goal=['200', '523', '828']mm | start_J=[57.7, 24.7, 11.2, 36.0, 65.0, -109.5]deg
+[planner] [INFO] [1792576068.612640835] [curobo_planner_node]: Plan OK 1199ms 32pts 0.56s | goal=['200', '487', '805']mm | end_J=[57.5, 13.1, 37.4, 45.0, 49.4, -122.4]deg
+[planner] [INFO] [1792576069.818853711] [curobo_planner_node]: Plan OK 1205ms 31pts 0.56s | goal=['200', '532', '805']mm | end_J=[60.9, 21.7, 25.4, 39.3, 50.2, -116.9]deg
+[planner] [INFO] [1792576069.819683002] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['57.5', '13.1', '37.4', '45.0', '49.4', '-122.4']deg
+[bridge]  [INFO] [1792576069.820958060] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576070.753575736] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.23deg (손끝 1.7mm) / 대기 0.34s
+[bridge]  [INFO] [1792576070.753795181] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[57.5 13.1 37.4 45.0 49.4 -122.4]deg
+[planner] [INFO] [1792576070.771430569] [curobo_planner_node]: PRE_APPROACH_REACHED — settling 0.3s before 45mm straight approach
+[planner] [INFO] [1792576071.072145538] [curobo_planner_node]: FINAL_APPROACH_STRAIGHT TOOL +Z 45.0mm vel=60.0mm/s
+[bridge]  [INFO] [1792576071.073273472] [sim_executor_bridge_node]: MoveLine called (pos=[ 0.  0. 45.  0.  0.  0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576074.469037725] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.22deg (손끝 0.6mm) / 대기 0.12s
+[bridge]  [INFO] [1792576074.469491923] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.6mm lateral=0.0mm |err|=0.6mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576074.469695863] [sim_executor_bridge_node]: MoveLine 실이동 44.4mm / 명령 45mm
+[bridge]  [INFO] [1792576074.469887467] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.75s 실소요 3.40s (worst step joint delta 0.7deg)
+[planner] [INFO] [1792576074.478022569] [curobo_planner_node]: GRASP_POSE_REACHED — offset=+0.015m pre=6cm+45mm+0mm variant=('base', [1, 0, 0], 0.0) elevation=-0.0deg (attempt 7/12)
+[planner] [WARN] [1792576074.478660193] [curobo_planner_node]: OPEN_DESCENT_DYNAMIC: kp1_z=775mm reached_z=805mm overshoot=30mm extra_below_kp1=0mm -> descent=30mm
+[planner] [INFO] [1792576074.479100967] [curobo_planner_node]: OPEN_STEM_DESCENT — gripper=600, BASE -Z 30mm to KP1
+[planner] [INFO] [1792576074.479702000] [curobo_planner_node]: OPEN_STEM_DESCENT BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-30.0)]mm dist=30.0mm vel=40.0mm/s
+[bridge]  [INFO] [1792576074.480979355] [sim_executor_bridge_node]: MoveLine called (pos=[  0.        0.      -30.00054   0.        0.        0.     ], ref=0, mode=1)
+[bridge]  [INFO] [1792576076.983445073] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.29deg (손끝 0.8mm) / 대기 0.10s
+[bridge]  [INFO] [1792576076.984599306] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.8mm lateral=0.0mm |err|=0.8mm (명령 30mm, BASE)
+[bridge]  [INFO] [1792576076.984770745] [sim_executor_bridge_node]: MoveLine 실이동 29.2mm / 명령 30mm
+[bridge]  [INFO] [1792576076.984916675] [sim_executor_bridge_node]: MoveLine ok: 30mm / 16 steps / 계획 0.75s 실소요 2.50s (worst step joint delta 1.1deg)
+[planner] [INFO] [1792576077.034218745] [curobo_planner_node]: 3 close gripper + verify grasp
+[bridge]  [INFO] [1792576077.034827335] [sim_executor_bridge_node]: SetPosition called to 700
+[bridge]  [INFO] [1792576077.035789485] [sim_executor_bridge_node]: GRASP_JUDGE 줄기기준 along=+15.7mm(조우 -6~27) lateral=0.4mm(허용20) | 과실기준 d_tcp=38.7mm -> CONTACT
+[bridge]  [INFO] [1792576077.035986316] [sim_executor_bridge_node]: GRASP_ATTACH 과실 (200, 783, 740)mm -> /sim/grasp_event
+[planner] [INFO] [1792576077.435156527] [curobo_planner_node]: VERIFY_GRASP: GRASP_CONTACT_DETECTED present_pos=670 current_raw=200 — jaw stopped before calibrated contact threshold (pos=670 <= 685); position-based grasp detected
+[planner] [INFO] [1792576077.435477115] [curobo_planner_node]: 4 detach pull — BASE -Z 40mm at 50mm/s
+[bridge]  [INFO] [1792576077.436436918] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -40.   0.   0.   0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576080.514051391] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.26deg (손끝 0.9mm) / 대기 0.08s
+[bridge]  [INFO] [1792576080.514804739] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.9mm lateral=0.0mm |err|=0.9mm (명령 40mm, BASE)
+[bridge]  [INFO] [1792576080.515135484] [sim_executor_bridge_node]: MoveLine 실이동 39.1mm / 명령 40mm
+[bridge]  [INFO] [1792576080.515464822] [sim_executor_bridge_node]: MoveLine ok: 40mm / 20 steps / 계획 0.80s 실소요 3.08s (worst step joint delta 0.7deg)
+[planner] [INFO] [1792576080.540469904] [curobo_planner_node]: DETACH_PULL_DOWN: BASE -Z 40mm -> OK
+[planner] [INFO] [1792576080.541208100] [curobo_planner_node]: RETREAT TOOL -Z 45.0mm vel=80.0mm/s
+[bridge]  [INFO] [1792576080.542416639] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -45.   0.   0.   0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576083.668252463] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.29deg (손끝 1.9mm) / 대기 0.04s
+[bridge]  [INFO] [1792576083.668784863] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.6mm lateral=0.0mm |err|=1.6mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576083.668943162] [sim_executor_bridge_node]: MoveLine 실이동 43.4mm / 명령 45mm
+[bridge]  [INFO] [1792576083.669084233] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.56s 실소요 3.13s (worst step joint delta 0.4deg)
+[planner] [WARN] [1792576083.997036992] [curobo_planner_node]: TAUGHT_TRAY_GRID_PLACE active: slot=3; fixed tray pose only; marker localization is bypassed
+[planner] [INFO] [1792576083.998131768] [curobo_planner_node]: TAUGHT_TRAY_SLOT3_ABOVE generated from Slot0 FK + grid offset: clearance=120mm goal_mm=[511.9, 1.8, 183.1]
+[planner] [INFO] [1792576084.048774051] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576085.180970769] [curobo_planner_node]: Plan OK 1131ms 54pts 0.97s | goal=['512', '2', '183']mm | end_J=[-3.9, 30.7, 125.3, -13.5, -66.3, -81.8]deg
+[planner] [INFO] [1792576085.181702634] [curobo_planner_node]: Spline 12pts plan=0.97s exec=0.84s -> end=['-3.9', '30.7', '125.3', '-13.5', '-66.3', '-81.8']deg
+[bridge]  [INFO] [1792576085.182800916] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576086.492910259] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.25deg (손끝 1.3mm) / 대기 0.40s
+[bridge]  [INFO] [1792576086.493138506] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.89s -> end=[-3.9 30.7 125.3 -13.5 -66.3 -81.8]deg
+[planner] [INFO] [1792576086.535047248] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE -Z 120mm
+[planner] [INFO] [1792576086.535476253] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-120.0)]mm dist=120.0mm vel=40.0mm/s
+[bridge]  [INFO] [1792576086.536326709] [sim_executor_bridge_node]: MoveLine called (pos=[   0.    0. -120.    0.    0.    0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576086.537149847] [sim_executor_bridge_node]: MoveLine 120mm: 60 -> 24 steps (5.0mm/step, 자유공간 이송)
+[bridge]  [INFO] [1792576091.186252150] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.27deg (손끝 1.5mm) / 대기 0.06s
+[bridge]  [INFO] [1792576091.186704549] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.5mm lateral=0.0mm |err|=1.5mm (명령 120mm, BASE)
+[bridge]  [INFO] [1792576091.186873096] [sim_executor_bridge_node]: MoveLine 실이동 118.5mm / 명령 120mm
+[bridge]  [INFO] [1792576091.187020277] [sim_executor_bridge_node]: MoveLine ok: 120mm / 24 steps / 계획 2.00s 실소요 4.65s (worst step joint delta 0.9deg)
+[planner] [WARN] [1792576091.192969955] [curobo_planner_node]: TAUGHT_TRAY_SLOT3_PLACE_RELEASE: position_cmd=600
+[bridge]  [INFO] [1792576091.193948336] [sim_executor_bridge_node]: SetPosition called to 600
+[bridge]  [INFO] [1792576091.194339783] [sim_executor_bridge_node]: GRASP_RELEASE -> /sim/grasp_event
+[planner] [INFO] [1792576091.244417155] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_ASCEND joint-space return to above pose (avoid raw BASE +Z branch/limit jump after release)
+[planner] [INFO] [1792576092.227538197] [curobo_planner_node]: Plan OK 982ms 31pts 0.56s | goal=['512', '2', '183']mm | end_J=[-3.9, 30.7, 125.3, -13.5, -66.3, -81.8]deg
+[planner] [INFO] [1792576092.228275251] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['-3.9', '30.7', '125.3', '-13.5', '-66.3', '-81.8']deg
+[bridge]  [INFO] [1792576092.229563429] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576093.076385761] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.28deg (손끝 1.4mm) / 대기 0.26s
+[bridge]  [INFO] [1792576093.076572682] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[-3.9 30.7 125.3 -13.5 -66.3 -81.8]deg
+[planner] [harvest_probe] 결과 바 5번째 = placed (배치 성공, place_status=success)
+[planner] [WARN] [1792576093.080496155] [curobo_planner_node]: TAUGHT_TRAY_SLOT_SEQUENCE: slot 3 -> 4 (sequence=[0, 1, 3, 4, 6, 7, 9, 10])
+[planner] [INFO] [1792576093.080752251] [curobo_planner_node]: 7 return to pick-start scan pose
+[planner] [INFO] [1792576094.604606258] [curobo_planner_node]: pick-start scan pose after pick/place JS Plan OK 1523ms 64pts 1.14s | goal=['18.9', '26.0', '1.0', '74.6', '78.2', '-115.6']deg
+[planner] [INFO] [1792576094.605350397] [curobo_planner_node]: Spline 12pts plan=1.14s exec=0.99s -> end=['18.9', '26.0', '1.0', '74.6', '78.2', '-115.6']deg
+[bridge]  [INFO] [1792576094.606527658] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576096.219499716] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.27deg (손끝 1.7mm) / 대기 0.38s
+[bridge]  [INFO] [1792576096.219881387] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.21s -> end=[18.9 26.0 1.0 74.6 78.2 -115.6]deg
+[planner] [INFO] [1792576096.259691573] [curobo_planner_node]: World updated (neighbor obstacles cleared): static=1 dynamic=0 neighbor_spheres=0
+[bridge]  [INFO] [1792576096.260698099] [sim_executor_bridge_node]: SetPosition called to 600
+[scan]    [INFO] [1792576096.310982511] [scan_executor_node]: PICK_ATTEMPT_DONE root/ne/sw 2/2 — planner sequence ended (success is verified by gripper/manual KPI, not this Empty topic)
+[scan]    [INFO] [1792576096.311399422] [scan_executor_node]: PICK_ATTEMPT_SETTLE 1.0s before next target
+[planner] [INFO] [1792576096.311514319] [curobo_planner_node]: === PICK COMPLETE (DETACH_SUCCESS_UNVERIFIED) ===
+[scan]    [INFO] [1792576097.312692006] [scan_executor_node]: PICK_SEQUENCE_DONE root/ne/sw — 2/2 attempted
+[scan]    [INFO] [1792576097.312940203] [scan_executor_node]: SUBCELL_EMPTY root/ne/se no pick candidate
+[scan]    [INFO] [1792576097.313253962] [scan_executor_node]: SUBCELL_EMPTY root/ne/nw no pick candidate
+[scan]    [INFO] [1792576097.313500287] [scan_executor_node]: SUBCELL_EMPTY root/ne/ne no pick candidate
+[scan]    [INFO] [1792576097.314179720] [scan_executor_node]: INTER_CELL_DIRECT — no overview reset; continuing to next cell
+[scan]    [INFO] [1792576097.314602413] [scan_executor_node]: CELL_RESCAN_AFTER_PICK root/ne pass=1 — checking remaining targets
+[scan]    [INFO] [1792576097.315266116] [scan_executor_node]: MOVING_TO root/ne  endpoint_deg=[18.9 26.0 1.0 74.6 78.2 -115.6]  (direct MoveJoint, YAML pose)
+[bridge]  [INFO] [1792576097.317655958] [sim_executor_bridge_node]: MoveJoint called to [18.9, 26.0, 1.0, 74.6, 78.2, -115.6] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576097.331467141] [sim_executor_bridge_node]: MoveJoint profile: span 0.0deg / 0.01s (3 steps)
+[bridge]  [INFO] [1792576097.332760792] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.00deg (손끝 0.0mm) / 대기 0.00s
+[scan]    [INFO] [1792576097.366130824] [scan_executor_node]: MoveJoint response: success=True  target=[18.9 26.0 1.0 74.6 78.2 -115.6]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576097.366874967] [scan_executor_node]: AT_SCAN_POSE root/ne joints_deg=[18.9 26.0 1.0 74.6 78.2 -115.6] — adaptive detection wait up to 3.0s
+[scan]    [INFO] [1792576100.371668213] [scan_executor_node]: TARGET_FOUND root/ne 6 pick candidate(s) detected
+[scan]    [INFO] [1792576100.372469515] [scan_executor_node]: SUBCELL_SCAN_ORDER root/ne root/ne/sw:2  root/ne/se:0  root/ne/nw:0  root/ne/ne:0
+[scan]    [INFO] [1792576100.372782689] [scan_executor_node]: SUBDIVIDE_SKIP root/ne candidates=2 < 3 — 잎(leaf), 부모 자세에서 pick
+[scan]    [INFO] [1792576100.373273719] [scan_executor_node]: PICK_SKIP_ATTEMPTED root/ne/sw pos=(280,783,700)mm
+[scan]    [INFO] [1792576100.373777058] [scan_executor_node]: PICK_SKIP_ATTEMPTED root/ne/sw pos=(200,783,740)mm
+[scan]    [INFO] [1792576100.374293887] [scan_executor_node]: PICK_SEQUENCE_START root/ne/sw — 0 candidate targets (raw=2 skipped_attempted=2)
+[scan]    [INFO] [1792576100.374691889] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/ne/sw timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576100.375089138] [scan_executor_node]: PICK_SEQUENCE_DONE root/ne/sw — 0/0 attempted
+[scan]    [INFO] [1792576100.375553895] [scan_executor_node]: SUBCELL_EMPTY root/ne/se no pick candidate
+[scan]    [INFO] [1792576100.375994753] [scan_executor_node]: SUBCELL_EMPTY root/ne/nw no pick candidate
+[scan]    [INFO] [1792576100.376443402] [scan_executor_node]: SUBCELL_EMPTY root/ne/ne no pick candidate
+[scan]    [INFO] [1792576100.377019655] [scan_executor_node]: INTER_CELL_DIRECT — no overview reset; continuing to next cell
+[scan]    [INFO] [1792576100.377529484] [scan_executor_node]: MOVING_TO root/sw  endpoint_deg=[150.3 -11.9 109.1 -97.8 63.3 10.5]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576100.377762119] [scan_executor_node]: TRANSIT_VIA_OVERVIEW root/ne -> root/sw — 비인접 분면, MoveJoint 폴백은 overview 경유
+[vision]  [INFO] [1792576100.377833603] [fake_vision_node]: SCAN_CELL root/sw (SCANNING) -> 시야 = x[-0.495,0.050] z[0.265,0.660]
+[bridge]  [INFO] [1792576100.378796652] [sim_executor_bridge_node]: MoveJoint called to [88.0, -94.9, 129.9, 175.9, -31.3, 93.4] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576104.530609704] [sim_executor_bridge_node]: MoveJoint profile: span 209.0deg / 4.15s (831 steps)
+[bridge]  [INFO] [1792576104.672411725] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.27deg (손끝 1.4mm) / 대기 0.14s
+[scan]    [INFO] [1792576104.684467653] [scan_executor_node]: MoveJoint response: success=True  target=[88.0 -94.9 129.9 175.9 -31.3 93.4]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576104.684751449] [scan_executor_node]: Joint equivalent rewrite J4 -97.8 -> 262.2 deg (current 175.9, shorter by 187.4 deg)
+[bridge]  [INFO] [1792576104.685655738] [sim_executor_bridge_node]: MoveJoint called to [150.3, -11.9, 109.1, 262.2, 63.3, 10.5] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576106.929220704] [sim_executor_bridge_node]: MoveJoint profile: span 94.6deg / 2.24s (449 steps)
+[bridge]  [INFO] [1792576107.070634543] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.26deg (손끝 1.9mm) / 대기 0.14s
+[scan]    [INFO] [1792576107.088379117] [scan_executor_node]: MoveJoint response: success=True  target=[150.3 -11.9 109.1 262.2 63.3 10.5]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576107.088757395] [scan_executor_node]: AT_SCAN_POSE root/sw joints_deg=[150.1 -12.1 109.2 262.0 63.1 10.7] — adaptive detection wait up to 3.0s
+[scan]    [INFO] [1792576110.093255560] [scan_executor_node]: TARGET_FOUND root/sw 9 pick candidate(s) detected
+[scan]    [INFO] [1792576110.093632639] [scan_executor_node]: SUBCELL_SCAN_ORDER root/sw root/sw/sw:0  root/sw/se:1  root/sw/nw:1  root/sw/ne:1
+[scan]    [INFO] [1792576110.094025221] [scan_executor_node]: SUBDIVIDE root/sw candidates=3 >= 3 cells=['se', 'nw', 'ne'] — 후보 있는 세부 칸만 세부 자세로 방문
+[scan]    [INFO] [1792576110.094222390] [scan_executor_node]: SUBCELL_EMPTY root/sw/sw no pick candidate — 2단 가지치기
+[scan]    [INFO] [1792576110.229338596] [scan_executor_node]: SUBCELL_POSE root/sw/se tier=lab_plane dJ_max=37.8deg dJ=[36 3 13 35 26 38] ee_mm=[-247.7, 317.3, 533.9] -> [-111.5, 433.0, 435.1] joints_deg=[114.4 -8.5 122.1 -132.9 37.6 48.3] (실기 깊이 2 평면 y=0.433 로 이동, 부모 시드 IK)
+[scan]    [INFO] [1792576110.229813593] [scan_executor_node]: MOVING_TO root/sw/se  endpoint_deg=[114.4 -8.5 122.1 -132.9 37.6 48.3]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576110.230035268] [scan_executor_node]: Joint equivalent rewrite J4 -132.9 -> 227.1 deg (current 262.2, shorter by 360.0 deg)
+[scan]    [INFO] [1792576110.230272471] [scan_executor_node]: Joint equivalent rewrite J4 -132.9 -> 227.1 deg (current 262.2, shorter by 360.0 deg)
+[bridge]  [INFO] [1792576110.231299903] [sim_executor_bridge_node]: MoveJoint called to [114.4, -8.5, 122.1, 227.1, 37.6, 48.3] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576111.528678336] [sim_executor_bridge_node]: MoveJoint profile: span 37.8deg / 1.30s (260 steps)
+[bridge]  [INFO] [1792576111.669959207] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.26deg (손끝 1.6mm) / 대기 0.14s
+[scan]    [INFO] [1792576111.682554022] [scan_executor_node]: MoveJoint response: success=True  target=[114.4 -8.5 122.1 227.1 37.6 48.3]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576111.683005185] [scan_executor_node]: AT_SCAN_POSE root/sw/se joints_deg=[114.6 -8.5 122.0 227.3 37.8 48.0] — adaptive detection wait up to 3.0s
+[vision]  [INFO] [1792576111.683171089] [fake_vision_node]: SCAN_CELL root/sw/se (VIEWING) -> 시야 = x[-0.223,0.050] z[0.265,0.463]
+[scan]    [INFO] [1792576114.687607419] [scan_executor_node]: SUBCELL_SCAN root/sw/se raw=3 in_cell=3 unique=1 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792576114.688006014] [scan_executor_node]: PICK_SEQUENCE_START root/sw/se — 1 candidate targets (raw=1 skipped_attempted=0)
+[scan]    [INFO] [1792576114.688171068] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/sw/se timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576114.688346450] [scan_executor_node]: PICK_ATTEMPT_BLACKLIST_ADD pos=(-100,783,440)mm radius=25mm
+[scan]    [INFO] [1792576114.688559884] [scan_executor_node]: PICK_TRIGGER root/sw/se 1/1 pos=(-100,783,440)mm
+[planner] [INFO] [1792576114.739614997] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576114.740524513] [curobo_planner_node]: === PICK 딸기 raw=(-100,783,440)mm grasp=(-100,783,475)mm det_y=783mm x_bias=+0mm z_bias=+35mm ===
+[planner] [INFO] [1792576114.740778349] [curobo_planner_node]: 1 open gripper for stem descent: set_position=600
+[bridge]  [INFO] [1792576114.741430058] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792576114.795266009] [curobo_planner_node]: World updated (neighbor obstacles registered): static=1 dynamic=0 neighbor_spheres=0
+[planner] [INFO] [1792576114.795585406] [curobo_planner_node]: Registered 0 neighbor sphere obstacle(s); self-excluded 1 within 50mm of target
+[planner] [INFO] [1792576114.796166096] [curobo_planner_node]: 2 grasp (CuRobo 2-step 6cm pre) — trying 3 offsets × 4 quats | target=(-100,783,475)mm | start_J1=114.4°
+[planner] [INFO] [1792576115.989602249] [curobo_planner_node]: Plan OK 1193ms 43pts 0.77s | goal=['-100', '491', '556']mm | end_J=[107.3, -5.6, 93.9, 304.4, 20.8, -32.4]deg
+[planner] [INFO] [1792576117.157152551] [curobo_planner_node]: Plan OK 1167ms 31pts 0.56s | goal=['-100', '536', '549']mm | end_J=[105.3, 0.9, 88.9, 304.2, 18.3, -32.2]deg
+[planner] [INFO] [1792576117.157923151] [curobo_planner_node]: Spline 12pts plan=0.77s exec=0.67s -> end=['107.3', '-5.6', '93.9', '304.4', '20.8', '-32.4']deg
+[bridge]  [INFO] [1792576117.158933468] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576118.253371256] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.24deg (손끝 0.7mm) / 대기 0.40s
+[bridge]  [INFO] [1792576118.253565899] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.68s -> end=[107.3 -5.6 93.9 304.4 20.8 -32.4]deg
+[planner] [INFO] [1792576118.260207751] [curobo_planner_node]: PRE_APPROACH_REACHED — settling 0.3s before 45mm straight approach
+[planner] [INFO] [1792576118.560720095] [curobo_planner_node]: FINAL_APPROACH_STRAIGHT TOOL +Z 45.0mm vel=60.0mm/s
+[bridge]  [INFO] [1792576118.561697720] [sim_executor_bridge_node]: MoveLine called (pos=[ 0.  0. 45.  0.  0.  0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576121.648398543] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.28deg (손끝 1.9mm) / 대기 0.02s
+[bridge]  [INFO] [1792576121.648811231] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.9mm lateral=0.0mm |err|=1.9mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576121.648968029] [sim_executor_bridge_node]: MoveLine 실이동 43.1mm / 명령 45mm
+[bridge]  [INFO] [1792576121.649112596] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.75s 실소요 3.09s (worst step joint delta 0.3deg)
+[planner] [INFO] [1792576121.666077258] [curobo_planner_node]: GRASP_POSE_REACHED — offset=+0.015m pre=6cm+45mm+0mm variant=('base', [1, 0, 0], -10.0) elevation=-10.0deg (attempt 1/12)
+[planner] [WARN] [1792576121.666470369] [curobo_planner_node]: OPEN_DESCENT_DYNAMIC: kp1_z=475mm reached_z=508mm overshoot=33mm extra_below_kp1=0mm -> descent=33mm
+[planner] [INFO] [1792576121.667837356] [curobo_planner_node]: OPEN_STEM_DESCENT — gripper=600, BASE -Z 33mm to KP1
+[planner] [INFO] [1792576121.668495003] [curobo_planner_node]: OPEN_STEM_DESCENT BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-32.6)]mm dist=32.6mm vel=40.0mm/s
+[bridge]  [INFO] [1792576121.669543135] [sim_executor_bridge_node]: MoveLine called (pos=[  0.           0.         -32.60535644   0.           0.
+[bridge]     0.        ], ref=0, mode=1)
+[bridge]  [INFO] [1792576124.469412697] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.23deg (손끝 0.4mm) / 대기 0.14s
+[bridge]  [INFO] [1792576124.469912750] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.4mm lateral=0.0mm |err|=0.4mm (명령 33mm, BASE)
+[bridge]  [INFO] [1792576124.470096318] [sim_executor_bridge_node]: MoveLine 실이동 32.2mm / 명령 33mm
+[bridge]  [INFO] [1792576124.470259431] [sim_executor_bridge_node]: MoveLine ok: 33mm / 17 steps / 계획 0.82s 실소요 2.80s (worst step joint delta 1.0deg)
+[planner] [INFO] [1792576124.473230295] [curobo_planner_node]: 3 close gripper + verify grasp
+[bridge]  [INFO] [1792576124.474185054] [sim_executor_bridge_node]: SetPosition called to 700
+[bridge]  [INFO] [1792576124.475602807] [sim_executor_bridge_node]: GRASP_JUDGE 줄기기준 along=+16.0mm(조우 -6~27) lateral=2.2mm(허용20) | 과실기준 d_tcp=39.1mm -> CONTACT
+[bridge]  [INFO] [1792576124.475865524] [sim_executor_bridge_node]: GRASP_ATTACH 과실 (-100, 783, 440)mm -> /sim/grasp_event
+[planner] [INFO] [1792576124.874255577] [curobo_planner_node]: VERIFY_GRASP: GRASP_CONTACT_DETECTED present_pos=670 current_raw=200 — jaw stopped before calibrated contact threshold (pos=670 <= 685); position-based grasp detected
+[planner] [INFO] [1792576124.874608552] [curobo_planner_node]: 4 detach pull — BASE -Z 40mm at 50mm/s
+[bridge]  [INFO] [1792576124.875977561] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -40.   0.   0.   0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576128.149227725] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.27deg (손끝 0.5mm) / 대기 0.16s
+[bridge]  [INFO] [1792576128.149787901] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-0.5mm lateral=0.0mm |err|=0.5mm (명령 40mm, BASE)
+[bridge]  [INFO] [1792576128.150729682] [sim_executor_bridge_node]: MoveLine 실이동 39.5mm / 명령 40mm
+[bridge]  [INFO] [1792576128.150910498] [sim_executor_bridge_node]: MoveLine ok: 40mm / 20 steps / 계획 0.80s 실소요 3.27s (worst step joint delta 1.2deg)
+[planner] [INFO] [1792576128.179973515] [curobo_planner_node]: DETACH_PULL_DOWN: BASE -Z 40mm -> OK
+[planner] [INFO] [1792576128.180691523] [curobo_planner_node]: RETREAT TOOL -Z 45.0mm vel=80.0mm/s
+[bridge]  [INFO] [1792576128.181751433] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -45.   0.   0.   0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576131.403744127] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.25deg (손끝 1.6mm) / 대기 0.04s
+[bridge]  [INFO] [1792576131.404238998] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.6mm lateral=0.0mm |err|=1.6mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576131.404407844] [sim_executor_bridge_node]: MoveLine 실이동 43.4mm / 명령 45mm
+[bridge]  [INFO] [1792576131.404550928] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.56s 실소요 3.22s (worst step joint delta 0.3deg)
+[planner] [WARN] [1792576131.737473923] [curobo_planner_node]: TAUGHT_TRAY_GRID_PLACE active: slot=4; fixed tray pose only; marker localization is bypassed
+[planner] [INFO] [1792576131.738614821] [curobo_planner_node]: TAUGHT_TRAY_SLOT4_ABOVE generated from Slot0 FK + grid offset: clearance=120mm goal_mm=[452.2, 5.2, 184.0]
+[planner] [INFO] [1792576131.789178766] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576133.096187373] [curobo_planner_node]: Plan OK 1306ms 66pts 1.19s | goal=['452', '5', '184']mm | end_J=[-4.1, 26.4, 135.0, 346.8, -71.6, -83.0]deg
+[planner] [INFO] [1792576133.097037218] [curobo_planner_node]: Spline 12pts plan=1.19s exec=1.03s -> end=['-4.1', '26.4', '135.0', '346.8', '-71.6', '-83.0']deg
+[bridge]  [INFO] [1792576133.098331602] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576134.512806082] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 2.7mm) / 대기 0.36s
+[bridge]  [INFO] [1792576134.513029692] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.03s -> end=[-4.1 26.4 135.0 346.8 -71.6 -83.0]deg
+[planner] [INFO] [1792576134.550851233] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE -Z 120mm
+[planner] [INFO] [1792576134.551469794] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-120.0)]mm dist=120.0mm vel=40.0mm/s
+[bridge]  [INFO] [1792576134.552600273] [sim_executor_bridge_node]: MoveLine called (pos=[   0.    0. -120.    0.    0.    0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576134.553733300] [sim_executor_bridge_node]: MoveLine 120mm: 60 -> 24 steps (5.0mm/step, 자유공간 이송)
+[bridge]  [INFO] [1792576139.072145912] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.27deg (손끝 1.3mm) / 대기 0.08s
+[bridge]  [INFO] [1792576139.072695264] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.3mm lateral=0.0mm |err|=1.3mm (명령 120mm, BASE)
+[bridge]  [INFO] [1792576139.072857413] [sim_executor_bridge_node]: MoveLine 실이동 118.7mm / 명령 120mm
+[bridge]  [INFO] [1792576139.073002111] [sim_executor_bridge_node]: MoveLine ok: 120mm / 24 steps / 계획 2.00s 실소요 4.52s (worst step joint delta 1.0deg)
+[planner] [WARN] [1792576139.109136031] [curobo_planner_node]: TAUGHT_TRAY_SLOT4_PLACE_RELEASE: position_cmd=600
+[bridge]  [INFO] [1792576139.110317013] [sim_executor_bridge_node]: SetPosition called to 600
+[bridge]  [INFO] [1792576139.110712496] [sim_executor_bridge_node]: GRASP_RELEASE -> /sim/grasp_event
+[planner] [INFO] [1792576139.160797092] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_ASCEND joint-space return to above pose (avoid raw BASE +Z branch/limit jump after release)
+[planner] [INFO] [1792576140.166347772] [curobo_planner_node]: Plan OK 1004ms 73pts 1.31s | goal=['452', '5', '184']mm | end_J=[-4.1, 26.4, 135.0, 346.7, -71.6, -83.0]deg
+[planner] [INFO] [1792576140.168154022] [curobo_planner_node]: Spline 12pts plan=1.31s exec=1.14s -> end=['-4.1', '26.4', '135.0', '346.7', '-71.6', '-83.0']deg
+[bridge]  [INFO] [1792576140.169474143] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576141.601735383] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.30deg (손끝 1.2mm) / 대기 0.28s
+[bridge]  [INFO] [1792576141.602128358] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.14s -> end=[-4.1 26.4 135.0 346.7 -71.6 -83.0]deg
+[planner] [harvest_probe] 결과 바 6번째 = placed (배치 성공, place_status=success)
+[planner] [WARN] [1792576141.620768053] [curobo_planner_node]: TAUGHT_TRAY_SLOT_SEQUENCE: slot 4 -> 6 (sequence=[0, 1, 3, 4, 6, 7, 9, 10])
+[planner] [INFO] [1792576141.620986519] [curobo_planner_node]: 7 return to pick-start scan pose
+[planner] [INFO] [1792576143.140585070] [curobo_planner_node]: pick-start scan pose after pick/place JS Plan OK 1519ms 84pts 1.50s | goal=['114.4', '-8.5', '122.1', '227.1', '37.7', '48.3']deg
+[planner] [INFO] [1792576143.141829016] [curobo_planner_node]: Spline 12pts plan=1.50s exec=1.31s -> end=['114.4', '-8.5', '122.1', '227.1', '37.7', '48.3']deg
+[bridge]  [INFO] [1792576143.143374970] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576144.835270081] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.29deg (손끝 2.0mm) / 대기 0.36s
+[bridge]  [INFO] [1792576144.835470305] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.31s -> end=[114.4 -8.5 122.1 227.1 37.7 48.3]deg
+[bridge]  [INFO] [1792576144.845236280] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792576144.894904460] [curobo_planner_node]: === PICK COMPLETE (DETACH_SUCCESS_UNVERIFIED) ===
+[scan]    [INFO] [1792576144.895471611] [scan_executor_node]: PICK_ATTEMPT_DONE root/sw/se 1/1 — planner sequence ended (success is verified by gripper/manual KPI, not this Empty topic)
+[scan]    [INFO] [1792576144.896033758] [scan_executor_node]: PICK_ATTEMPT_SETTLE 1.0s before next target
+[scan]    [INFO] [1792576145.896641929] [scan_executor_node]: PICK_SEQUENCE_DONE root/sw/se — 1/1 attempted
+[vision]  [INFO] [1792576145.897409740] [fake_vision_node]: SCAN_CELL root/sw/se (PICK_ATTEMPTED) -> 시야 = x[-0.495,0.050] z[0.265,0.660]
+[scan]    [INFO] [1792576146.033030932] [scan_executor_node]: SUBCELL_POSE root/sw/nw tier=lab_plane dJ_max=43.8deg dJ=[4 28 44 9 5 18] ee_mm=[-247.7, 317.3, 533.9] -> [-384.0, 433.0, 632.6] joints_deg=[146.3 15.8 65.3 -88.8 58.3 -7.7] (실기 깊이 2 평면 y=0.433 로 이동, 부모 시드 IK)
+[scan]    [INFO] [1792576146.034107386] [scan_executor_node]: MOVING_TO root/sw/nw  endpoint_deg=[146.3 15.8 65.3 -88.8 58.3 -7.7]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576146.034313911] [scan_executor_node]: Joint equivalent rewrite J4 -88.8 -> 271.2 deg (current 227.1, shorter by 271.7 deg)
+[scan]    [INFO] [1792576146.034515133] [scan_executor_node]: Joint equivalent rewrite J4 -88.8 -> 271.2 deg (current 227.1, shorter by 271.7 deg)
+[bridge]  [INFO] [1792576146.035163056] [sim_executor_bridge_node]: MoveJoint called to [146.3, 15.8, 65.3, 271.2, 58.3, -7.7] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576147.650343300] [sim_executor_bridge_node]: MoveJoint profile: span 56.9deg / 1.61s (323 steps)
+[bridge]  [INFO] [1792576147.792243804] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.28deg (손끝 1.6mm) / 대기 0.14s
+[scan]    [INFO] [1792576147.837884469] [scan_executor_node]: MoveJoint response: success=True  target=[146.3 15.8 65.3 271.2 58.3 -7.7]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576147.838344702] [scan_executor_node]: AT_SCAN_POSE root/sw/nw joints_deg=[146.2 15.7 65.4 271.1 58.3 -7.6] — adaptive detection wait up to 3.0s
+[vision]  [INFO] [1792576147.838430923] [fake_vision_node]: SCAN_CELL root/sw/nw (VIEWING) -> 시야 = x[-0.495,-0.223] z[0.463,0.660]
+[scan]    [INFO] [1792576150.842935944] [scan_executor_node]: SUBCELL_SCAN root/sw/nw raw=3 in_cell=3 unique=1 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792576150.843680401] [scan_executor_node]: PICK_SEQUENCE_START root/sw/nw — 1 candidate targets (raw=1 skipped_attempted=0)
+[scan]    [INFO] [1792576150.844097561] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/sw/nw timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576150.844535271] [scan_executor_node]: PICK_ATTEMPT_BLACKLIST_ADD pos=(-250,783,500)mm radius=25mm
+[scan]    [INFO] [1792576150.845024006] [scan_executor_node]: PICK_TRIGGER root/sw/nw 1/1 pos=(-250,783,500)mm
+[planner] [INFO] [1792576150.895934510] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576150.896517727] [curobo_planner_node]: === PICK 딸기 raw=(-250,783,500)mm grasp=(-250,783,535)mm det_y=783mm x_bias=+0mm z_bias=+35mm ===
+[planner] [INFO] [1792576150.896726577] [curobo_planner_node]: 1 open gripper for stem descent: set_position=600
+[bridge]  [INFO] [1792576150.897665593] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792576150.948483872] [curobo_planner_node]: World updated (neighbor obstacles registered): static=1 dynamic=0 neighbor_spheres=0
+[planner] [INFO] [1792576150.948795771] [curobo_planner_node]: Registered 0 neighbor sphere obstacle(s); self-excluded 1 within 50mm of target
+[planner] [INFO] [1792576150.949232688] [curobo_planner_node]: 2 grasp (CuRobo 2-step 6cm pre) — trying 3 offsets × 4 quats | target=(-250,783,535)mm | start_J1=146.3°
+[planner] [INFO] [1792576152.252678550] [curobo_planner_node]: Plan OK 1303ms 31pts 0.56s | goal=['-250', '491', '616']mm | end_J=[127.9, 6.3, 72.7, 297.8, 43.1, -27.5]deg
+[planner] [INFO] [1792576153.425122246] [curobo_planner_node]: Plan OK 1171ms 31pts 0.56s | goal=['-250', '536', '609']mm | end_J=[124.4, 11.8, 67.5, 300.0, 39.9, -29.5]deg
+[planner] [INFO] [1792576153.425988729] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['127.9', '6.3', '72.7', '297.8', '43.1', '-27.5']deg
+[bridge]  [INFO] [1792576153.427634875] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576154.318703941] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.23deg (손끝 1.2mm) / 대기 0.30s
+[bridge]  [INFO] [1792576154.318894875] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[127.9 6.3 72.7 297.8 43.1 -27.5]deg
+[planner] [INFO] [1792576154.327843641] [curobo_planner_node]: PRE_APPROACH_REACHED — settling 0.3s before 45mm straight approach
+[planner] [INFO] [1792576154.628628950] [curobo_planner_node]: FINAL_APPROACH_STRAIGHT TOOL +Z 45.0mm vel=60.0mm/s
+[bridge]  [INFO] [1792576154.629740790] [sim_executor_bridge_node]: MoveLine called (pos=[ 0.  0. 45.  0.  0.  0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576157.699427079] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.28deg (손끝 2.2mm) / 대기 0.02s
+[bridge]  [INFO] [1792576157.700084547] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-2.2mm lateral=0.0mm |err|=2.2mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576157.700657165] [sim_executor_bridge_node]: MoveLine 실이동 42.8mm / 명령 45mm
+[bridge]  [INFO] [1792576157.700814606] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.75s 실소요 3.07s (worst step joint delta 0.2deg)
+[planner] [INFO] [1792576157.734897223] [curobo_planner_node]: GRASP_POSE_REACHED — offset=+0.015m pre=6cm+45mm+0mm variant=('base', [1, 0, 0], -10.0) elevation=-10.0deg (attempt 1/12)
+[planner] [WARN] [1792576157.735532445] [curobo_planner_node]: OPEN_DESCENT_DYNAMIC: kp1_z=535mm reached_z=568mm overshoot=33mm extra_below_kp1=0mm -> descent=33mm
+[planner] [INFO] [1792576157.735964699] [curobo_planner_node]: OPEN_STEM_DESCENT — gripper=600, BASE -Z 33mm to KP1
+[planner] [INFO] [1792576157.736455137] [curobo_planner_node]: OPEN_STEM_DESCENT BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-32.6)]mm dist=32.6mm vel=40.0mm/s
+[bridge]  [INFO] [1792576157.737789555] [sim_executor_bridge_node]: MoveLine called (pos=[  0.           0.         -32.60535644   0.           0.
+[bridge]     0.        ], ref=0, mode=1)
+[bridge]  [INFO] [1792576160.319564972] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.29deg (손끝 1.2mm) / 대기 0.04s
+[bridge]  [INFO] [1792576160.320050548] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.2mm lateral=0.0mm |err|=1.2mm (명령 33mm, BASE)
+[bridge]  [INFO] [1792576160.320220784] [sim_executor_bridge_node]: MoveLine 실이동 31.4mm / 명령 33mm
+[bridge]  [INFO] [1792576160.320374425] [sim_executor_bridge_node]: MoveLine ok: 33mm / 17 steps / 계획 0.82s 실소요 2.58s (worst step joint delta 0.4deg)
+[planner] [INFO] [1792576160.340793516] [curobo_planner_node]: 3 close gripper + verify grasp
+[bridge]  [INFO] [1792576160.341587672] [sim_executor_bridge_node]: SetPosition called to 700
+[bridge]  [INFO] [1792576160.342733088] [sim_executor_bridge_node]: GRASP_JUDGE 줄기기준 along=+16.1mm(조우 -6~27) lateral=1.5mm(허용20) | 과실기준 d_tcp=39.7mm -> CONTACT
+[bridge]  [INFO] [1792576160.343207610] [sim_executor_bridge_node]: GRASP_ATTACH 과실 (-250, 783, 500)mm -> /sim/grasp_event
+[planner] [INFO] [1792576160.741926658] [curobo_planner_node]: VERIFY_GRASP: GRASP_CONTACT_DETECTED present_pos=670 current_raw=200 — jaw stopped before calibrated contact threshold (pos=670 <= 685); position-based grasp detected
+[planner] [INFO] [1792576160.742456547] [curobo_planner_node]: 4 detach pull — BASE -Z 40mm at 50mm/s
+[bridge]  [INFO] [1792576160.743833803] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -40.   0.   0.   0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576163.719614714] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.28deg (손끝 1.1mm) / 대기 0.06s
+[bridge]  [INFO] [1792576163.720044196] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.1mm lateral=0.0mm |err|=1.1mm (명령 40mm, BASE)
+[bridge]  [INFO] [1792576163.720211876] [sim_executor_bridge_node]: MoveLine 실이동 38.9mm / 명령 40mm
+[bridge]  [INFO] [1792576163.720371668] [sim_executor_bridge_node]: MoveLine ok: 40mm / 20 steps / 계획 0.80s 실소요 2.98s (worst step joint delta 0.5deg)
+[planner] [INFO] [1792576163.747435958] [curobo_planner_node]: DETACH_PULL_DOWN: BASE -Z 40mm -> OK
+[planner] [INFO] [1792576163.748521802] [curobo_planner_node]: RETREAT TOOL -Z 45.0mm vel=80.0mm/s
+[bridge]  [INFO] [1792576163.749688871] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -45.   0.   0.   0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576166.754302120] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.21deg (손끝 1.7mm) / 대기 0.04s
+[bridge]  [INFO] [1792576166.754800336] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.7mm lateral=0.0mm |err|=1.7mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576166.754960282] [sim_executor_bridge_node]: MoveLine 실이동 43.3mm / 명령 45mm
+[bridge]  [INFO] [1792576166.755105242] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.56s 실소요 3.00s (worst step joint delta 0.2deg)
+[planner] [WARN] [1792576167.105071897] [curobo_planner_node]: TAUGHT_TRAY_GRID_PLACE active: slot=6; fixed tray pose only; marker localization is bypassed
+[planner] [INFO] [1792576167.105967972] [curobo_planner_node]: TAUGHT_TRAY_SLOT6_ABOVE generated from Slot0 FK + grid offset: clearance=120mm goal_mm=[503.8, -48.8, 180.7]
+[planner] [INFO] [1792576167.156419403] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576168.382882744] [curobo_planner_node]: Plan OK 1226ms 61pts 1.10s | goal=['504', '-49', '181']mm | end_J=[-12.5, 31.1, 125.4, 157.3, 67.8, 101.7]deg
+[planner] [INFO] [1792576168.384427299] [curobo_planner_node]: Spline 12pts plan=1.10s exec=0.96s -> end=['-12.5', '31.1', '125.4', '157.3', '67.8', '101.7']deg
+[bridge]  [INFO] [1792576168.386027212] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576169.983086222] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.27deg (손끝 1.9mm) / 대기 0.40s
+[bridge]  [INFO] [1792576169.983526761] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.17s -> end=[-12.5 31.1 125.4 157.3 67.8 101.7]deg
+[planner] [INFO] [1792576169.987594766] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE -Z 120mm
+[planner] [INFO] [1792576169.988168012] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-120.0)]mm dist=120.0mm vel=40.0mm/s
+[bridge]  [INFO] [1792576169.989366064] [sim_executor_bridge_node]: MoveLine called (pos=[   0.    0. -120.    0.    0.    0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576169.990505545] [sim_executor_bridge_node]: MoveLine 120mm: 60 -> 24 steps (5.0mm/step, 자유공간 이송)
+[bridge]  [INFO] [1792576174.791488250] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.29deg (손끝 1.6mm) / 대기 0.06s
+[bridge]  [INFO] [1792576174.791889836] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.6mm lateral=0.0mm |err|=1.6mm (명령 120mm, BASE)
+[bridge]  [INFO] [1792576174.792043912] [sim_executor_bridge_node]: MoveLine 실이동 118.4mm / 명령 120mm
+[bridge]  [INFO] [1792576174.792185328] [sim_executor_bridge_node]: MoveLine ok: 120mm / 24 steps / 계획 2.00s 실소요 4.80s (worst step joint delta 0.9deg)
+[planner] [WARN] [1792576174.796129340] [curobo_planner_node]: TAUGHT_TRAY_SLOT6_PLACE_RELEASE: position_cmd=600
+[bridge]  [INFO] [1792576174.797170888] [sim_executor_bridge_node]: SetPosition called to 600
+[bridge]  [INFO] [1792576174.797406743] [sim_executor_bridge_node]: GRASP_RELEASE -> /sim/grasp_event
+[planner] [INFO] [1792576174.846927326] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_ASCEND joint-space return to above pose (avoid raw BASE +Z branch/limit jump after release)
+[planner] [INFO] [1792576175.757339720] [curobo_planner_node]: Plan OK 910ms 31pts 0.56s | goal=['504', '-49', '181']mm | end_J=[-12.5, 31.1, 125.4, 157.3, 67.8, 101.7]deg
+[planner] [INFO] [1792576175.758021849] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['-12.5', '31.1', '125.4', '157.3', '67.8', '101.7']deg
+[bridge]  [INFO] [1792576175.759124408] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576176.605837958] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 1.3mm) / 대기 0.26s
+[bridge]  [INFO] [1792576176.606218096] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[-12.5 31.1 125.4 157.3 67.8 101.7]deg
+[planner] [harvest_probe] 결과 바 7번째 = placed (배치 성공, place_status=success)
+[planner] [WARN] [1792576176.609778378] [curobo_planner_node]: TAUGHT_TRAY_SLOT_SEQUENCE: slot 6 -> 7 (sequence=[0, 1, 3, 4, 6, 7, 9, 10])
+[planner] [INFO] [1792576176.609994938] [curobo_planner_node]: 7 return to pick-start scan pose
+[planner] [INFO] [1792576178.071151812] [curobo_planner_node]: pick-start scan pose after pick/place JS Plan OK 1460ms 72pts 1.29s | goal=['146.3', '15.8', '65.3', '271.2', '58.3', '-7.7']deg
+[planner] [INFO] [1792576178.071943696] [curobo_planner_node]: Spline 12pts plan=1.29s exec=1.12s -> end=['146.3', '15.8', '65.3', '271.2', '58.3', '-7.7']deg
+[bridge]  [INFO] [1792576178.073291989] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576179.804081011] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.27deg (손끝 2.8mm) / 대기 0.38s
+[bridge]  [INFO] [1792576179.804303612] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.33s -> end=[146.3 15.8 65.3 271.2 58.3 -7.7]deg
+[bridge]  [INFO] [1792576179.825723485] [sim_executor_bridge_node]: SetPosition called to 600
+[scan]    [INFO] [1792576179.876118422] [scan_executor_node]: PICK_ATTEMPT_DONE root/sw/nw 1/1 — planner sequence ended (success is verified by gripper/manual KPI, not this Empty topic)
+[scan]    [INFO] [1792576179.876538593] [scan_executor_node]: PICK_ATTEMPT_SETTLE 1.0s before next target
+[planner] [INFO] [1792576179.877017101] [curobo_planner_node]: === PICK COMPLETE (DETACH_SUCCESS_UNVERIFIED) ===
+[scan]    [INFO] [1792576180.877834891] [scan_executor_node]: PICK_SEQUENCE_DONE root/sw/nw — 1/1 attempted
+[vision]  [INFO] [1792576180.878470007] [fake_vision_node]: SCAN_CELL root/sw/nw (PICK_ATTEMPTED) -> 시야 = x[-0.495,0.050] z[0.265,0.660]
+[scan]    [INFO] [1792576181.199140408] [scan_executor_node]: SUBCELL_POSE root/sw/ne tier=parent_y dJ_max=26.2deg dJ=[21 16 5 18 21 26] ee_mm=[-247.7, 317.3, 533.9] -> [-111.5, 317.3, 632.6] joints_deg=[129.1 -28.0 104.4 -80.2 42.0 -15.8] (부모 y 유지, x·z 평행이동, 부모 시드 IK)
+[scan]    [INFO] [1792576181.199582485] [scan_executor_node]: MOVING_TO root/sw/ne  endpoint_deg=[129.1 -28.0 104.4 -80.2 42.0 -15.8]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576181.199789094] [scan_executor_node]: Joint equivalent rewrite J4 -80.2 -> 279.8 deg (current 271.2, shorter by 342.8 deg)
+[scan]    [INFO] [1792576181.200774433] [scan_executor_node]: Joint equivalent rewrite J4 -80.2 -> 279.8 deg (current 271.2, shorter by 342.8 deg)
+[bridge]  [INFO] [1792576181.201445200] [sim_executor_bridge_node]: MoveJoint called to [129.1, -28.0, 104.4, 279.8, 42.0, -15.8] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576182.598554916] [sim_executor_bridge_node]: MoveJoint profile: span 43.8deg / 1.40s (280 steps)
+[bridge]  [INFO] [1792576182.740918153] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.27deg (손끝 1.7mm) / 대기 0.14s
+[scan]    [INFO] [1792576182.753836900] [scan_executor_node]: MoveJoint response: success=True  target=[129.1 -28.0 104.4 279.8 42.0 -15.8]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576182.754479249] [scan_executor_node]: AT_SCAN_POSE root/sw/ne joints_deg=[129.2 -27.8 104.2 279.7 42.1 -15.7] — adaptive detection wait up to 3.0s
+[scan]    [INFO] [1792576185.759582976] [scan_executor_node]: SUBCELL_SCAN root/sw/ne raw=9 in_cell=3 unique=1 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792576185.760301314] [scan_executor_node]: PICK_SEQUENCE_START root/sw/ne — 1 candidate targets (raw=1 skipped_attempted=0)
+[scan]    [INFO] [1792576185.760690405] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/sw/ne timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576185.761087952] [scan_executor_node]: PICK_ATTEMPT_BLACKLIST_ADD pos=(-220,783,560)mm radius=25mm
+[scan]    [INFO] [1792576185.761515037] [scan_executor_node]: PICK_TRIGGER root/sw/ne 1/1 pos=(-220,783,560)mm
+[planner] [INFO] [1792576185.812473740] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576185.813394594] [curobo_planner_node]: === PICK 딸기 raw=(-220,783,560)mm grasp=(-220,783,595)mm det_y=783mm x_bias=+0mm z_bias=+35mm ===
+[planner] [INFO] [1792576185.813820737] [curobo_planner_node]: 1 open gripper for stem descent: set_position=600
+[bridge]  [INFO] [1792576185.815029216] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792576185.865554011] [curobo_planner_node]: World updated (neighbor obstacles registered): static=1 dynamic=0 neighbor_spheres=2
+[planner] [INFO] [1792576185.865895915] [curobo_planner_node]: Registered 2 neighbor sphere obstacle(s); self-excluded 1 within 50mm of target
+[planner] [INFO] [1792576185.866330878] [curobo_planner_node]: 2 grasp (CuRobo 2-step 6cm pre) — trying 3 offsets × 4 quats | target=(-220,783,595)mm | start_J1=129.1°
+[planner] [INFO] [1792576187.057474542] [curobo_planner_node]: Plan OK 1190ms 32pts 0.56s | goal=['-220', '491', '676']mm | end_J=[124.4, 6.2, 63.2, 308.9, 45.6, -41.6]deg
+[planner] [INFO] [1792576188.199647315] [curobo_planner_node]: Plan OK 1141ms 31pts 0.56s | goal=['-220', '536', '669']mm | end_J=[121.0, 11.9, 57.9, 311.9, 43.0, -44.1]deg
+[planner] [INFO] [1792576188.201237771] [curobo_planner_node]: Spline 12pts plan=0.56s exec=0.58s -> end=['124.4', '6.2', '63.2', '308.9', '45.6', '-41.6']deg
+[bridge]  [INFO] [1792576188.202143747] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576189.135777368] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 1.4mm) / 대기 0.34s
+[bridge]  [INFO] [1792576189.135982295] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.58s -> end=[124.4 6.2 63.2 308.9 45.6 -41.6]deg
+[planner] [INFO] [1792576189.153491213] [curobo_planner_node]: PRE_APPROACH_REACHED — settling 0.3s before 45mm straight approach
+[planner] [INFO] [1792576189.454531680] [curobo_planner_node]: FINAL_APPROACH_STRAIGHT TOOL +Z 45.0mm vel=60.0mm/s
+[bridge]  [INFO] [1792576189.455606802] [sim_executor_bridge_node]: MoveLine called (pos=[ 0.  0. 45.  0.  0.  0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576192.665329264] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.25deg (손끝 1.9mm) / 대기 0.02s
+[bridge]  [INFO] [1792576192.665928370] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.9mm lateral=0.0mm |err|=1.9mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576192.666083610] [sim_executor_bridge_node]: MoveLine 실이동 43.1mm / 명령 45mm
+[bridge]  [INFO] [1792576192.666225033] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.75s 실소요 3.21s (worst step joint delta 0.3deg)
+[planner] [INFO] [1792576192.710373162] [curobo_planner_node]: GRASP_POSE_REACHED — offset=+0.015m pre=6cm+45mm+0mm variant=('base', [1, 0, 0], -10.0) elevation=-10.0deg (attempt 1/12)
+[planner] [WARN] [1792576192.711033076] [curobo_planner_node]: OPEN_DESCENT_DYNAMIC: kp1_z=595mm reached_z=628mm overshoot=33mm extra_below_kp1=0mm -> descent=33mm
+[planner] [INFO] [1792576192.711478144] [curobo_planner_node]: OPEN_STEM_DESCENT — gripper=600, BASE -Z 33mm to KP1
+[planner] [INFO] [1792576192.712018144] [curobo_planner_node]: OPEN_STEM_DESCENT BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-32.6)]mm dist=32.6mm vel=40.0mm/s
+[bridge]  [INFO] [1792576192.713277333] [sim_executor_bridge_node]: MoveLine called (pos=[  0.           0.         -32.60535644   0.           0.
+[bridge]     0.        ], ref=0, mode=1)
+[bridge]  [INFO] [1792576195.423682273] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.27deg (손끝 1.3mm) / 대기 0.04s
+[bridge]  [INFO] [1792576195.424092587] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.3mm lateral=0.0mm |err|=1.3mm (명령 33mm, BASE)
+[bridge]  [INFO] [1792576195.424247271] [sim_executor_bridge_node]: MoveLine 실이동 31.3mm / 명령 33mm
+[bridge]  [INFO] [1792576195.424393356] [sim_executor_bridge_node]: MoveLine ok: 33mm / 17 steps / 계획 0.82s 실소요 2.71s (worst step joint delta 0.5deg)
+[planner] [INFO] [1792576195.466617377] [curobo_planner_node]: 3 close gripper + verify grasp
+[bridge]  [INFO] [1792576195.468451216] [sim_executor_bridge_node]: SetPosition called to 700
+[bridge]  [INFO] [1792576195.470271626] [sim_executor_bridge_node]: GRASP_JUDGE 줄기기준 along=+15.9mm(조우 -6~27) lateral=1.8mm(허용20) | 과실기준 d_tcp=39.4mm -> CONTACT
+[bridge]  [INFO] [1792576195.470701074] [sim_executor_bridge_node]: GRASP_ATTACH 과실 (-220, 783, 560)mm -> /sim/grasp_event
+[planner] [INFO] [1792576195.868683260] [curobo_planner_node]: VERIFY_GRASP: GRASP_CONTACT_DETECTED present_pos=670 current_raw=200 — jaw stopped before calibrated contact threshold (pos=670 <= 685); position-based grasp detected
+[planner] [INFO] [1792576195.869014440] [curobo_planner_node]: 4 detach pull — BASE -Z 40mm at 50mm/s
+[bridge]  [INFO] [1792576195.870149872] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -40.   0.   0.   0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576198.926198201] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.26deg (손끝 1.1mm) / 대기 0.06s
+[bridge]  [INFO] [1792576198.926606627] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.1mm lateral=0.0mm |err|=1.1mm (명령 40mm, BASE)
+[bridge]  [INFO] [1792576198.926768667] [sim_executor_bridge_node]: MoveLine 실이동 38.9mm / 명령 40mm
+[bridge]  [INFO] [1792576198.926916117] [sim_executor_bridge_node]: MoveLine ok: 40mm / 20 steps / 계획 0.80s 실소요 3.06s (worst step joint delta 0.5deg)
+[planner] [INFO] [1792576198.973891588] [curobo_planner_node]: DETACH_PULL_DOWN: BASE -Z 40mm -> OK
+[planner] [INFO] [1792576198.974378361] [curobo_planner_node]: RETREAT TOOL -Z 45.0mm vel=80.0mm/s
+[bridge]  [INFO] [1792576198.975623018] [sim_executor_bridge_node]: MoveLine called (pos=[  0.   0. -45.   0.   0.   0.], ref=1, mode=1)
+[bridge]  [INFO] [1792576201.922707831] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.19deg (손끝 1.6mm) / 대기 0.04s
+[bridge]  [INFO] [1792576201.923214529] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.6mm lateral=0.0mm |err|=1.6mm (명령 45mm, TOOL)
+[bridge]  [INFO] [1792576201.923403509] [sim_executor_bridge_node]: MoveLine 실이동 43.4mm / 명령 45mm
+[bridge]  [INFO] [1792576201.923572589] [sim_executor_bridge_node]: MoveLine ok: 45mm / 23 steps / 계획 0.56s 실소요 2.95s (worst step joint delta 0.3deg)
+[planner] [WARN] [1792576202.229343010] [curobo_planner_node]: TAUGHT_TRAY_GRID_PLACE active: slot=7; fixed tray pose only; marker localization is bypassed
+[planner] [INFO] [1792576202.230114328] [curobo_planner_node]: TAUGHT_TRAY_SLOT7_ABOVE generated from Slot0 FK + grid offset: clearance=120mm goal_mm=[444.1, -45.3, 181.5]
+[planner] [INFO] [1792576202.280515314] [curobo_planner_node]: Operation speed set to 100%
+[planner] [INFO] [1792576203.521401321] [curobo_planner_node]: Plan OK 1240ms 65pts 1.16s | goal=['444', '-45', '182']mm | end_J=[-14.5, 26.9, 135.0, 335.9, -73.2, -79.9]deg
+[planner] [INFO] [1792576203.522134532] [curobo_planner_node]: Spline 12pts plan=1.16s exec=1.01s -> end=['-14.5', '26.9', '135.0', '335.9', '-73.2', '-79.9']deg
+[bridge]  [INFO] [1792576203.523134200] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576205.087089868] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.26deg (손끝 2.3mm) / 대기 0.38s
+[bridge]  [INFO] [1792576205.087468937] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.16s -> end=[-14.5 26.9 135.0 335.9 -73.2 -79.9]deg
+[planner] [INFO] [1792576205.125127038] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE -Z 120mm
+[planner] [INFO] [1792576205.125505019] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_DESCEND BASE REL xyz=[np.float64(0.0), np.float64(0.0), np.float64(-120.0)]mm dist=120.0mm vel=40.0mm/s
+[bridge]  [INFO] [1792576205.126768773] [sim_executor_bridge_node]: MoveLine called (pos=[   0.    0. -120.    0.    0.    0.], ref=0, mode=1)
+[bridge]  [INFO] [1792576205.127961859] [sim_executor_bridge_node]: MoveLine 120mm: 60 -> 24 steps (5.0mm/step, 자유공간 이송)
+[bridge]  [INFO] [1792576209.771731407] [sim_executor_bridge_node]: ARM_ARRIVAL MoveLine: 잔차 0.27deg (손끝 1.3mm) / 대기 0.08s
+[bridge]  [INFO] [1792576209.772313250] [sim_executor_bridge_node]: MOVELINE_END_ERR: along=-1.3mm lateral=0.0mm |err|=1.3mm (명령 120mm, BASE)
+[bridge]  [INFO] [1792576209.772478311] [sim_executor_bridge_node]: MoveLine 실이동 118.7mm / 명령 120mm
+[bridge]  [INFO] [1792576209.772626976] [sim_executor_bridge_node]: MoveLine ok: 120mm / 24 steps / 계획 2.00s 실소요 4.64s (worst step joint delta 1.0deg)
+[planner] [WARN] [1792576209.783093952] [curobo_planner_node]: TAUGHT_TRAY_SLOT7_PLACE_RELEASE: position_cmd=600
+[bridge]  [INFO] [1792576209.784469727] [sim_executor_bridge_node]: SetPosition called to 600
+[bridge]  [INFO] [1792576209.784689770] [sim_executor_bridge_node]: GRASP_RELEASE -> /sim/grasp_event
+[planner] [INFO] [1792576209.833863215] [curobo_planner_node]: TAUGHT_SLOT0_RELEASE_ASCEND joint-space return to above pose (avoid raw BASE +Z branch/limit jump after release)
+[planner] [INFO] [1792576210.825877455] [curobo_planner_node]: Plan OK 991ms 50pts 0.90s | goal=['444', '-45', '182']mm | end_J=[-14.5, 26.9, 135.0, 335.9, -73.1, -79.9]deg
+[planner] [INFO] [1792576210.826732459] [curobo_planner_node]: Spline 12pts plan=0.90s exec=0.78s -> end=['-14.5', '26.9', '135.0', '335.9', '-73.1', '-79.9']deg
+[bridge]  [INFO] [1792576210.828354380] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576211.877192593] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.30deg (손끝 1.6mm) / 대기 0.26s
+[bridge]  [INFO] [1792576211.877416284] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 0.78s -> end=[-14.5 26.9 135.0 335.9 -73.1 -79.9]deg
+[planner] [harvest_probe] 결과 바 8번째 = placed (배치 성공, place_status=success)
+[planner] [WARN] [1792576211.879329597] [curobo_planner_node]: TAUGHT_TRAY_SLOT_SEQUENCE: slot 7 -> 9 (sequence=[0, 1, 3, 4, 6, 7, 9, 10])
+[planner] [INFO] [1792576211.879599894] [curobo_planner_node]: 7 return to pick-start scan pose
+[planner] [INFO] [1792576213.329782786] [curobo_planner_node]: pick-start scan pose after pick/place JS Plan OK 1449ms 65pts 1.17s | goal=['129.1', '-28.0', '104.4', '279.8', '42.0', '-15.8']deg
+[planner] [INFO] [1792576213.330616492] [curobo_planner_node]: Spline 12pts plan=1.17s exec=1.02s -> end=['129.1', '-28.0', '104.4', '279.8', '42.0', '-15.8']deg
+[bridge]  [INFO] [1792576213.331939464] [sim_executor_bridge_node]: MoveSplineJoint called with 12 points
+[bridge]  [INFO] [1792576214.934987669] [sim_executor_bridge_node]: ARM_ARRIVAL MoveSpline: 잔차 0.27deg (손끝 1.4mm) / 대기 0.38s
+[bridge]  [INFO] [1792576214.935170517] [sim_executor_bridge_node]: MoveSpline ok: 12 pts / 1.20s -> end=[129.1 -28.0 104.4 279.8 42.0 -15.8]deg
+[planner] [INFO] [1792576214.985398591] [curobo_planner_node]: World updated (neighbor obstacles cleared): static=1 dynamic=0 neighbor_spheres=0
+[bridge]  [INFO] [1792576214.986338859] [sim_executor_bridge_node]: SetPosition called to 600
+[planner] [INFO] [1792576215.036089992] [curobo_planner_node]: === PICK COMPLETE (DETACH_SUCCESS_UNVERIFIED) ===
+[scan]    [INFO] [1792576215.037090966] [scan_executor_node]: PICK_ATTEMPT_DONE root/sw/ne 1/1 — planner sequence ended (success is verified by gripper/manual KPI, not this Empty topic)
+[scan]    [INFO] [1792576215.037442711] [scan_executor_node]: PICK_ATTEMPT_SETTLE 1.0s before next target
+[scan]    [INFO] [1792576216.038577483] [scan_executor_node]: PICK_SEQUENCE_DONE root/sw/ne — 1/1 attempted
+[scan]    [INFO] [1792576216.038980540] [scan_executor_node]: CELL_RESCAN_AFTER_PICK root/sw pass=1 — checking remaining targets
+[scan]    [INFO] [1792576216.039279997] [scan_executor_node]: MOVING_TO root/sw  endpoint_deg=[150.3 -11.9 109.1 -97.8 63.3 10.5]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576216.039481972] [scan_executor_node]: Joint equivalent rewrite J4 -97.8 -> 262.2 deg (current 279.8, shorter by 360.0 deg)
+[scan]    [INFO] [1792576216.039676703] [scan_executor_node]: Joint equivalent rewrite J4 -97.8 -> 262.2 deg (current 279.8, shorter by 360.0 deg)
+[bridge]  [INFO] [1792576216.040730604] [sim_executor_bridge_node]: MoveJoint called to [150.3, -11.9, 109.1, 262.2, 63.3, 10.5] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576217.121543356] [sim_executor_bridge_node]: MoveJoint profile: span 26.2deg / 1.08s (216 steps)
+[bridge]  [INFO] [1792576217.263512104] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.28deg (손끝 1.8mm) / 대기 0.14s
+[scan]    [INFO] [1792576217.291514904] [scan_executor_node]: MoveJoint response: success=True  target=[150.3 -11.9 109.1 262.2 63.3 10.5]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576217.291892696] [scan_executor_node]: AT_SCAN_POSE root/sw joints_deg=[150.1 -12.0 109.1 262.3 63.2 10.3] — adaptive detection wait up to 3.0s
+[scan]    [INFO] [1792576220.296491691] [scan_executor_node]: TARGET_FOUND root/sw 9 pick candidate(s) detected
+[scan]    [INFO] [1792576220.297200436] [scan_executor_node]: SUBCELL_SCAN_ORDER root/sw root/sw/sw:0  root/sw/se:1  root/sw/nw:1  root/sw/ne:1
+[scan]    [INFO] [1792576220.297848671] [scan_executor_node]: SUBDIVIDE root/sw candidates=3 >= 3 cells=['se', 'nw', 'ne'] — 후보 있는 세부 칸만 세부 자세로 방문
+[scan]    [INFO] [1792576220.298240441] [scan_executor_node]: SUBCELL_EMPTY root/sw/sw no pick candidate — 2단 가지치기
+[scan]    [INFO] [1792576220.441669937] [scan_executor_node]: SUBCELL_POSE root/sw/se tier=lab_plane dJ_max=37.8deg dJ=[36 3 13 35 26 38] ee_mm=[-247.7, 317.3, 533.9] -> [-111.5, 433.0, 435.1] joints_deg=[114.4 -8.5 122.1 -132.9 37.6 48.3] (실기 깊이 2 평면 y=0.433 로 이동, 부모 시드 IK)
+[scan]    [INFO] [1792576220.442111654] [scan_executor_node]: MOVING_TO root/sw/se  endpoint_deg=[114.4 -8.5 122.1 -132.9 37.6 48.3]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576220.442306985] [scan_executor_node]: Joint equivalent rewrite J4 -132.9 -> 227.1 deg (current 262.2, shorter by 360.0 deg)
+[scan]    [INFO] [1792576220.442508725] [scan_executor_node]: Joint equivalent rewrite J4 -132.9 -> 227.1 deg (current 262.2, shorter by 360.0 deg)
+[bridge]  [INFO] [1792576220.443700841] [sim_executor_bridge_node]: MoveJoint called to [114.4, -8.5, 122.1, 227.1, 37.6, 48.3] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576221.740877026] [sim_executor_bridge_node]: MoveJoint profile: span 37.8deg / 1.30s (260 steps)
+[bridge]  [INFO] [1792576221.882258945] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.30deg (손끝 1.8mm) / 대기 0.14s
+[scan]    [INFO] [1792576221.894522982] [scan_executor_node]: MoveJoint response: success=True  target=[114.4 -8.5 122.1 227.1 37.6 48.3]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576221.894834626] [scan_executor_node]: AT_SCAN_POSE root/sw/se joints_deg=[114.6 -8.5 122.0 227.3 37.8 48.0] — adaptive detection wait up to 3.0s
+[vision]  [INFO] [1792576221.895298940] [fake_vision_node]: SCAN_CELL root/sw/se (VIEWING) -> 시야 = x[-0.223,0.050] z[0.265,0.463]
+[scan]    [INFO] [1792576224.899198205] [scan_executor_node]: SUBCELL_SCAN root/sw/se raw=3 in_cell=3 unique=1 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792576224.899780572] [scan_executor_node]: PICK_SKIP_ATTEMPTED root/sw/se pos=(-100,783,440)mm
+[scan]    [INFO] [1792576224.901531392] [scan_executor_node]: PICK_SEQUENCE_START root/sw/se — 0 candidate targets (raw=1 skipped_attempted=1)
+[scan]    [INFO] [1792576224.902045996] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/sw/se timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576224.902394861] [scan_executor_node]: PICK_SEQUENCE_DONE root/sw/se — 0/0 attempted
+[vision]  [INFO] [1792576224.902883081] [fake_vision_node]: SCAN_CELL root/sw/se (SCANNED_EMPTY) -> 시야 = x[-0.495,0.050] z[0.265,0.660]
+[scan]    [INFO] [1792576225.055231033] [scan_executor_node]: SUBCELL_POSE root/sw/nw tier=lab_plane dJ_max=43.8deg dJ=[4 28 44 9 5 18] ee_mm=[-247.7, 317.3, 533.9] -> [-384.0, 433.0, 632.6] joints_deg=[146.3 15.8 65.3 -88.8 58.3 -7.7] (실기 깊이 2 평면 y=0.433 로 이동, 부모 시드 IK)
+[scan]    [INFO] [1792576225.055647669] [scan_executor_node]: MOVING_TO root/sw/nw  endpoint_deg=[146.3 15.8 65.3 -88.8 58.3 -7.7]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576225.055864903] [scan_executor_node]: Joint equivalent rewrite J4 -88.8 -> 271.2 deg (current 227.1, shorter by 271.7 deg)
+[scan]    [INFO] [1792576225.056078735] [scan_executor_node]: Joint equivalent rewrite J4 -88.8 -> 271.2 deg (current 227.1, shorter by 271.7 deg)
+[bridge]  [INFO] [1792576225.057008795] [sim_executor_bridge_node]: MoveJoint called to [146.3, 15.8, 65.3, 271.2, 58.3, -7.7] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576226.672361894] [sim_executor_bridge_node]: MoveJoint profile: span 56.9deg / 1.61s (323 steps)
+[bridge]  [INFO] [1792576226.814337615] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.29deg (손끝 1.7mm) / 대기 0.14s
+[scan]    [INFO] [1792576226.858676766] [scan_executor_node]: MoveJoint response: success=True  target=[146.3 15.8 65.3 271.2 58.3 -7.7]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576226.859121904] [scan_executor_node]: AT_SCAN_POSE root/sw/nw joints_deg=[146.2 15.7 65.4 271.1 58.3 -7.6] — adaptive detection wait up to 3.0s
+[vision]  [INFO] [1792576226.859545895] [fake_vision_node]: SCAN_CELL root/sw/nw (VIEWING) -> 시야 = x[-0.495,-0.223] z[0.463,0.660]
+[scan]    [INFO] [1792576229.864149554] [scan_executor_node]: SUBCELL_SCAN root/sw/nw raw=3 in_cell=3 unique=1 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792576229.864766640] [scan_executor_node]: PICK_SKIP_ATTEMPTED root/sw/nw pos=(-250,783,500)mm
+[scan]    [INFO] [1792576229.865312316] [scan_executor_node]: PICK_SEQUENCE_START root/sw/nw — 0 candidate targets (raw=1 skipped_attempted=1)
+[scan]    [INFO] [1792576229.865703303] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/sw/nw timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576229.866094815] [scan_executor_node]: PICK_SEQUENCE_DONE root/sw/nw — 0/0 attempted
+[vision]  [INFO] [1792576229.866830238] [fake_vision_node]: SCAN_CELL root/sw/nw (SCANNED_EMPTY) -> 시야 = x[-0.495,0.050] z[0.265,0.660]
+[scan]    [INFO] [1792576230.136976122] [scan_executor_node]: SUBCELL_POSE root/sw/ne tier=parent_y dJ_max=26.2deg dJ=[21 16 5 18 21 26] ee_mm=[-247.7, 317.3, 533.9] -> [-111.5, 317.3, 632.6] joints_deg=[129.1 -28.0 104.4 -80.2 42.0 -15.8] (부모 y 유지, x·z 평행이동, 부모 시드 IK)
+[scan]    [INFO] [1792576230.137579022] [scan_executor_node]: MOVING_TO root/sw/ne  endpoint_deg=[129.1 -28.0 104.4 -80.2 42.0 -15.8]  (direct MoveJoint, YAML pose)
+[scan]    [INFO] [1792576230.137853452] [scan_executor_node]: Joint equivalent rewrite J4 -80.2 -> 279.8 deg (current 271.2, shorter by 342.8 deg)
+[scan]    [INFO] [1792576230.138091822] [scan_executor_node]: Joint equivalent rewrite J4 -80.2 -> 279.8 deg (current 271.2, shorter by 342.8 deg)
+[bridge]  [INFO] [1792576230.139016058] [sim_executor_bridge_node]: MoveJoint called to [129.1, -28.0, 104.4, 279.8, 42.0, -15.8] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576231.536156185] [sim_executor_bridge_node]: MoveJoint profile: span 43.8deg / 1.40s (280 steps)
+[bridge]  [INFO] [1792576231.677474386] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.28deg (손끝 1.8mm) / 대기 0.14s
+[scan]    [INFO] [1792576231.690405562] [scan_executor_node]: MoveJoint response: success=True  target=[129.1 -28.0 104.4 279.8 42.0 -15.8]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576231.690824041] [scan_executor_node]: AT_SCAN_POSE root/sw/ne joints_deg=[129.2 -27.8 104.2 279.7 42.1 -15.7] — adaptive detection wait up to 3.0s
+[scan]    [INFO] [1792576234.695380333] [scan_executor_node]: SUBCELL_SCAN root/sw/ne raw=9 in_cell=3 unique=1 (분면 시야 중 이 칸의 것만)
+[scan]    [INFO] [1792576234.695755326] [scan_executor_node]: PICK_SKIP_ATTEMPTED root/sw/ne pos=(-220,783,560)mm
+[scan]    [INFO] [1792576234.696040941] [scan_executor_node]: PICK_SEQUENCE_START root/sw/ne — 0 candidate targets (raw=1 skipped_attempted=1)
+[scan]    [INFO] [1792576234.696215514] [scan_executor_node]: PICK_ALL_DETECTED_TARGETS root/sw/ne timeout=60s max_total_picks=0
+[scan]    [INFO] [1792576234.696397296] [scan_executor_node]: PICK_SEQUENCE_DONE root/sw/ne — 0/0 attempted
+[scan]    [INFO] [1792576234.696756555] [scan_executor_node]: RETURNING_TO_OVERVIEW
+[bridge]  [INFO] [1792576234.697871831] [sim_executor_bridge_node]: MoveJoint called to [88.0, -94.9, 129.9, 175.9, -31.3, 93.4] (vel=60 acc=90 time=0.00)
+[bridge]  [INFO] [1792576237.185800603] [sim_executor_bridge_node]: MoveJoint profile: span 109.2deg / 2.49s (498 steps)
+[bridge]  [INFO] [1792576237.327783392] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.27deg (손끝 1.1mm) / 대기 0.14s
+[scan]    [INFO] [1792576237.351175266] [scan_executor_node]: MoveJoint response: success=True  target=[88.0 -94.9 129.9 175.9 -31.3 93.4]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792576237.351489000] [scan_executor_node]: AT_OVERVIEW joints_deg=[88.0 -94.8 129.8 176.1 -31.2 93.2]
+[scan]    [INFO] [1792576237.351672214] [scan_executor_node]: HARVEST_PRIORITY_ORDER root/nw:9  root/sw:9  root/ne:6
+[scan]    [INFO] [1792576237.351831258] [scan_executor_node]: SCAN_COMPLETE
+[scan]    [INFO] [1792576237.352185730] [scan_executor_node]: READY_FOR_NEXT_START
+
+[run_strawberry_nodes] 종료 중 — 노드 정리
+[run_strawberry_nodes] 딸기 리포 상태 변화 없음 (무시 파일 포함)
+[run_strawberry_nodes] 로그: logs/m2/20261021_184458_m2_headless

@@ -1,0 +1,13 @@
+# 2026-10-21 16:50:03  unity_batch 10 configure_tgs  rc=0  8s
+# 인자: -executeMethod SimSetup.ConfigureProject
+# 전체 로그: logs/unity/10_configure_tgs.log
+
+322:[SimSetup] ConfigureProject 시작  Unity 2022.3.62f2  batch=True  cwd=/home/oceanshape/e0509_unity_sim/UnityProject
+332:[SimSetup] 정의 심볼 [Standalone] 이미 ROS2 포함: 'ROS2'
+343:[SimSetup] 이 컴파일(Assembly-CSharp-Editor)에서 ROS2 가 이미 활성
+362:[SimSetup] ROSConnection 프리팹: 127.0.0.1:10000, ConnectOnStart, ShowHud, TF 구독 끔
+373:[SimSetup] Fixed Timestep 0.01667 → 0.01667 s (60 Hz)
+384:[SimSetup] PlayerSettings.runInBackground = true
+395:[SimSetup] 물리 풀이기 PGS → TGS (Isaac 과 같게)
+411:[SimSetup] ConfigureProject OK. ROS2 정의는 다음 실행(재컴파일)부터 적용된다 → BuildScene 은 별도 실행.
+765:Exiting batchmode successfully now!

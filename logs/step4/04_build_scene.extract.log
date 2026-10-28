@@ -1,0 +1,45 @@
+# 2026-10-20 19:56:49  unity_batch 04 build_scene  rc=0  9s
+# 인자: -executeMethod SimSetup.BuildScene
+# 전체 로그: logs/unity/04_build_scene.log
+
+359:[SimSetup] BuildScene 시작  Unity 2022.3.62f2  batch=True  nographics=True  cwd=/home/oceanshape/e0509_unity_sim/UnityProject
+369:[SimSetup] ROS2 정의 활성 (커넥터가 ROS2 프로토콜로 컴파일됨)
+384:[SimSetup] 새 빈 씬 생성 (카메라·조명은 직접 배치)
+402:[SimSetup] 메쉬 사전 점검 통과: 34개 (.dae 28, .stl 6)
+414:[SimSetup] URDF 임포트 시작: /home/oceanshape/e0509_unity_sim/UnityProject/Assets/URDF/e0509/e0509.urdf  axis=zAxis convex=unity
+491:Couldn't create a Convex Mesh from source mesh "E0509_0" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+506:Couldn't create a Convex Mesh from source mesh "E0509_1_2" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+521:Couldn't create a Convex Mesh from source mesh "E0509_1_3" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+536:Couldn't create a Convex Mesh from source mesh "E0509_2_1" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+551:Couldn't create a Convex Mesh from source mesh "E0509_3_1" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+566:Couldn't create a Convex Mesh from source mesh "E0509_3_2" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+581:Couldn't create a Convex Mesh from source mesh "E0509_4_1" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+596:Couldn't create a Convex Mesh from source mesh "E0509_5_1" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+611:Couldn't create a Convex Mesh from source mesh "E0509_5_2" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+626:Couldn't create a Convex Mesh from source mesh "E0509_6" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+821:[SimSetup] 임포트 완료: 'strawberry_grasp_environment_robot' 링크 15/15
+832:[SimSetup] 후처리: 컨트롤 컴포넌트 제거 1, ArticulationBody 14(루트 1, immovable·useGravity=false, 강성 100000 감쇠 1000), Collider 비활성 19
+843:[SimSetup] 검증: 링크 15(기대 15) 관절 14(기대 14) 회전관절 10(기대 10) AB 14(기대 14)
+854:[SimSetup]   joint world_fixed                FixedJoint     link=base_link            isRoot=True  immovable=True  gravity=False damp=0.05 
+865:[SimSetup]   joint joint_1                    RevoluteJoint  link=link_1               isRoot=False immovable=False gravity=False damp=0.00 [-360.0009, 360.0009]° force=3.403E+38 maxAngVel=3.1416 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+876:[SimSetup]   joint joint_2                    RevoluteJoint  link=link_2               isRoot=False immovable=False gravity=False damp=0.00 [-95.0021, 95.0021]° force=3.403E+38 maxAngVel=3.1416 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+887:[SimSetup]   joint joint_3                    RevoluteJoint  link=link_3               isRoot=False immovable=False gravity=False damp=0.00 [-135.0003, 135.0003]° force=3.403E+38 maxAngVel=3.1416 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+898:[SimSetup]   joint joint_4                    RevoluteJoint  link=link_4               isRoot=False immovable=False gravity=False damp=0.00 [-360.0009, 360.0009]° force=3.403E+38 maxAngVel=3.9270 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+909:[SimSetup]   joint joint_5                    RevoluteJoint  link=link_5               isRoot=False immovable=False gravity=False damp=0.00 [-135.0003, 135.0003]° force=3.403E+38 maxAngVel=3.9270 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+920:[SimSetup]   joint joint_6                    RevoluteJoint  link=link_6               isRoot=False immovable=False gravity=False damp=0.00 [-360.0009, 360.0009]° force=3.403E+38 maxAngVel=3.9270 k=100000 c=1000 axis(anchor X)=(0.000, -1.000, 0.000)
+931:[SimSetup]   joint arm_to_gripper             FixedJoint     link=rh_p12_rn_base       isRoot=False immovable=False gravity=False damp=0.05 
+942:[SimSetup]   joint rh_l1                      RevoluteJoint  link=rh_p12_rn_l1         isRoot=False immovable=False gravity=False damp=0.70 [0.0000, 63.0254]° force=3.403E+38 maxAngVel=6.5000 k=100000 c=1000 axis(anchor X)=(0.000, 0.000, 1.000)
+953:[SimSetup]   joint rh_p12_rn                  RevoluteJoint  link=rh_p12_rn_r1         isRoot=False immovable=False gravity=False damp=0.70 [0.0000, 63.0254]° force=3.403E+38 maxAngVel=6.5000 k=100000 c=1000 axis(anchor X)=(0.000, 0.000, -1.000)
+964:[SimSetup]   joint rh_l2                      RevoluteJoint  link=rh_p12_rn_l2         isRoot=False immovable=False gravity=False damp=0.70 [0.0000, 63.0254]° force=3.403E+38 maxAngVel=6.5000 k=100000 c=1000 axis(anchor X)=(0.000, 0.000, -1.000)
+975:[SimSetup]   joint rh_r2                      RevoluteJoint  link=rh_p12_rn_r2         isRoot=False immovable=False gravity=False damp=0.70 [0.0000, 63.0254]° force=3.403E+38 maxAngVel=6.5000 k=100000 c=1000 axis(anchor X)=(0.000, 0.000, 1.000)
+986:[SimSetup]   joint l2_to_left_custom_part     FixedJoint     link=left_custom_part     isRoot=False immovable=False gravity=False damp=0.05 
+997:[SimSetup]   joint r2_to_right_custom_part    FixedJoint     link=right_custom_part    isRoot=False immovable=False gravity=False damp=0.05 
+1008:[SimSetup] 영점 FK: rh_p12_rn_base world=(0.0000, 1.1230, 0.0000) (기대 Unity y≈1.123) → OK
+1019:[SimSetup] 루트 링크 'world': AB 없음(기대); 루트 AB = base_link
+1030:[SimSetup] TCP 영점 world=(0.0000, 1.3590, 0.0000) (기대 y≈1.359) → OK
+1041:[SimSetup] Renderer 21개, 전체 bounds center=(-0.502, 0.577, 0.482) size=(1.242, 1.318, 1.383) (정상: 높이 ≈1.2–1.5 m)
+1052:[SimSetup] 'Sim' 컴포넌트: 새로 붙임 [] 이미 있음 [] 타입 없음 [JointStateMirror, SimHud, TcpTrail, JointLimitMonitor]
+1063:[SimSetup] WARN 단계 5 스크립트가 아직 없다. Assets/Scripts 에 추가한 뒤 BuildScene 을 다시 실행하면 붙는다.
+1074:[SimSetup] 카메라 (1.70, 1.50, -2.10) → (0.00, 0.60, 0.00), 방향광 (50,-30,0)
+1100:[SimSetup] BuildScene OK → Assets/Scenes/E0509Sim.unity (Build Settings 등록). TCP 자식 'tcp' @ rh_p12_rn_base
+1460:Exiting batchmode successfully now!

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 12:43:48Z" end-time="2026-10-21 12:44:13Z" duration="25.4621182">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 12:43:48Z" end-time="2026-10-21 12:44:13Z" duration="25.462118" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1015" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 12:43:48Z" end-time="2026-10-21 12:44:13Z" duration="25.456100" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="56846" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="CommandModeTest" fullname="CommandModeTest" classname="CommandModeTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 12:43:48Z" end-time="2026-10-21 12:44:08Z" duration="20.403100" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1002" name="CommandMode_ConvergesWithinTolerance_WithoutLimitViolations" fullname="CommandModeTest.CommandMode_ConvergesWithinTolerance_WithoutLimitViolations" methodname="CommandMode_ConvergesWithinTolerance_WithoutLimitViolations" classname="CommandModeTest" runstate="Runnable" seed="1866746542" result="Passed" start-time="2026-10-21 12:43:48Z" end-time="2026-10-21 12:44:08Z" duration="20.395068" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[WristCamera] 그래픽 장치 없음(-nographics) — 손목 카메라 렌더 끔
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 unity_measured. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름). 궤적 꺼짐 (P)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개(붙은·수확된 과실 뺌), 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[HarvestHud] 라벨 45개 (Resources/HudLabels), 뷰 파일 /tmp/e0509_hud_view.json, 그리퍼 카메라 있음. G 로 켜고 끈다
+[GraspFollower] 익은 과실 8개(화면 8), 안 익은 4개: strawberry_ripe_01↔(-0.25,0.7828,0.74) 1.6mm, strawberry_ripe_02↔(-0.12,0.7828,0.76) 1.6mm, strawberry_ripe_03↔(0.20,0.7828,0.74) 1.6mm, strawberry_ripe_04↔(-0.22,0.7828,0.56) 1.6mm, strawberry_ripe_05↔(-0.10,0.7828,0.44) 1.6mm, strawberry_ripe_06↔(-0.25,0.7828,0.50) 1.6mm, strawberry_ripe_07↔(-0.38,0.7828,0.72) 1.6mm, strawberry_ripe_08↔(0.28,0.7828,0.70) 1.6mm
+[GraspFollower] 트레이 상자 x[-0.155, 0.171] z[0.602, 0.828] y≤0.300 (Unity world, egg_carton 경계 + 여유)
+[StrawberryPublisher] 발행 과실 -1 → 8개
+[HarvestHud] 뷰 파일이 이번 Play 전에 쓰였다(699 s 전) — 이전 런의 것이라 그리지 않는다
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION velocity joint_1: peak 224.573 vs limit 180.000 (+44.573), 0.15s, 9 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.001), 0.12s, 7 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.001), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION velocity joint_1: peak 223.741 vs limit 180.000 (+43.741), 0.15s, 9 steps
+[CommandModeTest] 보고서 → /home/oceanshape/e0509_unity_sim/logs/m2/command_mode_report.json
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1005" name="GraspFollowTest" fullname="GraspFollowTest" classname="GraspFollowTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 12:44:08Z" end-time="2026-10-21 12:44:11Z" duration="2.803339" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1006" name="Attach_Follows_Release_Drops" fullname="GraspFollowTest.Attach_Follows_Release_Drops" methodname="Attach_Follows_Release_Drops" classname="GraspFollowTest" runstate="Runnable" seed="271604661" result="Passed" start-time="2026-10-21 12:44:08Z" end-time="2026-10-21 12:44:11Z" duration="2.802556" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.878 vs limit 57.296 (+4.583), 1.93s, 117 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.878 vs limit 57.296 (+4.583), 1.93s, 117 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.878 vs limit 57.296 (+4.583), 1.93s, 117 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.878 vs limit 57.296 (+4.583), 1.93s, 117 steps
+[JointLimitMonitor] 종료: 위반 6, 근처 11, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[WristCamera] 그래픽 장치 없음(-nographics) — 손목 카메라 렌더 끔
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 received_message. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름). 궤적 꺼짐 (P)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Mirror)
+[StrawberryPublisher] mode=Mirror — 발행 안 함 (Command 모드에서만). 구만 표시
+[JointStatePublisher] mode=Mirror — 발행 안 함 (Command 모드에서만)
+[HarvestHud] 라벨 45개 (Resources/HudLabels), 뷰 파일 /tmp/e0509_hud_view.json, 그리퍼 카메라 있음. G 로 켜고 끈다
+[GraspFollower] 익은 과실 8개(화면 8), 안 익은 4개: strawberry_ripe_01↔(-0.25,0.7828,0.74) 1.6mm, strawberry_ripe_02↔(-0.12,0.7828,0.76) 1.6mm, strawberry_ripe_03↔(0.20,0.7828,0.74) 1.6mm, strawberry_ripe_04↔(-0.22,0.7828,0.56) 1.6mm, strawberry_ripe_05↔(-0.10,0.7828,0.44) 1.6mm, strawberry_ripe_06↔(-0.25,0.7828,0.50) 1.6mm, strawberry_ripe_07↔(-0.38,0.7828,0.72) 1.6mm, strawberry_ripe_08↔(0.28,0.7828,0.70) 1.6mm
+[GraspFollower] 트레이 상자 x[-0.155, 0.171] z[0.602, 0.828] y≤0.300 (Unity world, egg_carton 경계 + 여유)
+[HarvestHud] 뷰 파일이 이번 Play 전에 쓰였다(719 s 전) — 이전 런의 것이라 그리지 않는다
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[GraspFollower] ATTACH strawberry_ripe_07  일치 0.0 mm  그리퍼 기준 (32.3, 3.2, 253.7) mm
+[GraspFollowTest] ATTACH strawberry_ripe_07: TCP–과실 루트 35.6 mm
+[GraspFollowTest] 운반: 상대 위치 오차 최대 0.0007 mm, 회전 0.0000°, 처음 자리에서 59.1 mm
+[GraspFollower] ATTACH 무시: 이미 strawberry_ripe_07 이(가) 붙어 있다
+[GraspFollower] 낙하 받침면: 삼각형 7580, 상자 6
+[GraspFollower] RELEASE strawberry_ripe_07  트레이 밖 낙하, (-380.4, 743.5, 674.2) mm 에서 놓음  수확 1 낙하 1
+[GraspFollower] strawberry_ripe_07 멈춤 (-380.4, 743.5, -421.8) mm, 1096.1 mm 낙하, 트레이 밖
+[GraspFollowTest] RELEASE strawberry_ripe_07: dropped, 높이 0.6758 → -0.4203 m
+[GraspFollower] RELEASE 무시: 붙은 과실 없음
+[GraspFollower] ATTACH 무시: (0.000, 0.000, 0.000) 에서 60 mm 안에 익은 과실 없음 (가장 가까운 904 mm)
+[GraspFollower] ATTACH 무시: (-0.380, 0.783, 0.720) 에서 60 mm 안에 익은 과실 없음 (가장 가까운 132 mm)
+[GraspFollower] ATTACH strawberry_ripe_03  일치 0.0 mm  그리퍼 기준 (-32.0, -576.8, 297.0) mm
+[GraspFollower] RELEASE strawberry_ripe_03  트레이 배치, (715.1, -7.7, 58.2) mm 에서 놓음 → 계란판으로 떨어짐  수확 2
+[GraspFollower] strawberry_ripe_03 멈춤 (715.1, -7.7, 2.2) mm, 56.0 mm 낙하, 트레이 안
+[GraspFollowTest] 계란판 낙하: 과실 가장 낮은 점 -0.0260 m (계란판 -0.0300–0.0000), 상자 안 True
+[GraspFollower] 과실을 처음 자리로: 시험 끝
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1007" name="GripperGeometryCheck" fullname="GripperGeometryCheck" classname="GripperGeometryCheck" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 12:44:11Z" end-time="2026-10-21 12:44:11Z" duration="0.422553" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1008" name="CustomFingers_MatchUrdfGap" fullname="GripperGeometryCheck.CustomFingers_MatchUrdfGap" methodname="CustomFingers_MatchUrdfGap" classname="GripperGeometryCheck" runstate="Runnable" seed="1780538899" result="Passed" start-time="2026-10-21 12:44:11Z" end-time="2026-10-21 12:44:11Z" duration="0.421955" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.880 vs limit 57.296 (+4.584), 2.68s, 162 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.879 vs limit 57.296 (+4.583), 2.68s, 162 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.880 vs limit 57.296 (+4.584), 2.68s, 162 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.583), 2.68s, 162 steps
+[JointLimitMonitor] 종료: 위반 0, 근처 0, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[WristCamera] 그래픽 장치 없음(-nographics) — 손목 카메라 렌더 끔
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 received_message. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름). 궤적 꺼짐 (P)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Mirror)
+[StrawberryPublisher] mode=Mirror — 발행 안 함 (Command 모드에서만). 구만 표시
+[JointStatePublisher] mode=Mirror — 발행 안 함 (Command 모드에서만)
+[HarvestHud] 라벨 45개 (Resources/HudLabels), 뷰 파일 /tmp/e0509_hud_view.json, 그리퍼 카메라 있음. G 로 켜고 끈다
+[GraspFollower] 익은 과실 8개(화면 8), 안 익은 4개: strawberry_ripe_01↔(-0.25,0.7828,0.74) 1.6mm, strawberry_ripe_02↔(-0.12,0.7828,0.76) 1.6mm, strawberry_ripe_03↔(0.20,0.7828,0.74) 1.6mm, strawberry_ripe_04↔(-0.22,0.7828,0.56) 1.6mm, strawberry_ripe_05↔(-0.10,0.7828,0.44) 1.6mm, strawberry_ripe_06↔(-0.25,0.7828,0.50) 1.6mm, strawberry_ripe_07↔(-0.38,0.7828,0.72) 1.6mm, strawberry_ripe_08↔(0.28,0.7828,0.70) 1.6mm
+[GraspFollower] 트레이 상자 x[-0.155, 0.171] z[0.602, 0.828] y≤0.300 (Unity world, egg_carton 경계 + 여유)
+[HarvestHud] 뷰 파일이 이번 Play 전에 쓰였다(722 s 전) — 이전 런의 것이라 그리지 않는다
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[GripperGeometryCheck]   0.00°  Unity  102.76 mm  URDF  102.76 mm  관절 [0.00,0.00,0.00,0.00]
+[GripperGeometryCheck]  30.00°  Unity   61.03 mm  URDF   61.03 mm  관절 [30.00,30.00,30.00,30.00]
+[JointLimitMonitor] VIOLATION velocity rh_p12_rn: peak 530.500 vs limit 372.400 (+158.100), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION velocity rh_r2: peak 530.500 vs limit 372.400 (+158.100), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION velocity rh_l1: peak 530.500 vs limit 372.400 (+158.100), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION velocity rh_l2: peak 530.500 vs limit 372.400 (+158.100), 0.02s, 1 steps
+[GripperGeometryCheck]  53.05°  Unity   17.82 mm  URDF   17.82 mm  관절 [53.05,53.05,53.05,53.05]
+[GripperGeometryCheck]  57.30°  Unity    9.40 mm  URDF    9.40 mm  관절 [57.30,57.30,57.30,57.30]
+[GripperGeometryCheck]  61.88°  Unity    0.29 mm  URDF    0.29 mm  관절 [61.88,61.88,61.88,61.88]
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1009" name="HudViewTest" fullname="HudViewTest" classname="HudViewTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 12:44:11Z" end-time="2026-10-21 12:44:13Z" duration="1.825885" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1010" name="RelayView_Parses_And_DrivesBoard" fullname="HudViewTest.RelayView_Parses_And_DrivesBoard" methodname="RelayView_Parses_And_DrivesBoard" classname="HudViewTest" runstate="Runnable" seed="1218070329" result="Passed" start-time="2026-10-21 12:44:11Z" end-time="2026-10-21 12:44:13Z" duration="1.825087" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.880 vs limit 57.296 (+4.584), 0.18s, 12 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.880 vs limit 57.296 (+4.584), 0.18s, 12 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.880 vs limit 57.296 (+4.584), 0.18s, 12 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.880 vs limit 57.296 (+4.584), 0.18s, 12 steps
+[JointLimitMonitor] 종료: 위반 4, 근처 5, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[WristCamera] 그래픽 장치 없음(-nographics) — 손목 카메라 렌더 끔
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 unity_measured. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름). 궤적 꺼짐 (P)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개(붙은·수확된 과실 뺌), 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[HarvestHud] 라벨 45개 (Resources/HudLabels), 뷰 파일 /tmp/DefaultCompany/UnityProject/hud_view_test.json, 그리퍼 카메라 있음. G 로 켜고 끈다
+[GraspFollower] 익은 과실 8개(화면 8), 안 익은 4개: strawberry_ripe_01↔(-0.25,0.7828,0.74) 1.6mm, strawberry_ripe_02↔(-0.12,0.7828,0.76) 1.6mm, strawberry_ripe_03↔(0.20,0.7828,0.74) 1.6mm, strawberry_ripe_04↔(-0.22,0.7828,0.56) 1.6mm, strawberry_ripe_05↔(-0.10,0.7828,0.44) 1.6mm, strawberry_ripe_06↔(-0.25,0.7828,0.50) 1.6mm, strawberry_ripe_07↔(-0.38,0.7828,0.72) 1.6mm, strawberry_ripe_08↔(0.28,0.7828,0.70) 1.6mm
+[GraspFollower] 트레이 상자 x[-0.155, 0.171] z[0.602, 0.828] y≤0.300 (Unity world, egg_carton 경계 + 여유)
+[StrawberryPublisher] 발행 과실 -1 → 8개
+[HarvestHud] 뷰 파일이 이번 Play 전에 쓰였다(6688 s 전) — 이전 런의 것이라 그리지 않는다
+[HudViewTest] 상태 DONE, 수확 done '6 / 8 (75%)', 칸 8, 트리 도형 27, 켜짐 [ne,nw,se,sw], 글자 'home'
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

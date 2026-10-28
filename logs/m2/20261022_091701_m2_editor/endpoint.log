@@ -1,0 +1,22 @@
+[run_endpoint] 127.0.0.1:10000  ROS_DOMAIN_ID=0  RMW=rmw_fastrtps_cpp
+[INFO] [1792628222.705827266] [UnityEndpoint]: Starting server on 127.0.0.1:10000
+[INFO] [1792628223.549196163] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1792628223.590369414] [UnityEndpoint]: RegisterSubscriber(/joint_command, <class 'sensor_msgs.msg._joint_state.JointState'>) OK
+[INFO] [1792628223.592629476] [UnityEndpoint]: RegisterSubscriber(/sim/grasp_event, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1792628223.618213341] [UnityEndpoint]: RegisterPublisher(/isaac_sim/strawberries, <class 'geometry_msgs.msg._pose_array.PoseArray'>) OK
+[INFO] [1792628223.620102496] [UnityEndpoint]: RegisterPublisher(/dsr01/joint_states, <class 'sensor_msgs.msg._joint_state.JointState'>) OK
+[ERROR] [1792628415.717810380] [UnityEndpoint]: Exception: No more data available
+[INFO] [1792628415.718077520] [UnityEndpoint]: Disconnected from 127.0.0.1
+[ERROR] [1792628416.155605045] [UnityEndpoint]: Exception [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "/home/oceanshape/e0509_unity_sim/ros/install/ros_tcp_endpoint/lib/ros_tcp_endpoint/default_server_endpoint", line 33, in <module>
+    sys.exit(load_entry_point('ros-tcp-endpoint==0.0.1', 'console_scripts', 'default_server_endpoint')())
+  File "/home/oceanshape/e0509_unity_sim/ros/install/ros_tcp_endpoint/lib/python3.10/site-packages/ros_tcp_endpoint/default_server_endpoint.py", line 17, in main
+    rclpy.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+    _shutdown(context=context)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+    return context.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+    self.__context.shutdown()
+rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 08:22:50Z" end-time="2026-10-21 08:22:58Z" duration="8.2540674">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-21 08:22:50Z" end-time="2026-10-21 08:22:58Z" duration="8.254067" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1009" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-21 08:22:50Z" end-time="2026-10-21 08:22:58Z" duration="8.248307" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="25757" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1005" name="M1SmokeTest" fullname="M1SmokeTest" classname="M1SmokeTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 08:22:50Z" end-time="2026-10-21 08:22:58Z" duration="8.247369" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1006" name="Mirror_FollowsFakeJointStates" fullname="M1SmokeTest.Mirror_FollowsFakeJointStates" methodname="Mirror_FollowsFakeJointStates" classname="M1SmokeTest" runstate="Runnable" seed="56363129" result="Passed" start-time="2026-10-21 08:22:50Z" end-time="2026-10-21 08:22:58Z" duration="8.239919" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 received_message. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] 구독 /dsr01/joint_states  mode=Mirror
+[StrawberryPublisher] mode=Mirror — 발행 안 함 (Command 모드에서만). 구만 표시
+[JointStatePublisher] mode=Mirror — 발행 안 함 (Command 모드에서만)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_3: peak 137.000 vs limit 135.000 (+2.000), 0.50s, 30 steps
+[M1SmokeTest] 보고서 → /home/oceanshape/e0509_unity_sim/logs/m1/smoke_report.json
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

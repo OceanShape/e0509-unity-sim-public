@@ -1,0 +1,5 @@
+# unity_batch 이전 수동 실행  전체 로그: logs/unity/02_resolve_packages.log (git 제외)
+
+24:[Licensing::Module] Error: Access token is unavailable; failed to update
+28:Pro License: NO
+1811:Exiting batchmode successfully now!

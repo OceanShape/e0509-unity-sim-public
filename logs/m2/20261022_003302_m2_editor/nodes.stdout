@@ -1,0 +1,79 @@
+[run_strawberry_nodes] check_params.py 통과
+[run_strawberry_nodes] 로그 logs/m2/20261022_003302_m2_editor  ROS_DOMAIN_ID=0  스캔 MoveJoint 60.0/90.0
+[vision]  [INFO] [1792596784.790281607] [fake_vision_node]: Fake Vision Node initialized. (Mocking strawberry_fusion_node) quadrant_filter=True subcell_view=True
+[vision]  [harvest_probe] 계측 부착: role=vision -> /tmp/harvest_hud_vision.json
+[bridge]  [INFO] [1792596786.514144889] [sim_executor_bridge_node]: Sim Executor Bridge Node initializing...
+[bridge]  [WARN] [1792596786.902714447] [sim_executor_bridge_node]: MOVELINE_COLLISION_WORLD: ['whiteboard'] loaded from /home/oceanshape/strawberry_grasp_environment/install/e0509_gripper_description/share/e0509_gripper_description/config/environment.yaml
+[bridge]  [INFO] [1792596787.307616262] [sim_executor_bridge_node]: cuRobo IK Solver successfully initialized for MoveLine.
+[bridge]  [WARN] [1792596787.307986852] [sim_executor_bridge_node]: GRASP_JUDGE_MODEL: tool_tcp_offset=236mm capture_radius=38mm enabled=True sim_speed_scale=1.0 gripper_close=1.080rad arm_arrival_tol=0.30deg — planner 의 ee_to_tcp_offset_m 과 반드시 같아야 한다 (다르면 전 타겟 GRASP_EMPTY)
+[bridge]  [WARN] [1792596787.308188128] [sim_executor_bridge_node]: DOOSAN_MOVEIT_REF: vel=[120, 120, 150, 225, 225, 225] acc=[120, 120, 150, 225, 225, 225] deg/s,deg/s^2 (dsr_moveit_config_e0509/config/joint_limits.yaml) — 초과해도 자르지 않고 기록만 (D3)
+[bridge]  [INFO] [1792596787.308338150] [sim_executor_bridge_node]: Sim Executor Bridge Node Ready! (Listening to Doosan & Gripper services)
+[bridge]  [harvest_probe] 계측 부착: role=controller -> /tmp/harvest_hud_controller.json
+
+[run_strawberry_nodes] cuRobo Planner warmup 대기 중 (수십 초)...
+[scan]    [INFO] [1792596789.758272895] [scan_executor_node]: Loaded 4 scan targets from /home/oceanshape/strawberry_grasp_environment/install/strawberry_motion/share/strawberry_motion/config/scan_pose_candidates_refit_candidate.yaml
+[scan]    [INFO] [1792596789.758487995] [scan_executor_node]: MoveJoint speeds: scan vel=60.0 acc=90.0, overview return vel=60.0 acc=90.0
+[scan]    [INFO] [1792596789.758628767] [scan_executor_node]: MoveJoint service dispatch timeout: 30.0s; arrival is verified from /joint_states
+[planner] [WARN] [1792596789.839398419] [curobo_planner_node]: EE_TO_TCP_OFFSET_OVERRIDE: 160mm -> 236mm (profile=legacy_160mm)
+[scan]    [INFO] [1792596790.244861970] [scan_executor_node]: SUBDIVIDE_IK_READY min_candidates=3 max_joint_delta=60deg seeds=32 init=0.5s subcell_ee_y=0.433
+[scan]    [INFO] [1792596790.252913786] [scan_executor_node]: scan_executor_node ready; explicit /strawberry/scan/start required
+[scan]    [harvest_probe] 계측 부착: role=scan -> /tmp/harvest_hud_scan.json
+[planner] [INFO] [1792596797.412745033] [curobo_planner_node]: cuRobo MotionGen warmed up!
+[planner] [INFO] [1792596797.430766061] [curobo_planner_node]: cuRobo Planner Ready!
+[planner] [INFO] [1792596797.430919952] [curobo_planner_node]: Runtime JSONL: /home/oceanshape/e0509_unity_sim/logs/runtime/2026-10-22/curobo_planner_node_20261022T003309-0901beb7.jsonl
+[planner] [INFO] [1792596797.431431562] [curobo_planner_node]:   ENV_CUBOIDS=1  SELF_COLLISION=False
+[planner] [WARN] [1792596797.431601739] [curobo_planner_node]: Leaf/stem geometry is not in the cuRobo world; visually occluded targets require reobserve/skip instead of forced approach
+[planner] [INFO] [1792596797.431756113] [curobo_planner_node]:   WALL_QUAT_WXYZ=[0.497, -0.497, 0.503, 0.503] approach_dir=[0.0, 1.0, -0.0] elevation=-0.0deg  variants=4
+[planner] [INFO] [1792596797.431889978] [curobo_planner_node]:   LEFTMOST horizontal fallback x_corr=+5mm offsets_mm=[15, 20, 25] extra_request=0mm wall_margin=-30mm wall_override=False pre_approach=60mm
+[planner] [WARN] [1792596797.432040577] [curobo_planner_node]:   TOOL_GEOMETRY_LEGACY: planner offset=160mm, measured grasp center=260mm (model shortfall=100mm).
+[planner] [INFO] [1792596797.432167708] [curobo_planner_node]:   environment loaded: /home/oceanshape/strawberry_grasp_environment/src/e0509_gripper_description/config/environment.yaml
+[planner] [INFO] [1792596797.432316061] [curobo_planner_node]:   marker place: enabled=True release=True taught_slot0_reference=True taught_place_via_tray_view=False hold_after_slot0=False hold_on_failure=False open_stem_descent=True straight_reverse_retreat=True slot_sequence=[0, 1, 3, 4, 6, 7, 9, 10] slot_step=1 skip_row2=False orthogonalize_taught_grid=False taught_grid_shift_y_m=0.0000 taught_grid_pitch_override_m=0.0000 allow_generated_slot_release=True allow_unverified_grasp=False max_age=3600s
+[planner] [INFO] [1792596797.432446147] [curobo_planner_node]:   SafeGrasp: enabled=False target=700 max_current=400 delta_threshold=40 timeout=5.0s contact_pos<=685 empty_pos>=695
+[planner] [INFO] [1792596797.432572913] [curobo_planner_node]:   grasp verification: position-only (contact <= 685, empty >= 695; current is logged only)
+[planner] [harvest_probe] 계측 부착: role=planner -> /tmp/harvest_hud_planner.json
+──────────────────────────────────────────────────────────
+ 기동 로그 대조 (딸기 run_nodes.sh 와 같은 항목, 속도만 D-7)
+──────────────────────────────────────────────────────────
+  OK   MoveLine 충돌월드 로드
+  OK   브릿지 TCP 오프셋 236mm
+  OK   도착 판정 허용오차 0.30deg
+  OK   플래너 TCP 오프셋 160→236mm
+  OK   열린 조우 하강 단계
+  OK   진입 역순 후퇴 단계
+  OK   배치 이송 = 실기 시연과 같은 직행
+  OK   배치 슬롯 0,1,3,4,6,7,9,10
+  OK   배치 격자 = 실기 티칭 그대로
+  OK   배치 격자 간격 = 실기 티칭
+  OK   배치 격자 평행이동 없음
+  OK   scan_executor 기동
+  OK   적응 분할 IK 솔버
+  OK   스캔·overview 복귀 MoveJoint 60.0/90.0
+  OK   cuRobo Planner Ready!
+──────────────────────────────────────────────────────────
+ 전부 정합. 플랜트(Unity Play 또는 Isaac)가 overview 자세로 /dsr01/joint_states 를 내는지 확인한 뒤:
+   ros2 service call /strawberry/scan/start std_srvs/srv/Trigger
+──────────────────────────────────────────────────────────
+[bridge]  [INFO] [1792596799.433778009] [sim_executor_bridge_node]: SetPosition called to 600
+[scan]    [INFO] [1792596802.595563899] [scan_executor_node]: START_ACCEPTED explicit request; initial pose verified
+[scan]    [INFO] [1792596802.596708991] [scan_executor_node]: TRAVERSAL_SCAN_STARTED cells=['root/nw', 'root/ne', 'root/se', 'root/sw'] (4/4 quadrants)
+[scan]    [INFO] [1792596802.597364145] [scan_executor_node]: OVERVIEW_SCAN_STARTED — scene_positions 로 분면별 익은 과실 판정, 최대 3.0s
+[scan]    [INFO] [1792596805.601175688] [scan_executor_node]: OVERVIEW_SCAN nw:0  ne:0  se:0  sw:0
+[scan]    [INFO] [1792596805.601443028] [scan_executor_node]: TRAVERSAL_PRUNED skip=['root/nw', 'root/ne', 'root/se', 'root/sw'] — overview 1차 스캔에서 익은 과실 0개
+[scan]    [INFO] [1792596805.601604776] [scan_executor_node]: TRAVERSAL_PRUNED_ALL — 익은 과실이 보이는 분면이 없다
+[scan]    [INFO] [1792596805.601879875] [scan_executor_node]: RETURNING_TO_OVERVIEW
+[vision]  [INFO] [1792596805.601870572] [fake_vision_node]: SCAN_CELL root/nw (SCANNED_EMPTY) -> 시야 = x[-0.495,0.050] z[0.660,1.055]
+[vision]  [INFO] [1792596805.602387298] [fake_vision_node]: SCAN_CELL root/ne (SCANNED_EMPTY) -> 시야 = x[0.050,0.595] z[0.660,1.055]
+[vision]  [INFO] [1792596805.602691953] [fake_vision_node]: SCAN_CELL root/se (SCANNED_EMPTY) -> 시야 = x[0.050,0.595] z[0.265,0.660]
+[bridge]  [INFO] [1792596805.602770597] [sim_executor_bridge_node]: MoveJoint called to [88.0, -94.9, 129.9, 175.9, -31.3, 93.4] (vel=60 acc=90 time=0.00)
+[vision]  [INFO] [1792596805.602942603] [fake_vision_node]: SCAN_CELL root/sw (SCANNED_EMPTY) -> 시야 = x[-0.495,0.050] z[0.265,0.660]
+[bridge]  [INFO] [1792596805.611378475] [sim_executor_bridge_node]: MoveJoint profile: span 0.0deg / 0.01s (2 steps)
+[bridge]  [INFO] [1792596805.616525579] [sim_executor_bridge_node]: ARM_ARRIVAL MoveJoint: 잔차 0.00deg (손끝 0.0mm) / 대기 0.00s
+[scan]    [INFO] [1792596805.652494226] [scan_executor_node]: MoveJoint response: success=True  target=[88.0 -94.9 129.9 175.9 -31.3 93.4]  vel=60.0  acc=90.0
+[scan]    [INFO] [1792596805.652932969] [scan_executor_node]: AT_OVERVIEW joints_deg=[88.0 -94.9 129.9 175.9 -31.3 93.4]
+[scan]    [INFO] [1792596805.653233643] [scan_executor_node]: SCAN_COMPLETE
+[scan]    [harvest_probe] 한 런 동안 PICK_SEQUENCE_START/PICK_TRIGGER 를 한 번도 못 봤다 — scan_executor 의 상태 문자열이 바뀌었는지 확인할 것
+[scan]    [INFO] [1792596805.653641387] [scan_executor_node]: READY_FOR_NEXT_START
+
+[run_strawberry_nodes] 종료 중 — 노드 정리
+[run_strawberry_nodes] 딸기 리포 상태 변화 없음 (무시 파일 포함)
+[run_strawberry_nodes] 로그: logs/m2/20261022_003302_m2_editor

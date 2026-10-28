@@ -1,0 +1,6 @@
+[INFO] [1792596784.790281607] [fake_vision_node]: Fake Vision Node initialized. (Mocking strawberry_fusion_node) quadrant_filter=True subcell_view=True
+[harvest_probe] 계측 부착: role=vision -> /tmp/harvest_hud_vision.json
+[INFO] [1792596805.601870572] [fake_vision_node]: SCAN_CELL root/nw (SCANNED_EMPTY) -> 시야 = x[-0.495,0.050] z[0.660,1.055]
+[INFO] [1792596805.602387298] [fake_vision_node]: SCAN_CELL root/ne (SCANNED_EMPTY) -> 시야 = x[0.050,0.595] z[0.660,1.055]
+[INFO] [1792596805.602691953] [fake_vision_node]: SCAN_CELL root/se (SCANNED_EMPTY) -> 시야 = x[0.050,0.595] z[0.265,0.660]
+[INFO] [1792596805.602942603] [fake_vision_node]: SCAN_CELL root/sw (SCANNED_EMPTY) -> 시야 = x[-0.495,0.050] z[0.265,0.660]

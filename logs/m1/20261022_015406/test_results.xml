@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 16:54:11Z" end-time="2026-10-21 16:54:20Z" duration="8.2839179">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 16:54:11Z" end-time="2026-10-21 16:54:20Z" duration="8.283918" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1015" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 16:54:11Z" end-time="2026-10-21 16:54:20Z" duration="8.277924" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="96331" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1011" name="M1SmokeTest" fullname="M1SmokeTest" classname="M1SmokeTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 16:54:11Z" end-time="2026-10-21 16:54:20Z" duration="8.276910" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1012" name="Mirror_FollowsFakeJointStates" fullname="M1SmokeTest.Mirror_FollowsFakeJointStates" methodname="Mirror_FollowsFakeJointStates" classname="M1SmokeTest" runstate="Runnable" seed="127386239" result="Passed" start-time="2026-10-21 16:54:11Z" end-time="2026-10-21 16:54:20Z" duration="8.269293" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1200000" />
+          </properties>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[WristCamera] 그래픽 장치 없음(-nographics) — 손목 카메라 렌더 끔
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 received_message. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름). 궤적 꺼짐 (P)
+[JointStateMirror] 구독 /dsr01/joint_states  mode=Mirror
+[StrawberryPublisher] mode=Mirror — 발행 안 함 (Command 모드에서만). 구만 표시
+[JointStatePublisher] mode=Mirror — 발행 안 함 (Command 모드에서만)
+[HarvestHud] 라벨 45개 (Resources/HudLabels), 뷰 파일 /tmp/e0509_hud_view.json, 그리퍼 카메라 있음. G 로 켜고 끈다
+[GraspFollower] 익은 과실 8개(화면 8), 안 익은 4개: strawberry_ripe_01↔(-0.25,0.7828,0.74) 1.6mm, strawberry_ripe_02↔(-0.12,0.7828,0.76) 1.6mm, strawberry_ripe_03↔(0.20,0.7828,0.74) 1.6mm, strawberry_ripe_04↔(-0.22,0.7828,0.56) 1.6mm, strawberry_ripe_05↔(-0.10,0.7828,0.44) 1.6mm, strawberry_ripe_06↔(-0.25,0.7828,0.50) 1.6mm, strawberry_ripe_07↔(-0.38,0.7828,0.72) 1.6mm, strawberry_ripe_08↔(0.28,0.7828,0.70) 1.6mm
+[GraspFollower] 트레이 상자 x[-0.155, 0.171] z[0.602, 0.828] y≤0.300 (Unity world, egg_carton 경계 + 여유)
+[GraspFollower] 구독 /sim/grasp_event (mode=Mirror)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_3: peak 137.000 vs limit 135.000 (+2.000), 0.48s, 29 steps
+[M1SmokeTest] 보고서 → /home/oceanshape/e0509_unity_sim/logs/m1/smoke_report.json
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

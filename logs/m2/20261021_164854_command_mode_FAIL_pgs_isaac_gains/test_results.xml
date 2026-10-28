@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 07:48:59Z" end-time="2026-10-21 07:49:07Z" duration="8.096753">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2026-10-21 07:48:59Z" end-time="2026-10-21 07:49:07Z" duration="8.096753" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1007" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2026-10-21 07:48:59Z" end-time="2026-10-21 07:49:07Z" duration="8.091041" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="7730" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="CommandModeTest" fullname="CommandModeTest" classname="CommandModeTest" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-21 07:48:59Z" end-time="2026-10-21 07:49:07Z" duration="8.090055" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1002" name="CommandMode_ConvergesWithinTolerance_WithoutLimitViolations" fullname="CommandModeTest.CommandMode_ConvergesWithinTolerance_WithoutLimitViolations" methodname="CommandMode_ConvergesWithinTolerance_WithoutLimitViolations" classname="CommandModeTest" runstate="Runnable" seed="250889464" result="Failed" start-time="2026-10-21 07:48:59Z" end-time="2026-10-21 07:49:07Z" duration="8.082583" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <failure>
+            <message><![CDATA[  step2_J3_133_to_135: 한계 위반 1건
+  Expected: 0
+  But was:  1
+]]></message>
+            <stack-trace><![CDATA[at CommandModeTest+<StepPhase>d__25.MoveNext () [0x0036b] in /home/oceanshape/e0509_unity_sim/UnityProject/Assets/Tests/PlayMode/CommandModeTest.cs:230
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in ./Library/PackageCache/com.unity.test-framework@1.1.33/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:46
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.017 vs limit -95.000 (+0.017), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.003 vs limit -95.000 (+0.003), 0.03s, 2 steps
+[CommandModeTest] 보고서 → /home/oceanshape/e0509_unity_sim/logs/m2/command_mode_report.json
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

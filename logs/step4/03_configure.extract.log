@@ -1,0 +1,13 @@
+# 2026-10-20 17:21:23  unity_batch 03 configure  rc=0  8s
+# 인자: -executeMethod SimSetup.ConfigureProject
+# 전체 로그: logs/unity/03_configure.log
+
+424:[SimSetup] ConfigureProject 시작  Unity 2022.3.62f2  batch=True  cwd=/home/oceanshape/e0509_unity_sim/UnityProject
+435:[SimSetup] 정의 심볼 [Standalone] '' → 'ROS2'
+446:[SimSetup] 이 컴파일에서는 ROS2 가 아직 비활성 (정상: 다음 실행부터 적용)
+468:[SimSetup] ROSConnection 프리팹 생성: Assets/Resources/ROSConnectionPrefab.prefab
+492:[SimSetup] ROSConnection 프리팹: 127.0.0.1:10000, ConnectOnStart, ShowHud, TF 구독 끔
+503:[SimSetup] Fixed Timestep 0.02000 → 0.01667 s (60 Hz)
+514:[SimSetup] PlayerSettings.runInBackground = true
+532:[SimSetup] ConfigureProject OK. ROS2 정의는 다음 실행(재컴파일)부터 적용된다 → BuildScene 은 별도 실행.
+888:Exiting batchmode successfully now!

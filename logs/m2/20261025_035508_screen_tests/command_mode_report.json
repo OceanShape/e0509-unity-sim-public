@@ -1,0 +1,141 @@
+{
+  "phases": [{
+      "phase": "hold",
+      "max_err_deg": 1.90734863E-06,
+      "violations": 0
+    }, {
+      "phase": "step5_J3_129.89_to_135_info",
+      "settle_sec": 0.28333334811031818,
+      "final_err_deg": 0.00131225586,
+      "gripper_final_err_deg": 3.05175781E-05,
+      "overshoot_deg": 0.0511169434,
+      "max_arm_speed_deg_s": 44.80041,
+      "J2_final_deg": -94.91934,
+      "J3_final_deg": 134.9988,
+      "new_violations": 0,
+      "asserted": false
+    }, {
+      "phase": "reset_J3_to_133",
+      "settle_sec": 0.20000001043081284,
+      "final_err_deg": 0.00131225586,
+      "gripper_final_err_deg": 0.000122070313,
+      "overshoot_deg": 0.07309151,
+      "max_arm_speed_deg_s": 16.270752,
+      "J2_final_deg": -94.9206543,
+      "J3_final_deg": 133.001236,
+      "new_violations": 0,
+      "asserted": false
+    }, {
+      "phase": "step2_J3_133_to_135",
+      "settle_sec": 0.20000001043081284,
+      "final_err_deg": 0.00131225586,
+      "gripper_final_err_deg": 0.000102996826,
+      "overshoot_deg": 0.07345009,
+      "max_arm_speed_deg_s": 16.2826538,
+      "J2_final_deg": -94.91934,
+      "J3_final_deg": 134.998779,
+      "new_violations": 0,
+      "asserted": true
+    }, {
+      "phase": "trap_60_90_out",
+      "vel_deg_s": 60,
+      "acc_deg_s2": 90,
+      "profile_sec": 1.3333333333333333,
+      "max_tracking_lag_deg": 5.87029266,
+      "max_arm_speed_deg_s": 53.87283,
+      "arrival_after_end_sec": 0.15000000782310963,
+      "final_err_deg": 0.00177001953,
+      "overshoot_deg": 0,
+      "J2_final_deg": -55.00158,
+      "J3_final_deg": 95.00139,
+      "new_violations": 0
+    }, {
+      "phase": "trap_60_90_back_to_limit_pose",
+      "vel_deg_s": 60,
+      "acc_deg_s2": 90,
+      "profile_sec": 1.3333333333333333,
+      "max_tracking_lag_deg": 5.87348938,
+      "max_arm_speed_deg_s": 53.8861046,
+      "arrival_after_end_sec": 0.13333334028720856,
+      "final_err_deg": 0.00189971924,
+      "overshoot_deg": 0,
+      "J2_final_deg": -94.9181,
+      "J3_final_deg": 134.998581,
+      "new_violations": 0
+    }, {
+      "phase": "trap_120_180_out",
+      "vel_deg_s": 120,
+      "acc_deg_s2": 180,
+      "profile_sec": 0.94280904158206336,
+      "max_tracking_lag_deg": 7.91500854,
+      "max_arm_speed_deg_s": 72.6178,
+      "arrival_after_end_sec": 0.21666667796671391,
+      "final_err_deg": 0.001663208,
+      "overshoot_deg": 0,
+      "J2_final_deg": -55.0015068,
+      "J3_final_deg": 95.0013,
+      "new_violations": 0
+    }, {
+      "phase": "trap_120_180_back_to_limit_pose",
+      "vel_deg_s": 120,
+      "acc_deg_s2": 180,
+      "profile_sec": 0.94280904158206336,
+      "max_tracking_lag_deg": 7.9221344,
+      "max_arm_speed_deg_s": 72.6512146,
+      "arrival_after_end_sec": 0.18333334289491177,
+      "final_err_deg": 0.002105713,
+      "overshoot_deg": 0,
+      "J2_final_deg": -94.91789,
+      "J3_final_deg": 134.998322,
+      "new_violations": 0
+    }, {
+      "phase": "info_J1_step60_peak_speed",
+      "peak_deg_s": 226.235489,
+      "limit_deg_s": 180,
+      "max_joint_velocity_rad_s": 3.14159274,
+      "asserted": false
+    }, {
+      "phase": "gripper_close_1.08rad",
+      "settle_sec": 0.35000001825392246,
+      "final_err_deg": 0.000473022461,
+      "gripper_final_err_deg": 0.00065612793,
+      "overshoot_deg": 7.62939453E-06,
+      "max_arm_speed_deg_s": 0.04760742,
+      "J2_final_deg": -94.9196548,
+      "J3_final_deg": 134.999527,
+      "new_violations": 0,
+      "asserted": true
+    }],
+  "started": "2026-10-25T03:55:14",
+  "solver": "6/1 default, root base_link 32/1",
+  "fixed_delta_time": 0.0166666675,
+  "max_joint_velocity_rad_s": {
+    "joint_1": 3.14159274,
+    "joint_2": 3.14159274,
+    "joint_3": 3.14159274,
+    "joint_4": 3.92699075,
+    "joint_5": 3.92699075,
+    "joint_6": 3.92699075,
+    "rh_l1": 6.499606,
+    "rh_l2": 6.499606,
+    "rh_p12_rn": 6.499606,
+    "rh_r2": 6.499606
+  },
+  "drive": {
+    "joint_1": "k=1000000 c=100000 f=194",
+    "joint_2": "k=1000000 c=100000 f=194",
+    "joint_3": "k=1000000 c=100000 f=194",
+    "joint_4": "k=1000000 c=100000 f=66",
+    "joint_5": "k=1000000 c=100000 f=66",
+    "joint_6": "k=1000000 c=100000 f=66",
+    "rh_l1": "k=100000 c=10000 f=1000",
+    "rh_l2": "k=100000 c=10000 f=1000",
+    "rh_p12_rn": "k=100000 c=10000 f=1000",
+    "rh_r2": "k=100000 c=10000 f=1000"
+  },
+  "publisher_active": true,
+  "violations_total": 6,
+  "near_limit_episodes": 9,
+  "violations_csv": "/home/oceanshape/e0509_unity_sim/logs/limit_violations.csv",
+  "result": "PASS"
+}

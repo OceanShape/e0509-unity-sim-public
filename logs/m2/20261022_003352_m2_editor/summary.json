@@ -1,0 +1,95 @@
+{
+ "bridge": {
+  "ARM_ARRIVAL": 23,
+  "ARM_ARRIVAL_STALLED": 0,
+  "ARM_ARRIVAL_TIMEOUT": 0,
+  "GRASP_JUDGE": 3,
+  "GRASP_ATTACH": 3,
+  "GRASP_EMPTY": 1,
+  "GRASP_RELEASE": 2,
+  "MOVEJ_OVER_DOOSAN_MOVEIT": 0
+ },
+ "scan": {
+  "START_ACCEPTED": 1,
+  "START_REJECTED": 0,
+  "AT_SCAN_POSE": 3,
+  "EXEC_TIMEOUT": 0,
+  "PICK_TRIGGER": 3,
+  "PICK_ATTEMPT_DONE": 2,
+  "SCAN_COMPLETE": 0,
+  "READY_FOR_NEXT_START": 0,
+  "start_to_complete_s": null,
+  "pick_durations_s": [
+   21.9,
+   28.5
+  ],
+  "pick_max_s": 28.5,
+  "overview_ripe": {
+   "nw": 3,
+   "ne": 2,
+   "se": 0,
+   "sw": 3
+  }
+ },
+ "planner": {
+  "GRASP_CONTACT_DETECTED": 3,
+  "GRASP_EMPTY": 0,
+  "PLACE_GATE_BLOCKED": 0
+ },
+ "ros_rate": null,
+ "unity_plant": null,
+ "strawberry_repo_unchanged": true,
+ "reference_isaac_run": {
+  "path": "/home/oceanshape/strawberry_grasp_environment/run_logs/20261014_002919",
+  "bridge": {
+   "ARM_ARRIVAL": 73,
+   "ARM_ARRIVAL_STALLED": 0,
+   "ARM_ARRIVAL_TIMEOUT": 0,
+   "GRASP_JUDGE": 8,
+   "GRASP_ATTACH": 8,
+   "GRASP_EMPTY": 1,
+   "GRASP_RELEASE": 8,
+   "MOVEJ_OVER_DOOSAN_MOVEIT": 12
+  },
+  "scan": {
+   "START_ACCEPTED": 1,
+   "START_REJECTED": 0,
+   "AT_SCAN_POSE": 11,
+   "EXEC_TIMEOUT": 0,
+   "PICK_TRIGGER": 8,
+   "PICK_ATTEMPT_DONE": 8,
+   "SCAN_COMPLETE": 1,
+   "READY_FOR_NEXT_START": 1,
+   "start_to_complete_s": 334.5,
+   "pick_durations_s": [
+    28.3,
+    39.0,
+    39.5,
+    30.1,
+    29.7,
+    40.4,
+    36.2,
+    25.8
+   ],
+   "pick_max_s": 40.4,
+   "overview_ripe": {
+    "nw": 3,
+    "ne": 2,
+    "se": 0,
+    "sw": 3
+   }
+  },
+  "planner": {
+   "GRASP_CONTACT_DETECTED": 8,
+   "GRASP_EMPTY": 0,
+   "PLACE_GATE_BLOCKED": 0
+  }
+ },
+ "verdict": {
+  "arrival_timeout_zero": true,
+  "sequence_complete": false,
+  "picks_attempted": false,
+  "state_rate_ok": false,
+  "M2_complete": false
+ }
+}

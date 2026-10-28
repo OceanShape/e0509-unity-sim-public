@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 08:22:21Z" end-time="2026-10-21 08:22:42Z" duration="20.3636018">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-21 08:22:21Z" end-time="2026-10-21 08:22:42Z" duration="20.363602" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1009" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-21 08:22:21Z" end-time="2026-10-21 08:22:42Z" duration="20.357903" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="25322" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="CommandModeTest" fullname="CommandModeTest" classname="CommandModeTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 08:22:21Z" end-time="2026-10-21 08:22:42Z" duration="20.356924" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1002" name="CommandMode_ConvergesWithinTolerance_WithoutLimitViolations" fullname="CommandModeTest.CommandMode_ConvergesWithinTolerance_WithoutLimitViolations" methodname="CommandMode_ConvergesWithinTolerance_WithoutLimitViolations" classname="CommandModeTest" runstate="Runnable" seed="2030497936" result="Passed" start-time="2026-10-21 08:22:21Z" end-time="2026-10-21 08:22:42Z" duration="20.349247" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 unity_measured. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION velocity joint_1: peak 224.573 vs limit 180.000 (+44.573), 0.15s, 9 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.001), 0.12s, 7 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.001), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION velocity joint_1: peak 223.741 vs limit 180.000 (+43.741), 0.15s, 9 steps
+[CommandModeTest] 보고서 → /home/oceanshape/e0509_unity_sim/logs/m2/command_mode_report.json
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

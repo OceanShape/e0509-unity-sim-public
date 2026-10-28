@@ -1,0 +1,1438 @@
+[
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_0_0.dae",
+  "sha256_before": "2f135b2d8691e982a16d76b5f4fe533644483dcf190240d653edc39d018edfbd",
+  "nodes": [
+   {
+    "node": "E0509_0",
+    "identity": true
+   }
+  ],
+  "changed": false,
+  "sha256_after": "2f135b2d8691e982a16d76b5f4fe533644483dcf190240d653edc39d018edfbd"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_1_1.dae",
+  "sha256_before": "bd7da888e18380723fe283e6b18dcac357f980028248efb657f1ae9a70cc60cc",
+  "nodes": [
+   {
+    "node": "E0509_1_1",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -204.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_1_1-mesh",
+      "vertices": 153,
+      "bbox_before": [
+       [
+        -58.08591,
+        -57.74956,
+        85.4999
+       ],
+       [
+        57.91409,
+        58.25044,
+        90.4999
+       ]
+      ],
+      "bbox_after": [
+       [
+        -58.08591,
+        -57.74956,
+        -119.0001
+       ],
+       [
+        57.91409,
+        58.25044,
+        -114.0001
+       ]
+      ],
+      "normals": 189,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "411d2b1be3dfc714494d6d0942add42dce59ec7c1eb4da8ddc595628fbb7e4a8"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_1_2.dae",
+  "sha256_before": "089245d0cdcd547ad69da7597bffb6675e21fdffcf2bb355fb923f3f15f17f95",
+  "nodes": [
+   {
+    "node": "E0509_1_2",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -204.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_1_2-mesh",
+      "vertices": 5475,
+      "bbox_before": [
+       [
+        -60.08708,
+        -59.7471,
+        90.99988
+       ],
+       [
+        59.91504,
+        113.7502,
+        264.4967
+       ]
+      ],
+      "bbox_after": [
+       [
+        -60.08708,
+        -59.7471,
+        -113.50012
+       ],
+       [
+        59.91504,
+        113.7502,
+        59.996699999999976
+       ]
+      ],
+      "normals": 10873,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "96c2997424d847b7026cb1f5e1957df8897efd2e29ed33d984790640403e10a0"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_1_3.dae",
+  "sha256_before": "daaf1c5a8146d6773aba4fea10208c2cce67bbf4b1908a2f973721b4c3640ccd",
+  "nodes": [
+   {
+    "node": "E0509_1_3",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -204.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_1_3-mesh",
+      "vertices": 1296,
+      "bbox_before": [
+       [
+        -23.9646,
+        -38.27364,
+        208.9278
+       ],
+       [
+        23.79119,
+        -4.16692,
+        243.0343
+       ]
+      ],
+      "bbox_after": [
+       [
+        -23.9646,
+        -38.27364,
+        4.427799999999991
+       ],
+       [
+        23.79119,
+        -4.16692,
+        38.5343
+       ]
+      ],
+      "normals": 2574,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "efc9bced100f460cd90e9a833832238024c74c2ec3aa49e063f6dd643cd027cb"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_1_4.dae",
+  "sha256_before": "22322e4a97326be63fbc9395b04bf06d049d39c2548fd72347d7d77b6b694a20",
+  "nodes": [
+   {
+    "node": "E0509_1_4",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -204.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_1_4-mesh",
+      "vertices": 153,
+      "bbox_before": [
+       [
+        -58.08591,
+        114.2502,
+        146.5
+       ],
+       [
+        57.91409,
+        119.2502,
+        262.5
+       ]
+      ],
+      "bbox_after": [
+       [
+        -58.08591,
+        114.2502,
+        -58.0
+       ],
+       [
+        57.91409,
+        119.2502,
+        58.0
+       ]
+      ],
+      "normals": 243,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "5729a9c7adfc0c0fd243314709adbef1460fb97a0a00182ba098d7624dbcb552"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_2_1.dae",
+  "sha256_before": "61976b3d99fac1582463a6343d9bf3e034831ca153b8d177b0c12c942c8dae2e",
+  "nodes": [
+   {
+    "node": "E0509_2_1",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     119.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_2_1-mesh",
+      "vertices": 8532,
+      "bbox_before": [
+       [
+        -60.00296,
+        -70.16625,
+        0.2503778
+       ],
+       [
+        433.0125,
+        69.99249,
+        115.2631
+       ]
+      ],
+      "bbox_after": [
+       [
+        -60.00296,
+        -70.16625,
+        119.7503778
+       ],
+       [
+        433.0125,
+        69.99249,
+        234.7631
+       ]
+      ],
+      "normals": 17052,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "82a81dd9e9d92bbeb44ae061fe79a0d92de06a6699af9a67d901758031c9e5af"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_2_2.dae",
+  "sha256_before": "45245990b25e3e9dd660c3efd3a7b2005561228d6431d4f1aa927ca04eb1fbae",
+  "nodes": [
+   {
+    "node": "E0509_2_2",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     119.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_2_2-mesh",
+      "vertices": 228,
+      "bbox_before": [
+       [
+        315.0,
+        -58.08832,
+        -5.24802
+       ],
+       [
+        431.0,
+        57.91167,
+        -0.2480149
+       ]
+      ],
+      "bbox_after": [
+       [
+        315.0,
+        -58.08832,
+        114.25198
+       ],
+       [
+        431.0,
+        57.91167,
+        119.2519851
+       ]
+      ],
+      "normals": 424,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "efb3acd450166eae03d1c700abab2a04983bc6703e011182dfefa35bfd5d95bf"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_3_1.dae",
+  "sha256_before": "054898ea6b3c0ab2fa3cc890dfafacdfeed7ed9297cf2137bccd648735b34c69",
+  "nodes": [
+   {
+    "node": "E0509_3_1",
+    "identity": true
+   }
+  ],
+  "changed": false,
+  "sha256_after": "054898ea6b3c0ab2fa3cc890dfafacdfeed7ed9297cf2137bccd648735b34c69"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_3_2.dae",
+  "sha256_before": "b481429c5609a9fa4992833f7f7559418cb23a21ff0e77a1511daf1bcde044a0",
+  "nodes": [
+   {
+    "node": "E0509_3_2",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      -4.37114e-08,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      -4.37114e-08
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_3_2-mesh",
+      "vertices": 224,
+      "bbox_before": [
+       [
+        -48.08365,
+        -47.74799,
+        99.0
+       ],
+       [
+        47.90696,
+        48.25201,
+        104.0
+       ]
+      ],
+      "bbox_after": [
+       [
+        -48.08365,
+        -104.00000209604949,
+        -47.747994532872184
+       ],
+       [
+        47.90696,
+        -98.99999791286851,
+        48.2520056725714
+       ]
+      ],
+      "normals": 322,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "5b8c58974ff8f9a5c528da95331dbee192e68cf15f215fd22294485346045f83"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_4_1.dae",
+  "sha256_before": "b60544165096644b67242e534e053e0ec525790a9597258f4f31acce921de839",
+  "nodes": [
+   {
+    "node": "E0509_4_1",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -950.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_4_1-mesh",
+      "vertices": 8549,
+      "bbox_before": [
+       [
+        -58.53506,
+        -49.75256,
+        682.0091
+       ],
+       [
+        58.35345,
+        190.6982,
+        1000.501
+       ]
+      ],
+      "bbox_after": [
+       [
+        -58.53506,
+        -49.75256,
+        -268.4909
+       ],
+       [
+        58.35345,
+        190.6982,
+        50.000999999999976
+       ]
+      ],
+      "normals": 17079,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "e2f9314c89547bfd0a3c546579e7e1c27e2b8160f8525d468f88a9a21a088777"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_4_2.dae",
+  "sha256_before": "14ea85467d3bf787718a3dc210096fb17c633bf32de20f972c2b71763e996daf",
+  "nodes": [
+   {
+    "node": "E0509_4_2",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -950.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_4_2-mesh",
+      "vertices": 213,
+      "bbox_before": [
+       [
+        -48.03999,
+        110.5628,
+        902.4999
+       ],
+       [
+        47.86334,
+        115.5628,
+        998.4999
+       ]
+      ],
+      "bbox_after": [
+       [
+        -48.03999,
+        110.5628,
+        -48.000099999999975
+       ],
+       [
+        47.86334,
+        115.5628,
+        47.999900000000025
+       ]
+      ],
+      "normals": 364,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "fa2acfb70f8b66bb64d4d894fececcba6001ed33281dc940eab06749a5199be0"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_5_1.dae",
+  "sha256_before": "0cd7acd33de5461a4568ec58910417f339393e16db6c3d4179c7faac0387501e",
+  "nodes": [
+   {
+    "node": "E0509_5_1",
+    "identity": true
+   }
+  ],
+  "changed": false,
+  "sha256_after": "0cd7acd33de5461a4568ec58910417f339393e16db6c3d4179c7faac0387501e"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_5_2.dae",
+  "sha256_before": "89bd78b01f7a5cb23306d6c1a54c1e7a9bc7770dbd7a4ae47707b90018969ec9",
+  "nodes": [
+   {
+    "node": "E0509_5_2",
+    "identity": true
+   }
+  ],
+  "changed": false,
+  "sha256_after": "89bd78b01f7a5cb23306d6c1a54c1e7a9bc7770dbd7a4ae47707b90018969ec9"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_collision/E0509_6_1.dae",
+  "sha256_before": "8357236667cc134e04bac32bcd61e4f2fbdc66edd34c1e3c3f803fd891f9749d",
+  "nodes": [
+   {
+    "node": "E0509_6",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -1123.0
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_6-mesh",
+      "vertices": 2118,
+      "bbox_before": [
+       [
+        -50.09926,
+        -49.75555,
+        1055.0
+       ],
+       [
+        49.91897,
+        50.26268,
+        1123.0
+       ]
+      ],
+      "bbox_after": [
+       [
+        -50.09926,
+        -49.75555,
+        -68.0
+       ],
+       [
+        49.91897,
+        50.26268,
+        0.0
+       ]
+      ],
+      "normals": 3662,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "29a6fc361e10cc699e4ef7c7c962138177852404a76d10d8953eaf375ed44e12"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_0_0.dae",
+  "sha256_before": "d1c5a8506039bde88e96489cb09d1732ebc6e5decb15f11b5963850274900f4f",
+  "nodes": [
+   {
+    "node": "E0509_0",
+    "identity": true
+   }
+  ],
+  "changed": false,
+  "sha256_after": "d1c5a8506039bde88e96489cb09d1732ebc6e5decb15f11b5963850274900f4f"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_1_1.dae",
+  "sha256_before": "f4a44bb2426a962a5a89afb44a9cc450c6a8432c0acf08db4abe82a6a5ff6316",
+  "nodes": [
+   {
+    "node": "E0509_1_1",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -204.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_1_1-mesh",
+      "vertices": 153,
+      "bbox_before": [
+       [
+        -58.08591,
+        -57.74956,
+        85.4999
+       ],
+       [
+        57.91409,
+        58.25044,
+        90.4999
+       ]
+      ],
+      "bbox_after": [
+       [
+        -58.08591,
+        -57.74956,
+        -119.0001
+       ],
+       [
+        57.91409,
+        58.25044,
+        -114.0001
+       ]
+      ],
+      "normals": 189,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "44d81ade36e58fda2ba90f4806c49468a4bad16caefa4b2c75ae82fbd33259d3"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_1_2.dae",
+  "sha256_before": "3cbd58bcdd58e25ed8d5a920f4bb6005dbd6a44f8a46ecdde859763ab84b26a5",
+  "nodes": [
+   {
+    "node": "E0509_1_2",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -204.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_1_2-mesh",
+      "vertices": 5475,
+      "bbox_before": [
+       [
+        -60.08708,
+        -59.7471,
+        90.99988
+       ],
+       [
+        59.91504,
+        113.7502,
+        264.4967
+       ]
+      ],
+      "bbox_after": [
+       [
+        -60.08708,
+        -59.7471,
+        -113.50012
+       ],
+       [
+        59.91504,
+        113.7502,
+        59.996699999999976
+       ]
+      ],
+      "normals": 10873,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "edfd7ebab1d241131ab1b730d0f4b3c8519cf111b61703616cd8e99d938de9bf"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_1_3.dae",
+  "sha256_before": "7c9b261f4f9290206755a4c7085be9f4598de8aaa6a285a01f8e052f19a3c03a",
+  "nodes": [
+   {
+    "node": "E0509_1_3",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -204.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_1_3-mesh",
+      "vertices": 1296,
+      "bbox_before": [
+       [
+        -23.9646,
+        -38.27364,
+        208.9278
+       ],
+       [
+        23.79119,
+        -4.16692,
+        243.0343
+       ]
+      ],
+      "bbox_after": [
+       [
+        -23.9646,
+        -38.27364,
+        4.427799999999991
+       ],
+       [
+        23.79119,
+        -4.16692,
+        38.5343
+       ]
+      ],
+      "normals": 2574,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "ad21dbd982dcbcd8c5c22a438ffa027400e8098bf26c12ad70e2ae995aedd819"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_1_4.dae",
+  "sha256_before": "7a6ddc8d5564abd624ee68bfe8a92c82201070c9f3bdc9d1b35035747e8fba3c",
+  "nodes": [
+   {
+    "node": "E0509_1_4",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -204.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_1_4-mesh",
+      "vertices": 153,
+      "bbox_before": [
+       [
+        -58.08591,
+        114.2502,
+        146.5
+       ],
+       [
+        57.91409,
+        119.2502,
+        262.5
+       ]
+      ],
+      "bbox_after": [
+       [
+        -58.08591,
+        114.2502,
+        -58.0
+       ],
+       [
+        57.91409,
+        119.2502,
+        58.0
+       ]
+      ],
+      "normals": 243,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "92cc6d77273b06041d8011385412caa09d107d07d98800a30a62edc7ea8f0825"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_2_1.dae",
+  "sha256_before": "2064e6985dc2217706a3d0ce97f9a9148934c98006a910bf845a21942b31b3d0",
+  "nodes": [
+   {
+    "node": "E0509_2_1",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     119.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_2_1-mesh",
+      "vertices": 8532,
+      "bbox_before": [
+       [
+        -60.00296,
+        -70.16625,
+        0.2503778
+       ],
+       [
+        433.0125,
+        69.99249,
+        115.2631
+       ]
+      ],
+      "bbox_after": [
+       [
+        -60.00296,
+        -70.16625,
+        119.7503778
+       ],
+       [
+        433.0125,
+        69.99249,
+        234.7631
+       ]
+      ],
+      "normals": 17052,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "6a61aafe16bb3690fe011778d75f0c97ba47bd1c3625155d7e0f9b1cffe5ce17"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_2_2.dae",
+  "sha256_before": "c7a765aa8eaed19d3fba653b6b3846bd736a76d6f689162a2f4750d2971f41c7",
+  "nodes": [
+   {
+    "node": "E0509_2_2",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     119.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_2_2-mesh",
+      "vertices": 228,
+      "bbox_before": [
+       [
+        315.0,
+        -58.08832,
+        -5.24802
+       ],
+       [
+        431.0,
+        57.91167,
+        -0.2480149
+       ]
+      ],
+      "bbox_after": [
+       [
+        315.0,
+        -58.08832,
+        114.25198
+       ],
+       [
+        431.0,
+        57.91167,
+        119.2519851
+       ]
+      ],
+      "normals": 424,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "f99031555d70b619e1929ebb27a00c9e48edeae2354921bcf1ff7c50ff0c013d"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_3_1.dae",
+  "sha256_before": "68e1d79b919e94362bac784dcf70a12d4312b9bb276e63d21e36863ee27fd1be",
+  "nodes": [
+   {
+    "node": "E0509_3_1",
+    "identity": true
+   }
+  ],
+  "changed": false,
+  "sha256_after": "68e1d79b919e94362bac784dcf70a12d4312b9bb276e63d21e36863ee27fd1be"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_3_2.dae",
+  "sha256_before": "59bcac5829233bd70ce928f80c748d7cdb4d59b4313ef7cc872f143be560c90c",
+  "nodes": [
+   {
+    "node": "E0509_3_2",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      -4.37114e-08,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      -4.37114e-08
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_3_2-mesh",
+      "vertices": 224,
+      "bbox_before": [
+       [
+        -48.08365,
+        -47.74799,
+        99.0
+       ],
+       [
+        47.90696,
+        48.25201,
+        104.0
+       ]
+      ],
+      "bbox_after": [
+       [
+        -48.08365,
+        -104.00000209604949,
+        -47.747994532872184
+       ],
+       [
+        47.90696,
+        -98.99999791286851,
+        48.2520056725714
+       ]
+      ],
+      "normals": 322,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "b9be71507983b688d2e04221038bbdf196c91ed2e54c1d00ae5f8997b1d4079e"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_4_1.dae",
+  "sha256_before": "9d018352b6ee832a7daab7bf2ef59287134a62181074209c8aead94878c915b2",
+  "nodes": [
+   {
+    "node": "E0509_4_1",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -950.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_4_1-mesh",
+      "vertices": 8549,
+      "bbox_before": [
+       [
+        -58.53506,
+        -49.75256,
+        682.0091
+       ],
+       [
+        58.35345,
+        190.6982,
+        1000.501
+       ]
+      ],
+      "bbox_after": [
+       [
+        -58.53506,
+        -49.75256,
+        -268.4909
+       ],
+       [
+        58.35345,
+        190.6982,
+        50.000999999999976
+       ]
+      ],
+      "normals": 17079,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "24eed62ef7909f32c407b3a78d499062168af57bf028cdf56ddf06ef7ea6d4e2"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_4_2.dae",
+  "sha256_before": "3cab944d756fbcf6b3a9552048e252c03d11491fcd9485efd1d91a566fca24f0",
+  "nodes": [
+   {
+    "node": "E0509_4_2",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -950.5
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_4_2-mesh",
+      "vertices": 213,
+      "bbox_before": [
+       [
+        -48.03999,
+        110.5628,
+        902.4999
+       ],
+       [
+        47.86334,
+        115.5628,
+        998.4999
+       ]
+      ],
+      "bbox_after": [
+       [
+        -48.03999,
+        110.5628,
+        -48.000099999999975
+       ],
+       [
+        47.86334,
+        115.5628,
+        47.999900000000025
+       ]
+      ],
+      "normals": 364,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "1425d1d9606383153d7f6399bc6c12acad5d45fe15e97e892b1b4c0903b4a08f"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_5_1.dae",
+  "sha256_before": "24ddcfd9edd68b8d97901d11c29df283e785a8bdc203032feadc2545c5b62183",
+  "nodes": [
+   {
+    "node": "E0509_5_1",
+    "identity": true
+   }
+  ],
+  "changed": false,
+  "sha256_after": "24ddcfd9edd68b8d97901d11c29df283e785a8bdc203032feadc2545c5b62183"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_5_2.dae",
+  "sha256_before": "01c83c67490a205525e95d71ea0e567351990f0d3abc8640f466b7199a229738",
+  "nodes": [
+   {
+    "node": "E0509_5_2",
+    "identity": true
+   }
+  ],
+  "changed": false,
+  "sha256_after": "01c83c67490a205525e95d71ea0e567351990f0d3abc8640f466b7199a229738"
+ },
+ {
+  "file": "/home/oceanshape/e0509_unity_sim/assets_src/e0509/dsr_description2/meshes/e0509_white/E0509_6_1.dae",
+  "sha256_before": "68780b0934887180e5c8e4c82d9fcb6a6c931b0f5b015ec56ce8514c2b8b27a6",
+  "nodes": [
+   {
+    "node": "E0509_6",
+    "identity": false,
+    "translate": [
+     0.0,
+     0.0,
+     -1123.0
+    ],
+    "rotation": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      1.0
+     ]
+    ],
+    "geometries": [
+     {
+      "geometry": "E0509_6-mesh",
+      "vertices": 2118,
+      "bbox_before": [
+       [
+        -50.09926,
+        -49.75555,
+        1055.0
+       ],
+       [
+        49.91897,
+        50.26268,
+        1123.0
+       ]
+      ],
+      "bbox_after": [
+       [
+        -50.09926,
+        -49.75555,
+        -68.0
+       ],
+       [
+        49.91897,
+        50.26268,
+        0.0
+       ]
+      ],
+      "normals": 3662,
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "changed": true,
+  "notice": true,
+  "sha256_after": "f5bb49133b0cb1291ccaee3bbac8e957a879d0b60da5c05bc001fd9319b13810"
+ }
+]

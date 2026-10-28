@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 11:04:55Z" end-time="2026-10-21 11:10:26Z" duration="331.3073543">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 11:04:55Z" end-time="2026-10-21 11:10:26Z" duration="331.307354" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1015" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 11:04:55Z" end-time="2026-10-21 11:10:26Z" duration="331.301728" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="41255" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1011" name="M1SmokeTest" fullname="M1SmokeTest" classname="M1SmokeTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 11:04:55Z" end-time="2026-10-21 11:10:26Z" duration="331.300750" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1012" name="Mirror_FollowsFakeJointStates" fullname="M1SmokeTest.Mirror_FollowsFakeJointStates" methodname="Mirror_FollowsFakeJointStates" classname="M1SmokeTest" runstate="Runnable" seed="1908236879" result="Passed" start-time="2026-10-21 11:04:55Z" end-time="2026-10-21 11:10:26Z" duration="331.293533" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1200000" />
+          </properties>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[WristCamera] 그래픽 장치 없음(-nographics) — 손목 카메라 렌더 끔
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 received_message. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름). 궤적 꺼짐 (P)
+[JointStateMirror] 구독 /dsr01/joint_states  mode=Mirror
+[StrawberryPublisher] mode=Mirror — 발행 안 함 (Command 모드에서만). 구만 표시
+[JointStatePublisher] mode=Mirror — 발행 안 함 (Command 모드에서만)
+[HarvestHud] 라벨 45개 (Resources/HudLabels), 뷰 파일 /tmp/e0509_hud_view.json, 그리퍼 카메라 있음. G 로 켜고 끈다
+[GraspFollower] 익은 과실 8개(화면 8), 안 익은 4개: strawberry_ripe_01↔(-0.25,0.7828,0.74) 1.6mm, strawberry_ripe_02↔(-0.12,0.7828,0.76) 1.6mm, strawberry_ripe_03↔(0.20,0.7828,0.74) 1.6mm, strawberry_ripe_04↔(-0.22,0.7828,0.56) 1.6mm, strawberry_ripe_05↔(-0.10,0.7828,0.44) 1.6mm, strawberry_ripe_06↔(-0.25,0.7828,0.50) 1.6mm, strawberry_ripe_07↔(-0.38,0.7828,0.72) 1.6mm, strawberry_ripe_08↔(0.28,0.7828,0.70) 1.6mm
+[GraspFollower] 트레이 상자 x[-0.155, 0.171] z[0.602, 0.828] y≤0.300 (Unity world, egg_carton 경계 + 여유)
+[GraspFollower] 구독 /sim/grasp_event (mode=Mirror)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[GraspFollower] ATTACH strawberry_ripe_07  일치 0.0 mm  그리퍼 기준 (32.3, 3.2, 253.7) mm
+[GraspFollower] 낙하 받침면: 삼각형 7580, 상자 6
+[GraspFollower] RELEASE strawberry_ripe_07  트레이 밖 낙하, (-380.4, 743.5, 674.2) mm 에서 놓음  수확 1 낙하 1
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.880 vs limit 57.296 (+4.584), 8.53s, 512 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.879 vs limit 57.296 (+4.583), 8.53s, 512 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.880 vs limit 57.296 (+4.584), 8.53s, 512 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.583), 8.53s, 512 steps
+[GraspFollower] strawberry_ripe_07 멈춤 (-380.4, 743.5, -421.8) mm, 1096.0 mm 낙하, 트레이 밖
+[GraspFollower] ATTACH strawberry_ripe_01  일치 0.0 mm  그리퍼 기준 (31.3, -2.7, 248.4) mm
+[GraspFollower] RELEASE strawberry_ripe_01  트레이 배치, (765.7, 90.0, 34.2) mm 에서 놓음 → 계란판으로 떨어짐  수확 2
+[GraspFollower] strawberry_ripe_01 멈춤 (765.7, 90.0, 3.1) mm, 31.2 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.885 vs limit 57.296 (+4.589), 16.07s, 964 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.880 vs limit 57.296 (+4.584), 16.07s, 964 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.891 vs limit 57.296 (+4.596), 16.07s, 964 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.583), 16.07s, 964 steps
+[GraspFollower] ATTACH strawberry_ripe_02  일치 0.0 mm  그리퍼 기준 (35.2, -0.5, 250.4) mm
+[GraspFollower] RELEASE strawberry_ripe_02  트레이 배치, (707.9, 93.2, 31.0) mm 에서 놓음 → 계란판으로 떨어짐  수확 3
+[GraspFollower] strawberry_ripe_02 멈춤 (707.9, 93.2, 8.6) mm, 22.4 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.892 vs limit 57.296 (+4.596), 16.10s, 966 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.880 vs limit 57.296 (+4.584), 16.10s, 966 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.894 vs limit 57.296 (+4.598), 16.10s, 966 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.583), 16.10s, 966 steps
+[GraspFollower] ATTACH strawberry_ripe_03  일치 0.0 mm  그리퍼 기준 (31.9, 1.6, 248.7) mm
+[GraspFollower] RELEASE strawberry_ripe_03  트레이 배치, (757.9, 41.8, 31.7) mm 에서 놓음 → 계란판으로 떨어짐  수확 4
+[GraspFollower] strawberry_ripe_03 멈춤 (757.9, 41.8, 9.3) mm, 22.4 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.907 vs limit 57.296 (+4.611), 15.18s, 911 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.880 vs limit 57.296 (+4.584), 15.18s, 911 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.914 vs limit 57.296 (+4.618), 15.18s, 911 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.583), 15.18s, 911 steps
+[GraspFollower] ATTACH strawberry_ripe_05  일치 0.0 mm  그리퍼 기준 (32.0, -0.4, 257.8) mm
+[GraspFollower] RELEASE strawberry_ripe_05  트레이 배치, (709.9, 45.9, 32.3) mm 에서 놓음 → 계란판으로 떨어짐  수확 5
+[GraspFollower] strawberry_ripe_05 멈춤 (709.9, 45.9, 7.7) mm, 24.6 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.894 vs limit 57.296 (+4.598), 15.77s, 946 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.880 vs limit 57.296 (+4.584), 15.77s, 946 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.898 vs limit 57.296 (+4.602), 15.77s, 946 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.584), 15.77s, 946 steps
+[GraspFollower] ATTACH strawberry_ripe_06  일치 0.0 mm  그리퍼 기준 (31.9, -0.7, 257.5) mm
+[GraspFollower] RELEASE strawberry_ripe_06  트레이 밖 낙하, (-250.0, 739.0, 465.2) mm 에서 놓음  수확 6 낙하 2
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.880 vs limit 57.296 (+4.584), 9.02s, 541 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.879 vs limit 57.296 (+4.583), 9.02s, 541 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.880 vs limit 57.296 (+4.584), 9.02s, 541 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.583), 9.02s, 541 steps
+[GraspFollower] strawberry_ripe_06 멈춤 (-250.0, 739.0, -421.8) mm, 887.1 mm 낙하, 트레이 밖
+[GraspFollower] ATTACH strawberry_ripe_04  일치 0.0 mm  그리퍼 기준 (31.8, -0.9, 257.0) mm
+[GraspFollower] RELEASE strawberry_ripe_04  트레이 밖 낙하, (-220.2, 739.1, 524.9) mm 에서 놓음  수확 7 낙하 3
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.880 vs limit 57.296 (+4.584), 8.75s, 525 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.879 vs limit 57.296 (+4.583), 8.75s, 525 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.880 vs limit 57.296 (+4.584), 8.75s, 525 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.583), 8.75s, 525 steps
+[GraspFollower] strawberry_ripe_04 멈춤 (-220.2, 739.1, -421.8) mm, 946.8 mm 낙하, 트레이 밖
+[M1SmokeTest] 보고서 → /home/oceanshape/e0509_unity_sim/logs/m1/smoke_report.json
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

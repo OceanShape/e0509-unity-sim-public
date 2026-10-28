@@ -1,0 +1,9 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1792585082.339403462] [rosbag2_storage]: Opened database '/home/oceanshape/bags/run1/run1_0.db3' for READ_ONLY.
+[INFO] [1792585082.340018848] [rosbag2_player]: Set rate to 1
+[INFO] [1792585082.347041411] [rosbag2_player]: Adding keyboard callbacks.
+[INFO] [1792585082.347348062] [rosbag2_player]: Press SPACE for Pause/Resume
+[INFO] [1792585082.347490791] [rosbag2_player]: Press CURSOR_RIGHT for Play Next Message
+[INFO] [1792585082.347599990] [rosbag2_player]: Press CURSOR_UP for Increase Rate 10%
+[INFO] [1792585082.347682415] [rosbag2_player]: Press CURSOR_DOWN for Decrease Rate 10%
+[INFO] [1792585082.348028189] [rosbag2_storage]: Opened database '/home/oceanshape/bags/run1/run1_0.db3' for READ_ONLY.
+[INFO] [1792585426.908415341] [rosbag2_storage]: Opened database '/home/oceanshape/bags/run1/run1_0.db3' for READ_ONLY.

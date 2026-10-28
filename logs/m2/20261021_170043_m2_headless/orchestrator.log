@@ -1,0 +1,23 @@
+[run_m2] 17:00:43 ROS_DOMAIN_ID=0  노드 인자: (D-7 60/90)  상한 20분
+[run_m2] 17:00:44 엔드포인트 준비
+[run_m2] 17:00:44 Unity 플랜트 시작 (M2PlantRun)
+[run_m2] 17:00:50 플랜트 overview 확인 (1차)
+[run_m2] 17:00:50 딸기 노드 시작
+[run_m2] 17:01:04 딸기 노드 기동 대조 전부 정합
+[run_m2] 17:01:08 플랜트 overview 확인 (2차) → 트리거
+response:
+std_srvs.srv.Trigger_Response(success=True, message='traversal mode all cells accepted')
+
+[run_m2] 17:06:19 종료 사유: scan_complete
+[run_m2] 17:06:19 정리 시작 (결과: scan_complete)
+M2 런 요약 — /home/oceanshape/e0509_unity_sim/logs/m2/20261021_170043_m2_headless
+판정: M2 완료 아니오  (도착 타임아웃 0: True, 시퀀스 완주: True, 상태 주기: False)
+가상 제어기 도착: ARM_ARRIVAL 80 · STALLED 0 · TIMEOUT 0
+파지 판정(가상 제어기): 접촉 GRASP_ATTACH 7 · 빈손 GRASP_EMPTY 1 · RELEASE 7
+스캔: START_ACCEPTED 1 · AT_SCAN_POSE 16 · PICK_TRIGGER 8 · SCAN_COMPLETE 1 · EXEC_TIMEOUT 0 · 시작→완료 305.0 s
+픽 시간(PICK_TRIGGER→DONE) s: [22.3, 28.6, 31.4, 10.0, 29.8, 29.3, 28.2, 28.8] (최대 31.4, 스캔 대기 상한 60 s)
+/dsr01/joint_states (ROS 쪽): 60.0 Hz, 최대 간격 0.3374 s, 0.3 s 넘는 간격 1
+Unity 플랜트: 명령 8642 · 상태 발행 19984 · 한계 위반 0 · 근처 6 · 판정 값 unity_measured
+딸기 리포 변화 없음: True
+참고 Isaac 런 20261014_002919 (스캔 120/180): ARM_ARRIVAL 73 · STALLED 0 · TIMEOUT 0 · 접촉 8 · 빈손 1 · PICK 8 · 시작→완료 334.5 s · 픽 [28.3, 39.0, 39.5, 30.1, 29.7, 40.4, 36.2, 25.8]
+[run_m2] 17:06:28 결과 폴더: logs/m2/20261021_170043_m2_headless

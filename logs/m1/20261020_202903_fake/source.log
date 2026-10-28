@@ -1,0 +1,4 @@
+[INFO] [1792495744.630034654] [fake_joint_states]: /dsr01/joint_states @ 60.0 Hz, period 8.0s, hold 1.0s, ramp 1.0s, limit-test=off
+[INFO] [1792495749.623938402] [fake_joint_states]: t=   5.0s   60.0 Hz  J1..J6 deg =   87.98  -79.70   81.22  147.41  -48.97   93.42
+[INFO] [1792495754.640592324] [fake_joint_states]: t=  10.0s   60.0 Hz  J1..J6 deg =  109.47  -40.26  127.12  189.21  -36.42   71.93
+[INFO] [1792495759.640449197] [fake_joint_states]: t=  15.0s   60.0 Hz  J1..J6 deg =   57.98  -85.03   97.59  185.59   -6.84  123.42

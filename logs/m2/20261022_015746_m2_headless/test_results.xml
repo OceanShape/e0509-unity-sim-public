@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 16:57:51Z" end-time="2026-10-21 17:03:09Z" duration="317.9105949">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 16:57:51Z" end-time="2026-10-21 17:03:09Z" duration="317.910595" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1015" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-21 16:57:51Z" end-time="2026-10-21 17:03:09Z" duration="317.904379" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="102913" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1013" name="M2PlantRun" fullname="M2PlantRun" classname="M2PlantRun" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 16:57:51Z" end-time="2026-10-21 17:03:09Z" duration="317.903351" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1014" name="Plant" fullname="M2PlantRun.Plant" methodname="Plant" classname="M2PlantRun" runstate="Runnable" seed="1082039234" result="Passed" start-time="2026-10-21 16:57:51Z" end-time="2026-10-21 17:03:09Z" duration="317.895569" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1800000" />
+          </properties>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[WristCamera] 그래픽 장치 없음(-nographics) — 손목 카메라 렌더 끔
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 unity_measured. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름). 궤적 꺼짐 (P)
+[JointStateMirror] 구독 /joint_command  mode=Command
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개(붙은·수확된 과실 뺌), 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[HarvestHud] 라벨 45개 (Resources/HudLabels), 뷰 파일 /tmp/e0509_hud_view.json, 그리퍼 카메라 있음. G 로 켜고 끈다
+[GraspFollower] 익은 과실 8개(화면 8), 안 익은 4개: strawberry_ripe_01↔(-0.25,0.7828,0.74) 1.6mm, strawberry_ripe_02↔(-0.12,0.7828,0.76) 1.6mm, strawberry_ripe_03↔(0.20,0.7828,0.74) 1.6mm, strawberry_ripe_04↔(-0.22,0.7828,0.56) 1.6mm, strawberry_ripe_05↔(-0.10,0.7828,0.44) 1.6mm, strawberry_ripe_06↔(-0.25,0.7828,0.50) 1.6mm, strawberry_ripe_07↔(-0.38,0.7828,0.72) 1.6mm, strawberry_ripe_08↔(0.28,0.7828,0.70) 1.6mm
+[GraspFollower] 트레이 상자 x[-0.155, 0.171] z[0.602, 0.828] y≤0.300 (Unity world, egg_carton 경계 + 여유)
+[GraspFollower] 구독 /sim/grasp_event (mode=Command)
+[StrawberryPublisher] 발행 과실 -1 → 8개
+[M2PlantRun] 플랜트 시작: mode=Command, 정지 파일 /home/oceanshape/e0509_unity_sim/logs/m2/20261022_015746_m2_headless/stop_plant, 최대 1620 s
+[M2PlantRun] t=10s connected=True 명령 0 상태 발행 601 (60 Hz) 위반 0 근처 0
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[M2PlantRun] t=20s connected=True 명령 1 상태 발행 1201 (61 Hz) 위반 0 근처 0
+[M2PlantRun] t=30s connected=True 명령 760 상태 발행 1801 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=40s connected=True 명령 796 상태 발행 2401 (60 Hz) 위반 0 근처 1
+[GraspFollower] ATTACH strawberry_ripe_07  일치 0.0 mm  그리퍼 기준 (37.7, 5.5, 255.5) mm
+[StrawberryPublisher] 발행 과실 8 → 7개
+[M2PlantRun] t=50s connected=True 명령 851 상태 발행 3001 (61 Hz) 위반 0 근처 1
+[GraspFollower] 낙하 받침면: 삼각형 7580, 상자 6
+[GraspFollower] RELEASE strawberry_ripe_07  트레이 밖 낙하, (-379.9, 743.0, 675.2) mm 에서 놓음  수확 1 낙하 1
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.879 vs limit 57.296 (+4.583), 8.03s, 482 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.879 vs limit 57.296 (+4.583), 8.03s, 482 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.879 vs limit 57.296 (+4.583), 8.03s, 482 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.583), 8.03s, 482 steps
+[GraspFollower] strawberry_ripe_07 멈춤 (-379.9, 743.0, -421.8) mm, 1097.0 mm 낙하, 트레이 밖
+[M2PlantRun] t=60s connected=True 명령 894 상태 발행 3601 (60 Hz) 위반 0 근처 1
+[GraspFollower] ATTACH strawberry_ripe_01  일치 0.0 mm  그리퍼 기준 (37.0, -0.5, 251.3) mm
+[StrawberryPublisher] 발행 과실 7 → 6개
+[M2PlantRun] t=70s connected=True 명령 954 상태 발행 4201 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=80s connected=True 명령 1064 상태 발행 4801 (61 Hz) 위반 0 근처 1
+[GraspFollower] RELEASE strawberry_ripe_01  트레이 배치, (768.2, 92.5, 29.0) mm 에서 놓음 → 계란판으로 떨어짐  수확 2
+[GraspFollower] strawberry_ripe_01 멈춤 (768.2, 92.5, 2.2) mm, 26.9 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.903 vs limit 57.296 (+4.608), 14.38s, 863 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.882 vs limit 57.296 (+4.586), 14.38s, 863 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.887 vs limit 57.296 (+4.591), 14.38s, 863 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.883 vs limit 57.296 (+4.587), 14.38s, 863 steps
+[M2PlantRun] t=90s connected=True 명령 1549 상태 발행 5401 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=100s connected=True 명령 1573 상태 발행 6001 (60 Hz) 위반 0 근처 1
+[GraspFollower] ATTACH strawberry_ripe_02  일치 0.0 mm  그리퍼 기준 (37.1, -0.4, 251.6) mm
+[StrawberryPublisher] 발행 과실 6 → 5개
+[M2PlantRun] t=110s connected=True 명령 1639 상태 발행 6601 (60 Hz) 위반 0 근처 1
+[GraspFollower] RELEASE strawberry_ripe_02  트레이 배치, (709.4, 93.3, 30.9) mm 에서 놓음 → 계란판으로 떨어짐  수확 3
+[GraspFollower] strawberry_ripe_02 멈춤 (709.4, 93.3, 5.5) mm, 25.4 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.902 vs limit 57.296 (+4.606), 14.63s, 878 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.883 vs limit 57.296 (+4.587), 14.63s, 878 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.887 vs limit 57.296 (+4.591), 14.63s, 878 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.882 vs limit 57.296 (+4.587), 14.63s, 878 steps
+[M2PlantRun] t=120s connected=True 명령 1770 상태 발행 7201 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=130s connected=True 명령 2209 상태 발행 7801 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=140s connected=True 명령 3092 상태 발행 8401 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=150s connected=True 명령 3162 상태 발행 9001 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=160s connected=True 명령 3213 상태 발행 9601 (60 Hz) 위반 0 근처 1
+[GraspFollower] ATTACH strawberry_ripe_03  일치 0.0 mm  그리퍼 기준 (37.0, -0.4, 251.8) mm
+[StrawberryPublisher] 발행 과실 5 → 4개
+[M2PlantRun] t=170s connected=True 명령 3270 상태 발행 10201 (61 Hz) 위반 0 근처 1
+[GraspFollower] RELEASE strawberry_ripe_03  트레이 배치, (761.4, 40.8, 26.6) mm 에서 놓음 → 계란판으로 떨어짐  수확 4
+[GraspFollower] strawberry_ripe_03 멈춤 (761.4, 40.8, 2.7) mm, 23.9 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.893 vs limit 57.296 (+4.597), 14.13s, 848 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.886 vs limit 57.296 (+4.590), 14.13s, 848 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.882 vs limit 57.296 (+4.587), 14.13s, 848 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.881 vs limit 57.296 (+4.586), 14.13s, 848 steps
+[M2PlantRun] t=180s connected=True 명령 3392 상태 발행 10801 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=190s connected=True 명령 4329 상태 발행 11401 (61 Hz) 위반 0 근처 2
+[M2PlantRun] t=200s connected=True 명령 5000 상태 발행 12001 (60 Hz) 위반 0 근처 2
+[GraspFollower] ATTACH strawberry_ripe_05  일치 0.0 mm  그리퍼 기준 (33.7, -0.4, 258.0) mm
+[StrawberryPublisher] 발행 과실 4 → 3개
+[M2PlantRun] t=210s connected=True 명령 5089 상태 발행 12601 (60 Hz) 위반 0 근처 2
+[M2PlantRun] t=220s connected=True 명령 5198 상태 발행 13201 (61 Hz) 위반 0 근처 2
+[GraspFollower] RELEASE strawberry_ripe_05  트레이 배치, (709.9, 46.6, 30.4) mm 에서 놓음 → 계란판으로 떨어짐  수확 5
+[GraspFollower] strawberry_ripe_05 멈춤 (709.9, 46.6, 9.3) mm, 21.1 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.917 vs limit 57.296 (+4.621), 14.28s, 857 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.884 vs limit 57.296 (+4.588), 14.28s, 857 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.892 vs limit 57.296 (+4.596), 14.28s, 857 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.885 vs limit 57.296 (+4.589), 14.28s, 857 steps
+[M2PlantRun] t=230s connected=True 명령 5327 상태 발행 13801 (61 Hz) 위반 0 근처 4
+[M2PlantRun] t=240s connected=True 명령 5676 상태 발행 14401 (60 Hz) 위반 0 근처 4
+[GraspFollower] ATTACH strawberry_ripe_06  일치 0.0 mm  그리퍼 기준 (34.3, -0.5, 259.0) mm
+[StrawberryPublisher] 발행 과실 3 → 2개
+[M2PlantRun] t=250s connected=True 명령 5743 상태 발행 15001 (60 Hz) 위반 0 근처 4
+[GraspFollower] RELEASE strawberry_ripe_06  트레이 배치, (760.5, -8.3, 27.1) mm 에서 놓음 → 계란판으로 떨어짐  수확 6
+[GraspFollower] strawberry_ripe_06 멈춤 (760.5, -8.3, 3.9) mm, 23.2 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.891 vs limit 57.296 (+4.595), 14.50s, 870 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.886 vs limit 57.296 (+4.590), 14.50s, 870 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.883 vs limit 57.296 (+4.587), 14.50s, 870 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.881 vs limit 57.296 (+4.585), 14.50s, 870 steps
+[M2PlantRun] t=260s connected=True 명령 5856 상태 발행 15601 (61 Hz) 위반 0 근처 4
+[M2PlantRun] t=270s connected=True 명령 6243 상태 발행 16201 (61 Hz) 위반 0 근처 4
+[M2PlantRun] t=280s connected=True 명령 6306 상태 발행 16801 (60 Hz) 위반 0 근처 4
+[GraspFollower] ATTACH strawberry_ripe_04  일치 0.0 mm  그리퍼 기준 (34.4, -0.4, 258.2) mm
+[StrawberryPublisher] 발행 과실 2 → 1개
+[M2PlantRun] t=290s connected=True 명령 6429 상태 발행 17401 (61 Hz) 위반 0 근처 4
+[GraspFollower] RELEASE strawberry_ripe_04  트레이 배치, (701.8, -4.4, 27.3) mm 에서 놓음 → 계란판으로 떨어짐  수확 7
+[GraspFollower] strawberry_ripe_04 멈춤 (701.8, -4.4, 19.0) mm, 8.3 mm 낙하, 트레이 안
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.908 vs limit 57.296 (+4.612), 14.25s, 855 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.882 vs limit 57.296 (+4.586), 14.25s, 855 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.889 vs limit 57.296 (+4.593), 14.25s, 855 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.883 vs limit 57.296 (+4.588), 14.25s, 855 steps
+[M2PlantRun] t=300s connected=True 명령 6560 상태 발행 18001 (61 Hz) 위반 0 근처 6
+[M2PlantRun] t=310s connected=True 명령 7228 상태 발행 18601 (61 Hz) 위반 0 근처 6
+[M2PlantRun] 보고서 → /home/oceanshape/e0509_unity_sim/logs/m2/20261022_015746_m2_headless/unity_plant_report.json
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

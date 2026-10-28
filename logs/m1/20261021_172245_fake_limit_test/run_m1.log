@@ -1,0 +1,11 @@
+[run_m1] 모드=fake  ROS_DOMAIN_ID=77  RMW=rmw_fastrtps_cpp  로그=logs/m1/20261021_172245
+[run_m1] 엔드포인트 127.0.0.1:10000 준비 (pid 25673)
+[run_m1] 가짜 퍼블리셔 시작: fake_joint_states.py --hold 1 --ramp 1 --limit-test
+[run_m1] Ctrl-C 로 전부 종료. 이제 Unity 에디터에서 E0509Sim.unity 를 Play 하세요 (H3).
+[INFO] [1792570966.382781264] [fake_joint_states]: /dsr01/joint_states @ 60.0 Hz, period 8.0s, hold 1.0s, ramp 1.0s, limit-test=on
+[INFO] [1792570971.375753439] [fake_joint_states]: t=   5.0s   60.0 Hz  J1..J6 deg =   87.98  -79.70   81.22  147.41  -48.97   93.42
+[INFO] [1792570976.376070950] [fake_joint_states]: t=  10.0s   60.0 Hz  J1..J6 deg =  109.20  -40.31  137.00  189.56  -36.04   72.20
+[INFO] [1792570981.392377507] [fake_joint_states]: t=  15.0s   60.0 Hz  J1..J6 deg =   57.98  -85.03   97.59  185.59   -6.84  123.42
+
+[run_m1] 종료 중…
+[run_m1] 로그: logs/m1/20261021_172245/

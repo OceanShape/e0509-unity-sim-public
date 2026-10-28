@@ -1,0 +1,8 @@
+[check_overview] name 순서: ['joint_1', 'joint_2', 'joint_3', 'joint_4', 'joint_5', 'joint_6', 'rh_l1', 'rh_p12_rn', 'rh_l2', 'rh_r2']
+  joint_1:    87.981°  overview    87.98°  차 +0.001°  OK
+  joint_2:   -94.919°  overview   -94.92°  차 +0.001°  OK
+  joint_3:   129.889°  overview   129.89°  차 -0.001°  OK
+  joint_4:   175.941°  overview   175.94°  차 +0.001°  OK
+  joint_5:   -31.340°  overview   -31.34°  차 +0.000°  OK
+  joint_6:    93.419°  overview    93.42°  차 -0.001°  OK
+[check_overview] overview ±1.0° 통과

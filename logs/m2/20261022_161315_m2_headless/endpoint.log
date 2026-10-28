@@ -1,0 +1,25 @@
+[run_endpoint] 127.0.0.1:10000  ROS_DOMAIN_ID=0  RMW=rmw_fastrtps_cpp
+[INFO] [1792653196.008564167] [UnityEndpoint]: Starting server on 127.0.0.1:10000
+[INFO] [1792653200.299506616] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1792653200.339562967] [UnityEndpoint]: RegisterSubscriber(/joint_command, <class 'sensor_msgs.msg._joint_state.JointState'>) OK
+[INFO] [1792653200.341520573] [UnityEndpoint]: RegisterSubscriber(/sim/grasp_event, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1792653200.361616647] [UnityEndpoint]: RegisterPublisher(/isaac_sim/strawberries, <class 'geometry_msgs.msg._pose_array.PoseArray'>) OK
+[INFO] [1792653200.363533901] [UnityEndpoint]: RegisterPublisher(/dsr01/joint_states, <class 'sensor_msgs.msg._joint_state.JointState'>) OK
+[WARN] [1792653200.363700827] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1792653200.367739179] [UnityEndpoint]: RegisterPublisher(/isaac_sim/strawberries, <class 'geometry_msgs.msg._pose_array.PoseArray'>) OK
+[WARN] [1792653200.367916304] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1792653200.370883699] [UnityEndpoint]: RegisterPublisher(/dsr01/joint_states, <class 'sensor_msgs.msg._joint_state.JointState'>) OK
+[ERROR] [1792653508.269138150] [UnityEndpoint]: Exception: No more data available
+[INFO] [1792653508.269595136] [UnityEndpoint]: Disconnected from 127.0.0.1
+Traceback (most recent call last):
+  File "/home/oceanshape/e0509_unity_sim/ros/install/ros_tcp_endpoint/lib/ros_tcp_endpoint/default_server_endpoint", line 33, in <module>
+    sys.exit(load_entry_point('ros-tcp-endpoint==0.0.1', 'console_scripts', 'default_server_endpoint')())
+  File "/home/oceanshape/e0509_unity_sim/ros/install/ros_tcp_endpoint/lib/python3.10/site-packages/ros_tcp_endpoint/default_server_endpoint.py", line 17, in main
+    rclpy.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+    _shutdown(context=context)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+    return context.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+    self.__context.shutdown()
+rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241

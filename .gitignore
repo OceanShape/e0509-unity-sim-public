@@ -1,0 +1,49 @@
+# ── Unity ──
+UnityProject/Library/
+UnityProject/Temp/
+UnityProject/Obj/
+UnityProject/Logs/
+UnityProject/UserSettings/
+UnityProject/Build*/
+UnityProject/*.csproj
+UnityProject/*.sln
+UnityProject/.vs/
+UnityProject/.idea/
+UnityProject/.vsconfig
+# Recorder 원본 녹화(WebM). 공개용 MP4 는 ffmpeg 로 변환해 docs/media/ 에 둔다
+UnityProject/Recordings/
+
+# ── ROS 2 워크스페이스 ──
+ros/build/
+ros/install/
+ros/log/
+# 클론 커밋 해시는 docs/PROGRESS.md 에 기록한다. (gitignore 는 줄 뒤 주석을 지원하지 않는다)
+ros/src/ROS-TCP-Endpoint/
+
+# ── 실행 로그 ──
+# 맨 위 logs/*.log 는 일회성 로그. 근거로 남길 로그는 logs/<단계>/ 아래에 두고 커밋한다.
+logs/*.log
+
+# ── 기타 ──
+__pycache__/
+*.pyc
+*.swp
+
+# ── Unity batchmode 전체 로그(크고 반복적). 발췌는 logs/step4/*.extract.log 로 커밋한다 ──
+logs/unity/
+
+# ── M1/M2 실행 로그: Unity 전체 로그는 크다. 근거는 같은 폴더의 report·CSV·xml ──
+logs/m1/*/unity.log
+logs/m2/*/unity.log
+# JointLimitMonitor 가 Play 마다 덮어쓰는 작업 파일(근거 사본은 실행 폴더에 있다)
+logs/limit_violations.csv
+logs/limit_near.csv
+
+# 플래너 JSONL(STRAWBERRY_RUNTIME_LOG_ROOT). 근거로 쓸 런은 logs/m2/<STAMP>/ 에 복사한다
+logs/runtime/
+
+# Unity 비정상 종료 덤프
+UnityProject/mono_crash.*
+
+# check_env.sh 가 만드는 이 PC 의 경로(UNITY_BIN 등)
+scripts/env.sh

@@ -1,0 +1,11 @@
+[run_m1] 모드=fake  ROS_DOMAIN_ID=0  RMW=rmw_fastrtps_cpp  로그=logs/m1/20261022_012512
+[run_m1] 엔드포인트 127.0.0.1:10000 준비 (pid 86408)
+[run_m1] 가짜 퍼블리셔 시작: fake_joint_states.py --hold 1 --ramp 1 --limit-test
+[run_m1] Ctrl-C 로 전부 종료. 에디터: bash scripts/open_editor.sh mirror (H3-1).
+[INFO] [1792599913.778158832] [fake_joint_states]: /dsr01/joint_states @ 60.0 Hz, period 8.0s, hold 1.0s, ramp 1.0s, limit-test=on
+[INFO] [1792599918.770635053] [fake_joint_states]: t=   5.0s   60.0 Hz  J1..J6 deg =   87.98  -79.70   81.22  147.41  -48.97   93.42
+[INFO] [1792599923.770609683] [fake_joint_states]: t=  10.0s   60.0 Hz  J1..J6 deg =  109.20  -40.31  137.00  189.56  -36.04   72.20
+[INFO] [1792599928.787367966] [fake_joint_states]: t=  15.0s   60.0 Hz  J1..J6 deg =   57.98  -85.03   97.59  185.59   -6.84  123.42
+
+[run_m1] 종료 중…
+[run_m1] 로그: logs/m1/20261022_012512/

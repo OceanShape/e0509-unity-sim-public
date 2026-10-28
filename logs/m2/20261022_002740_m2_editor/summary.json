@@ -1,0 +1,147 @@
+{
+ "bridge": {
+  "ARM_ARRIVAL": 79,
+  "ARM_ARRIVAL_STALLED": 0,
+  "ARM_ARRIVAL_TIMEOUT": 0,
+  "GRASP_JUDGE": 8,
+  "GRASP_ATTACH": 8,
+  "GRASP_EMPTY": 1,
+  "GRASP_RELEASE": 8,
+  "MOVEJ_OVER_DOOSAN_MOVEIT": 0
+ },
+ "scan": {
+  "START_ACCEPTED": 1,
+  "START_REJECTED": 0,
+  "AT_SCAN_POSE": 11,
+  "EXEC_TIMEOUT": 0,
+  "PICK_TRIGGER": 8,
+  "PICK_ATTEMPT_DONE": 8,
+  "SCAN_COMPLETE": 1,
+  "READY_FOR_NEXT_START": 1,
+  "start_to_complete_s": 288.0,
+  "pick_durations_s": [
+   22.1,
+   28.4,
+   29.7,
+   19.2,
+   30.3,
+   29.2,
+   28.5,
+   27.9
+  ],
+  "pick_max_s": 30.3,
+  "overview_ripe": {
+   "nw": 3,
+   "ne": 2,
+   "se": 0,
+   "sw": 3
+  }
+ },
+ "planner": {
+  "GRASP_CONTACT_DETECTED": 8,
+  "GRASP_EMPTY": 0,
+  "PLACE_GATE_BLOCKED": 0
+ },
+ "ros_rate": {
+  "joint_states": {
+   "count": 18930,
+   "duration_s": 315.48,
+   "mean_hz": 60.0,
+   "max_gap_s": 0.1078,
+   "p99_gap_s": 0.0584,
+   "gaps_over_0.3s": 0
+  },
+  "joint_state_names": [
+   "joint_1",
+   "joint_2",
+   "joint_3",
+   "joint_4",
+   "joint_5",
+   "joint_6",
+   "rh_l1",
+   "rh_p12_rn",
+   "rh_l2",
+   "rh_r2"
+  ],
+  "strawberries": {
+   "count": 315,
+   "duration_s": 314.38,
+   "mean_hz": 0.999,
+   "max_gap_s": 1.0429,
+   "p99_gap_s": 1.0415
+  },
+  "berry_counts_seen": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "joint_state_gaps_over_0.1s": [
+   {
+    "wall": 1792596511.509,
+    "recv_gap_s": 0.1078,
+    "stamp_gap_s": 0.066
+   }
+  ]
+ },
+ "unity_plant": null,
+ "strawberry_repo_unchanged": true,
+ "reference_isaac_run": {
+  "path": "/home/oceanshape/strawberry_grasp_environment/run_logs/20261014_002919",
+  "bridge": {
+   "ARM_ARRIVAL": 73,
+   "ARM_ARRIVAL_STALLED": 0,
+   "ARM_ARRIVAL_TIMEOUT": 0,
+   "GRASP_JUDGE": 8,
+   "GRASP_ATTACH": 8,
+   "GRASP_EMPTY": 1,
+   "GRASP_RELEASE": 8,
+   "MOVEJ_OVER_DOOSAN_MOVEIT": 12
+  },
+  "scan": {
+   "START_ACCEPTED": 1,
+   "START_REJECTED": 0,
+   "AT_SCAN_POSE": 11,
+   "EXEC_TIMEOUT": 0,
+   "PICK_TRIGGER": 8,
+   "PICK_ATTEMPT_DONE": 8,
+   "SCAN_COMPLETE": 1,
+   "READY_FOR_NEXT_START": 1,
+   "start_to_complete_s": 334.5,
+   "pick_durations_s": [
+    28.3,
+    39.0,
+    39.5,
+    30.1,
+    29.7,
+    40.4,
+    36.2,
+    25.8
+   ],
+   "pick_max_s": 40.4,
+   "overview_ripe": {
+    "nw": 3,
+    "ne": 2,
+    "se": 0,
+    "sw": 3
+   }
+  },
+  "planner": {
+   "GRASP_CONTACT_DETECTED": 8,
+   "GRASP_EMPTY": 0,
+   "PLACE_GATE_BLOCKED": 0
+  }
+ },
+ "verdict": {
+  "arrival_timeout_zero": true,
+  "sequence_complete": true,
+  "picks_attempted": true,
+  "state_rate_ok": true,
+  "M2_complete": true
+ }
+}

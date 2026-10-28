@@ -1,0 +1,214 @@
+{
+ "bridge": {
+  "ARM_ARRIVAL": 75,
+  "ARM_ARRIVAL_STALLED": 0,
+  "ARM_ARRIVAL_TIMEOUT": 0,
+  "GRASP_JUDGE": 7,
+  "GRASP_ATTACH": 7,
+  "GRASP_EMPTY": 1,
+  "GRASP_RELEASE": 7,
+  "MOVEJ_OVER_DOOSAN_MOVEIT": 0
+ },
+ "scan": {
+  "START_ACCEPTED": 1,
+  "START_REJECTED": 0,
+  "AT_SCAN_POSE": 11,
+  "EXEC_TIMEOUT": 0,
+  "PICK_TRIGGER": 8,
+  "PICK_ATTEMPT_DONE": 8,
+  "SCAN_COMPLETE": 1,
+  "READY_FOR_NEXT_START": 1,
+  "start_to_complete_s": 276.9,
+  "pick_durations_s": [
+   22.4,
+   28.0,
+   30.5,
+   9.9,
+   29.4,
+   28.1,
+   27.7,
+   27.6
+  ],
+  "pick_max_s": 30.5
+ },
+ "planner": {
+  "GRASP_CONTACT_DETECTED": 7,
+  "GRASP_EMPTY": 0,
+  "PLACE_GATE_BLOCKED": 0
+ },
+ "ros_rate": {
+  "joint_states": {
+   "count": 18251,
+   "duration_s": 304.07,
+   "mean_hz": 60.02,
+   "max_gap_s": 0.236,
+   "p99_gap_s": 0.0577,
+   "gaps_over_0.3s": 0
+  },
+  "joint_state_names": [
+   "joint_1",
+   "joint_2",
+   "joint_3",
+   "joint_4",
+   "joint_5",
+   "joint_6",
+   "rh_l1",
+   "rh_p12_rn",
+   "rh_l2",
+   "rh_r2"
+  ],
+  "strawberries": {
+   "count": 304,
+   "duration_s": 303.02,
+   "mean_hz": 1.0,
+   "max_gap_s": 1.1874,
+   "p99_gap_s": 1.0406
+  },
+  "berry_counts_seen": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "joint_state_gaps_over_0.1s": [
+   {
+    "wall": 1792581065.807,
+    "recv_gap_s": 0.236,
+    "stamp_gap_s": 0.017
+   }
+  ]
+ },
+ "unity_plant": {
+  "started": "2026-10-21T20:10:46",
+  "mode": "Command",
+  "subscribed": "/joint_command",
+  "stopped_by": "stop_file",
+  "duration_s": 304.88536018200006,
+  "publish_hz_samples_10s": [
+   61,
+   60,
+   61,
+   61,
+   61,
+   61,
+   60,
+   61,
+   61,
+   61,
+   61,
+   61,
+   60,
+   61,
+   61,
+   61,
+   60,
+   60,
+   61,
+   60,
+   60,
+   60,
+   61,
+   61,
+   61,
+   60,
+   60,
+   61,
+   60,
+   61
+  ],
+  "result": "RAN",
+  "connected_at_end": true,
+  "commands_received": 7229,
+  "unknown_names": [],
+  "state_published": 18294,
+  "berries_published": 305,
+  "berries_last_published_count": 1,
+  "grasp_attach": 7,
+  "grasp_release": 7,
+  "grasp_ignored": 0,
+  "grasp_placed_in_tray": 6,
+  "grasp_dropped_outside": 1,
+  "grasp_fruits": [
+   "strawberry_ripe_01 placed",
+   "strawberry_ripe_02 placed",
+   "strawberry_ripe_03 placed",
+   "strawberry_ripe_04 placed",
+   "strawberry_ripe_05 placed",
+   "strawberry_ripe_06 placed",
+   "strawberry_ripe_07 dropped",
+   "strawberry_ripe_08 on_vine"
+  ],
+  "grasp_events": [
+   "43.04s ATTACH strawberry_ripe_07  일치 0.0 mm  그리퍼 기준 (37.6, 5.4, 255.8) mm",
+   "50.45s RELEASE strawberry_ripe_07  트레이 밖 낙하, (-379.9, 743.0, 675.1) mm 에서 놓음  수확 1 낙하 1",
+   "66.17s ATTACH strawberry_ripe_01  일치 0.0 mm  그리퍼 기준 (37.0, -0.5, 251.3) mm",
+   "79.49s RELEASE strawberry_ripe_01  트레이 배치, (768.3, 92.4, 28.7) mm 에서 놓음 → 계란판으로 떨어짐  수확 2",
+   "102.24s ATTACH strawberry_ripe_02  일치 0.0 mm  그리퍼 기준 (37.1, -0.4, 251.5) mm",
+   "116.19s RELEASE strawberry_ripe_02  트레이 배치, (709.0, 93.6, 29.9) mm 에서 놓음 → 계란판으로 떨어짐  수확 3",
+   "156.93s ATTACH strawberry_ripe_03  일치 0.0 mm  그리퍼 기준 (37.1, -0.4, 251.7) mm",
+   "170.37s RELEASE strawberry_ripe_03  트레이 배치, (762.0, 41.3, 27.4) mm 에서 놓음 → 계란판으로 떨어짐  수확 4",
+   "202.85s ATTACH strawberry_ripe_05  일치 0.0 mm  그리퍼 기준 (33.7, -0.4, 258.1) mm",
+   "216.32s RELEASE strawberry_ripe_05  트레이 배치, (710.1, 46.5, 30.4) mm 에서 놓음 → 계란판으로 떨어짐  수확 5",
+   "236.73s ATTACH strawberry_ripe_06  일치 0.0 mm  그리퍼 기준 (34.1, -0.5, 258.3) mm",
+   "250.36s RELEASE strawberry_ripe_06  트레이 배치, (759.7, -8.6, 26.9) mm 에서 놓음 → 계란판으로 떨어짐  수확 6",
+   "270.21s ATTACH strawberry_ripe_04  일치 0.0 mm  그리퍼 기준 (34.1, -0.4, 258.7) mm",
+   "283.63s RELEASE strawberry_ripe_04  트레이 배치, (702.3, -4.4, 27.4) mm 에서 놓음 → 계란판으로 떨어짐  수확 7"
+  ],
+  "violations": 0,
+  "near_limit_episodes": 6,
+  "operational_warn": 0,
+  "monitor_value_source": "unity_measured",
+  "wrap_detected": false
+ },
+ "strawberry_repo_unchanged": true,
+ "reference_isaac_run": {
+  "path": "/home/oceanshape/strawberry_grasp_environment/run_logs/20261014_002919",
+  "bridge": {
+   "ARM_ARRIVAL": 73,
+   "ARM_ARRIVAL_STALLED": 0,
+   "ARM_ARRIVAL_TIMEOUT": 0,
+   "GRASP_JUDGE": 8,
+   "GRASP_ATTACH": 8,
+   "GRASP_EMPTY": 1,
+   "GRASP_RELEASE": 8,
+   "MOVEJ_OVER_DOOSAN_MOVEIT": 12
+  },
+  "scan": {
+   "START_ACCEPTED": 1,
+   "START_REJECTED": 0,
+   "AT_SCAN_POSE": 11,
+   "EXEC_TIMEOUT": 0,
+   "PICK_TRIGGER": 8,
+   "PICK_ATTEMPT_DONE": 8,
+   "SCAN_COMPLETE": 1,
+   "READY_FOR_NEXT_START": 1,
+   "start_to_complete_s": 334.5,
+   "pick_durations_s": [
+    28.3,
+    39.0,
+    39.5,
+    30.1,
+    29.7,
+    40.4,
+    36.2,
+    25.8
+   ],
+   "pick_max_s": 40.4
+  },
+  "planner": {
+   "GRASP_CONTACT_DETECTED": 8,
+   "GRASP_EMPTY": 0,
+   "PLACE_GATE_BLOCKED": 0
+  }
+ },
+ "verdict": {
+  "arrival_timeout_zero": true,
+  "sequence_complete": true,
+  "state_rate_ok": true,
+  "M2_complete": true
+ }
+}

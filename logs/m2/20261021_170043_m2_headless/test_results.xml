@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 08:00:50Z" end-time="2026-10-21 08:06:23Z" duration="333.1761419">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-21 08:00:50Z" end-time="2026-10-21 08:06:23Z" duration="333.176142" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1009" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-21 08:00:50Z" end-time="2026-10-21 08:06:23Z" duration="333.170240" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="13444" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1007" name="M2PlantRun" fullname="M2PlantRun" classname="M2PlantRun" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 08:00:50Z" end-time="2026-10-21 08:06:23Z" duration="333.169279" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1008" name="Plant" fullname="M2PlantRun.Plant" methodname="Plant" classname="M2PlantRun" runstate="Runnable" seed="115809515" result="Passed" start-time="2026-10-21 08:00:50Z" end-time="2026-10-21 08:06:23Z" duration="333.161524" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1800000" />
+          </properties>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 루트 base_link 관절 풀이 반복 32/1 (Isaac 32/1), 풀이기 6/1 기본
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°, 판정 값 unity_measured. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] 구독 /joint_command  mode=Command
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[M2PlantRun] 플랜트 시작: mode=Command, 정지 파일 /home/oceanshape/e0509_unity_sim/logs/m2/20261021_170043_m2_headless/stop_plant, 최대 1320 s
+[M2PlantRun] t=10s connected=True 명령 0 상태 발행 601 (60 Hz) 위반 0 근처 0
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[M2PlantRun] t=20s connected=True 명령 1 상태 발행 1201 (60 Hz) 위반 0 근처 0
+[M2PlantRun] t=30s connected=True 명령 760 상태 발행 1801 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=40s connected=True 명령 795 상태 발행 2401 (60 Hz) 위반 0 근처 1
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.880 vs limit 57.296 (+4.584), 7.37s, 442 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.879 vs limit 57.296 (+4.583), 7.37s, 442 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.879 vs limit 57.296 (+4.583), 7.37s, 442 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.879 vs limit 57.296 (+4.583), 7.37s, 442 steps
+[M2PlantRun] t=50s connected=True 명령 852 상태 발행 3001 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=60s connected=True 명령 907 상태 발행 3601 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=70s connected=True 명령 976 상태 발행 4201 (60 Hz) 위반 0 근처 1
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.904 vs limit 57.296 (+4.608), 13.93s, 836 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.883 vs limit 57.296 (+4.587), 13.93s, 836 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.887 vs limit 57.296 (+4.591), 13.93s, 836 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.883 vs limit 57.296 (+4.587), 13.93s, 836 steps
+[M2PlantRun] t=80s connected=True 명령 1084 상태 발행 4801 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=90s connected=True 명령 1562 상태 발행 5401 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=100s connected=True 명령 1601 상태 발행 6001 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=110s connected=True 명령 1662 상태 발행 6601 (60 Hz) 위반 0 근처 1
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.902 vs limit 57.296 (+4.606), 14.25s, 855 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.883 vs limit 57.296 (+4.587), 14.25s, 855 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.888 vs limit 57.296 (+4.592), 14.25s, 855 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.882 vs limit 57.296 (+4.587), 14.25s, 855 steps
+[M2PlantRun] t=120s connected=True 명령 1804 상태 발행 7201 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=130s connected=True 명령 2411 상태 발행 7801 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=140s connected=True 명령 3252 상태 발행 8401 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=150s connected=True 명령 3623 상태 발행 9001 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=160s connected=True 명령 3662 상태 발행 9601 (61 Hz) 위반 0 근처 1
+[M2PlantRun] t=170s connected=True 명령 3742 상태 발행 10201 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=180s connected=True 명령 3851 상태 발행 10801 (60 Hz) 위반 0 근처 1
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.893 vs limit 57.296 (+4.597), 13.38s, 803 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.885 vs limit 57.296 (+4.589), 13.38s, 803 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.882 vs limit 57.296 (+4.587), 13.38s, 803 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.881 vs limit 57.296 (+4.586), 13.38s, 803 steps
+[M2PlantRun] t=190s connected=True 명령 4004 상태 발행 11401 (60 Hz) 위반 0 근처 1
+[M2PlantRun] t=200s connected=True 명령 5311 상태 발행 12001 (61 Hz) 위반 0 근처 2
+[M2PlantRun] t=210s connected=True 명령 5562 상태 발행 12601 (60 Hz) 위반 0 근처 2
+[M2PlantRun] t=220s connected=True 명령 5629 상태 발행 13201 (60 Hz) 위반 0 근처 2
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.918 vs limit 57.296 (+4.622), 13.95s, 837 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.883 vs limit 57.296 (+4.587), 13.95s, 837 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.892 vs limit 57.296 (+4.596), 13.95s, 837 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.885 vs limit 57.296 (+4.589), 13.95s, 837 steps
+[M2PlantRun] t=230s connected=True 명령 5750 상태 발행 13801 (61 Hz) 위반 0 근처 3
+[M2PlantRun] t=240s connected=True 명령 6150 상태 발행 14401 (61 Hz) 위반 0 근처 4
+[M2PlantRun] t=250s connected=True 명령 6218 상태 발행 15001 (60 Hz) 위반 0 근처 4
+[M2PlantRun] t=260s connected=True 명령 6342 상태 발행 15601 (60 Hz) 위반 0 근처 4
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.893 vs limit 57.296 (+4.598), 13.92s, 835 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.886 vs limit 57.296 (+4.590), 13.92s, 835 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.884 vs limit 57.296 (+4.588), 13.92s, 835 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.881 vs limit 57.296 (+4.586), 13.92s, 835 steps
+[M2PlantRun] t=270s connected=True 명령 6687 상태 발행 16201 (60 Hz) 위반 0 근처 4
+[M2PlantRun] t=280s connected=True 명령 6790 상태 발행 16801 (60 Hz) 위반 0 근처 4
+[M2PlantRun] t=290s connected=True 명령 6855 상태 발행 17401 (60 Hz) 위반 0 근처 4
+[JointLimitMonitor] note gripper_over_1rad rh_p12_rn: peak 61.907 vs limit 57.296 (+4.612), 14.05s, 843 steps
+[JointLimitMonitor] note gripper_over_1rad rh_r2: peak 61.882 vs limit 57.296 (+4.586), 14.05s, 843 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l1: peak 61.889 vs limit 57.296 (+4.593), 14.05s, 843 steps
+[JointLimitMonitor] note gripper_over_1rad rh_l2: peak 61.883 vs limit 57.296 (+4.588), 14.05s, 843 steps
+[M2PlantRun] t=300s connected=True 명령 6979 상태 발행 18001 (60 Hz) 위반 0 근처 5
+[M2PlantRun] t=310s connected=True 명령 7538 상태 발행 18601 (60 Hz) 위반 0 근처 6
+[M2PlantRun] t=320s connected=True 명령 8143 상태 발행 19201 (60 Hz) 위반 0 근처 6
+[M2PlantRun] t=330s connected=True 명령 8642 상태 발행 19801 (61 Hz) 위반 0 근처 6
+[M2PlantRun] 보고서 → /home/oceanshape/e0509_unity_sim/logs/m2/20261021_170043_m2_headless/unity_plant_report.json
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

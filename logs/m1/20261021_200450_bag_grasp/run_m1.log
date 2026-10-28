@@ -1,0 +1,16 @@
+[run_m1] 모드=bag  ROS_DOMAIN_ID=0  RMW=rmw_fastrtps_cpp  로그=logs/m1/20261021_200450
+[run_m1] 엔드포인트 127.0.0.1:10000 준비 (pid 41135)
+[run_m1] bag 재생(한 번): /home/oceanshape/bags/run1 -d 5 --topics /dsr01/joint_states /sim/grasp_event
+[run_m1] Ctrl-C 로 전부 종료. 이제 Unity 에디터에서 E0509Sim.unity 를 Play 하세요 (H3).
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1792580691.178010278] [rosbag2_storage]: Opened database '/home/oceanshape/bags/run1/run1_0.db3' for READ_ONLY.
+[INFO] [1792580691.178070717] [rosbag2_player]: Set rate to 1
+[INFO] [1792580691.181724552] [rosbag2_player]: Adding keyboard callbacks.
+[INFO] [1792580691.181755701] [rosbag2_player]: Press SPACE for Pause/Resume
+[INFO] [1792580691.181767881] [rosbag2_player]: Press CURSOR_RIGHT for Play Next Message
+[INFO] [1792580691.181777211] [rosbag2_player]: Press CURSOR_UP for Increase Rate 10%
+[INFO] [1792580691.181786286] [rosbag2_player]: Press CURSOR_DOWN for Decrease Rate 10%
+[INFO] [1792580691.181836547] [rosbag2_player]: Sleep 5000000000 ns
+[INFO] [1792580696.182123403] [rosbag2_storage]: Opened database '/home/oceanshape/bags/run1/run1_0.db3' for READ_ONLY.
+
+[run_m1] 종료 중…
+[run_m1] 로그: logs/m1/20261021_200450/

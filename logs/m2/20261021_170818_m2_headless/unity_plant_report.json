@@ -1,0 +1,19 @@
+{
+  "started": "2026-10-21T17:08:23",
+  "mode": "Command",
+  "subscribed": "/joint_command",
+  "stopped_by": "stop_file",
+  "duration_s": 320.236640307,
+  "publish_hz_samples_10s": [60, 60, 61, 60, 60, 61, 60, 60, 60, 61, 61, 60, 61, 61, 61, 60, 60, 61, 60, 60, 61, 61, 60, 61, 61, 61, 60, 60, 60, 61, 61, 60],
+  "result": "RAN",
+  "connected_at_end": true,
+  "commands_received": 8377,
+  "unknown_names": [],
+  "state_published": 19216,
+  "berries_published": 321,
+  "violations": 0,
+  "near_limit_episodes": 4,
+  "operational_warn": 0,
+  "monitor_value_source": "unity_measured",
+  "wrap_detected": false
+}

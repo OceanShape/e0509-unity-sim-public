@@ -1,0 +1,227 @@
+{
+ "head_nodes": {
+  "w": 42.0,
+  "h": 32.5,
+  "text": "노드"
+ },
+ "head_region": {
+  "w": 38.5,
+  "h": 29.5,
+  "text": "영역"
+ },
+ "head_targets": {
+  "w": 42.0,
+  "h": 32.5,
+  "text": "타겟"
+ },
+ "head_placed": {
+  "w": 42.0,
+  "h": 32.5,
+  "text": "배치"
+ },
+ "head_phase": {
+  "w": 42.0,
+  "h": 32.5,
+  "text": "단계"
+ },
+ "head_tree": {
+  "w": 42.0,
+  "h": 32.5,
+  "text": "트리"
+ },
+ "node_vision": {
+  "w": 46.0,
+  "h": 35.0,
+  "text": "인식"
+ },
+ "node_planner": {
+  "w": 68.0,
+  "h": 35.0,
+  "text": "플래너"
+ },
+ "node_controller": {
+  "w": 46.0,
+  "h": 35.0,
+  "text": "제어"
+ },
+ "node_scan": {
+  "w": 46.0,
+  "h": 35.0,
+  "text": "스캔"
+ },
+ "final_placed": {
+  "w": 89.0,
+  "h": 32.5,
+  "text": "배치 성공"
+ },
+ "final_dropped": {
+  "w": 89.0,
+  "h": 32.5,
+  "text": "배치 실패"
+ },
+ "final_detach_failed": {
+  "w": 89.0,
+  "h": 32.5,
+  "text": "분리 실패"
+ },
+ "count_targets": {
+  "w": 46.0,
+  "h": 35.0,
+  "text": "타겟"
+ },
+ "count_non_targets": {
+  "w": 68.0,
+  "h": 35.0,
+  "text": "비대상"
+ },
+ "cam_title": {
+  "w": 320.0,
+  "h": 29.5,
+  "text": "그리퍼 카메라 · D455 렌더 · 인식 없음"
+ },
+ "state_IDLE": {
+  "w": 75.5,
+  "h": 58.5,
+  "text": "대기"
+ },
+ "state_SCAN_MOVE": {
+  "w": 160.0,
+  "h": 58.5,
+  "text": "스캔 이동"
+ },
+ "state_DETECT": {
+  "w": 160.0,
+  "h": 58.5,
+  "text": "타겟 수신"
+ },
+ "state_PLAN": {
+  "w": 160.0,
+  "h": 58.5,
+  "text": "경로 계산"
+ },
+ "state_APPROACH": {
+  "w": 75.5,
+  "h": 58.5,
+  "text": "접근"
+ },
+ "state_ENTER": {
+  "w": 75.5,
+  "h": 58.5,
+  "text": "진입"
+ },
+ "state_GRASP": {
+  "w": 195.0,
+  "h": 58.5,
+  "text": "하강 + 파지"
+ },
+ "state_DETACH": {
+  "w": 75.5,
+  "h": 58.5,
+  "text": "당김"
+ },
+ "state_RETREAT": {
+  "w": 75.5,
+  "h": 58.5,
+  "text": "후퇴"
+ },
+ "state_PLACE": {
+  "w": 75.5,
+  "h": 58.5,
+  "text": "배치"
+ },
+ "state_RETURN": {
+  "w": 75.5,
+  "h": 58.5,
+  "text": "복귀"
+ },
+ "state_DONE": {
+  "w": 75.5,
+  "h": 58.5,
+  "text": "완료"
+ },
+ "region_home": {
+  "w": 70.5,
+  "h": 35.0,
+  "text": "HOME"
+ },
+ "region_nw": {
+  "w": 91.0,
+  "h": 35.0,
+  "text": "북서 NW"
+ },
+ "region_ne": {
+  "w": 84.0,
+  "h": 35.0,
+  "text": "북동 NE"
+ },
+ "region_sw": {
+  "w": 88.0,
+  "h": 35.0,
+  "text": "남서 SW"
+ },
+ "region_se": {
+  "w": 81.0,
+  "h": 35.0,
+  "text": "남동 SE"
+ },
+ "harvest_idle": {
+  "w": 177.0,
+  "h": 49.5,
+  "text": "수확 시작 전"
+ },
+ "harvest_running": {
+  "w": 177.0,
+  "h": 49.5,
+  "text": "수확 진행 중"
+ },
+ "harvest_stopped": {
+  "w": 136.5,
+  "h": 49.5,
+  "text": "수확 중단"
+ },
+ "harvest_done": {
+  "w": 136.5,
+  "h": 49.5,
+  "text": "수확 완료"
+ },
+ "tree_split_nw": {
+  "w": 35.0,
+  "h": 26.5,
+  "text": "분할"
+ },
+ "tree_split_ne": {
+  "w": 35.0,
+  "h": 26.5,
+  "text": "분할"
+ },
+ "tree_split_se": {
+  "w": 35.0,
+  "h": 26.5,
+  "text": "분할"
+ },
+ "tree_split_sw": {
+  "w": 35.0,
+  "h": 26.5,
+  "text": "분할"
+ },
+ "tree_pruned_nw": {
+  "w": 35.0,
+  "h": 26.5,
+  "text": "제외"
+ },
+ "tree_pruned_ne": {
+  "w": 35.0,
+  "h": 26.5,
+  "text": "제외"
+ },
+ "tree_pruned_se": {
+  "w": 35.0,
+  "h": 26.5,
+  "text": "제외"
+ },
+ "tree_pruned_sw": {
+  "w": 35.0,
+  "h": 26.5,
+  "text": "제외"
+ }
+}

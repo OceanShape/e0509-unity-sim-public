@@ -1,0 +1,44 @@
+보드 기하 (8개 파일이 한 세트)
+  OK   layout_layer  보드 앞면                        0.8100
+  OK   layout_layer  board_guard                  0.9100 (기대 0.9100 = 보드 + 0.10)
+  OK   layout_layer  딸기 y                         0.7828 (기대 0.7828 = 보드 - 0.0272)
+  OK   physics_layer localPos0                    0.7828 (딸기와 동일해야 함)
+  OK   harvest_params WALL_SURFACE_Y_M            0.8100
+  OK   scan_executor  BOARD_SURFACE_Y_M           0.8100
+  OK   fake_vision    board_surface_y_m           0.8100
+  OK   cuRobo 상자 앞면  src/e0509_gripper_description/config/environment.yaml 0.8100
+  OK   cuRobo 상자 앞면  src/strawberry_motion/config/environment.yaml 0.8100
+  OK   cuRobo 상자 앞면  scan_collision_world         0.8100
+
+분할 격자 (2곳이 같아야 함)
+  OK   scan_executor    x_mid / z_mid             0.050 / 0.660
+  OK   quadrant_filter  x_mid / z_mid             0.050 / 0.660
+
+스캔 이동 속도 (부수 규칙 1 — 실기 기본값은 코드에, 시뮬 전용 값은 run_nodes.sh 에. 2026-10-02)
+  OK   scan 기본값 SCAN_MOVEJ_VEL_DEG_S              60.0 (실기 원본 60 — 다르면 실기 기본 동작이 바뀐 것)
+  OK   scan 기본값 SCAN_MOVEJ_ACC_DEG_S2             90.0 (실기 원본 90 — 다르면 실기 기본 동작이 바뀐 것)
+  OK   scan 기본값 OVERVIEW_RETURN_VEL_DEG_S         60.0 (실기 원본 60 — 다르면 실기 기본 동작이 바뀐 것)
+  OK   scan 기본값 OVERVIEW_RETURN_ACC_DEG_S2        90.0 (실기 원본 90 — 다르면 실기 기본 동작이 바뀐 것)
+  OK   run_nodes.sh -p scan_movej_vel_deg_s       120.0 (시뮬 전용 120 — 없으면 시뮬이 실기 속도 60/90 으로 돈다)
+  OK   run_nodes.sh -p scan_movej_acc_deg_s2      180.0 (시뮬 전용 180 — 없으면 시뮬이 실기 속도 60/90 으로 돈다)
+  OK   run_nodes.sh -p overview_return_vel_deg_s  120.0 (시뮬 전용 120 — 없으면 시뮬이 실기 속도 60/90 으로 돈다)
+  OK   run_nodes.sh -p overview_return_acc_deg_s2 180.0 (시뮬 전용 180 — 없으면 시뮬이 실기 속도 60/90 으로 돈다)
+
+툴 · 파지
+  OK   bridge tool_tcp_offset_m                   0.236 (T3 의 ee_to_tcp_offset_m 과 같아야 함)
+  OK   파지 오프셋 사다리 <= 조우 물림 한계                     최대 25mm / 물림 한계 27mm  (넘으면 조우가 줄기 앞에서 닫힌다)
+  OK   첫 오프셋이 물림 구간 안                             15mm  (구간 -6~27mm)
+  OK   bridge z bias == planner pick_target_z_bias_m 0.035  (T3 인자와 같아야 함)
+  OK   충돌 활성거리 플래너 == 브릿지                         0.005 / 0.005  (실기는 벽 없음=0, 시뮬은 5mm 로 통일)
+Warning: in _ReportErrors at line 3316 of /opt/USD/pxr/usd/usd/stage.cpp -- In </World/robot_assembly/world/visuals>: Unresolved reference prim path @/home/oceanshape/strawberry_grasp_environment/strawberry_harvest/assets/robot/doosan_e0509_rh_p12_rn/configuration/robot_physics.usd@</visuals/world> introduced by @/home/oceanshape/strawberry_grasp_environment/strawberry_harvest/assets/robot/doosan_e0509_rh_p12_rn/configuration/robot_base.usd@</strawberry_grasp_robot/world/visuals> (instantiating stage on stage @/home/oceanshape/strawberry_grasp_environment/strawberry_harvest/scenes/main_scene.usd@ <0x56fdd04e17d0>)
+  OK   gripper_close_rad <= USD rh_r2/rh_l2 상한    닫힘 1.080 rad / 상한 1.100 rad (63.025 deg)
+  OK   gripper_close_rad (파츠 간격)                  1.080 rad -> 파츠 간격 0.3mm. 1.0 이면 9.4mm 로 줄기를 못 문다
+  OK   cuRobo lock_joints == 접근 개도 (src/strawberry_motion/config/curobo/e0509_gripper.yml) 0.926 rad / stroke 600 x 1.08/700 = 0.926 rad
+  OK   cuRobo lock_joints == 접근 개도 (src/strawberry_motion/config/curobo/e0509_gripper_measured_tcp.yml) 0.926 rad / stroke 600 x 1.08/700 = 0.926 rad
+  OK   cuRobo lock_joints == 접근 개도 (src/e0509_gripper_description/config/curobo/e0509_gripper.yml) 0.926 rad / stroke 600 x 1.08/700 = 0.926 rad
+  OK   cuRobo lock_joints == 접근 개도 (src/e0509_gripper_description/config/curobo/e0509_gripper_measured_tcp.yml) 0.926 rad / stroke 600 x 1.08/700 = 0.926 rad
+
+순회
+  OK   _ALL_CELLS_CLOCKWISE_ORDER 첫 셀             root/nw (실기 순서 nw->ne->se->sw)
+
+전부 정합 (docs/parameters.md 기준)

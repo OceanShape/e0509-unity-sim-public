@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 07:44:26Z" end-time="2026-10-21 07:46:30Z" duration="124.0849119">
+  <test-suite type="TestSuite" id="1000" name="UnityProject" fullname="UnityProject" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-21 07:44:26Z" end-time="2026-10-21 07:46:30Z" duration="124.084912" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <test-suite type="Assembly" id="1007" name="E0509Sim.Tests.PlayMode.dll" fullname="/home/oceanshape/e0509_unity_sim/UnityProject/Library/ScriptAssemblies/E0509Sim.Tests.PlayMode.dll" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-21 07:44:26Z" end-time="2026-10-21 07:46:30Z" duration="124.079360" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="5942" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <test-suite type="TestFixture" id="1003" name="DriveTuningSweep" fullname="DriveTuningSweep" classname="DriveTuningSweep" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-21 07:44:26Z" end-time="2026-10-21 07:46:30Z" duration="124.078476" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1004" name="Sweep" fullname="DriveTuningSweep.Sweep" methodname="Sweep" classname="DriveTuningSweep" runstate="Runnable" seed="649108182" result="Passed" start-time="2026-10-21 07:44:26Z" end-time="2026-10-21 07:46:30Z" duration="124.070969" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <output><![CDATA[[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 드라이브 덮어쓰기 k=100000 c=1000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.580 vs limit -95.000 (+0.580), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.491 vs limit 135.000 (+0.491), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.029 vs limit -95.000 (+0.029), 0.05s, 3 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.043 vs limit 135.000 (+0.043), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.005 vs limit 135.000 (+0.005), 0.10s, 6 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.000), 0.12s, 7 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.022 vs limit 135.000 (+0.022), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.002 vs limit 135.000 (+0.002), 0.12s, 7 steps
+[DriveTuningSweep] 100000,1000,1,0.0000,0.4909,-95.5802,0.183,124.1,2.266,0.017,135.0223,-94.9253,82.9,8
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 1.03s, 63 steps
+[JointLimitMonitor] 종료: 위반 9, 근처 13, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 드라이브 덮어쓰기 k=100000 c=10000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.085 vs limit -95.000 (+0.085), 0.05s, 3 steps
+[DriveTuningSweep] 100000,10000,1,0.0000,-0.0007,-95.0848,0.283,32.1,8.600,0.250,134.9994,-94.9194,72.3,1
+[JointLimitMonitor] 종료: 위반 1, 근처 5, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 드라이브 덮어쓰기 k=100000 c=100000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[DriveTuningSweep] 100000,100000,1,0.0000,-1.1588,-94.9536,NaN,4.7,27.540,NaN,133.9367,-94.9226,27.2,0
+[JointLimitMonitor] 종료: 위반 0, 근처 1, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 드라이브 덮어쓰기 k=1000000 c=1000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.953 vs limit -95.000 (+0.953), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.886 vs limit 135.000 (+0.886), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.098 vs limit -95.000 (+0.098), 0.05s, 3 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.130 vs limit 135.000 (+0.130), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.023 vs limit 135.000 (+0.023), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.003 vs limit 135.000 (+0.003), 0.10s, 6 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.026 vs limit 135.000 (+0.026), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.003 vs limit 135.000 (+0.003), 0.10s, 6 steps
+[DriveTuningSweep] 1000000,1000,1,0.0000,0.8860,-95.9526,0.150,189.0,1.523,0.017,135.0258,-94.9243,84.2,10
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 1.15s, 70 steps
+[JointLimitMonitor] 종료: 위반 11, 근처 15, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 드라이브 덮어쓰기 k=1000000 c=10000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.603 vs limit -95.000 (+0.603), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.523 vs limit 135.000 (+0.523), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.010 vs limit -95.000 (+0.010), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.044 vs limit 135.000 (+0.043), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.004 vs limit 135.000 (+0.004), 0.10s, 6 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.12s, 7 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.022 vs limit 135.000 (+0.022), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.001), 0.12s, 7 steps
+[DriveTuningSweep] 1000000,10000,1,0.0000,0.5231,-95.6032,0.167,125.2,2.263,0.017,135.0216,-94.9240,82.9,9
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 1.05s, 64 steps
+[JointLimitMonitor] 종료: 위반 10, 근처 14, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 드라이브 덮어쓰기 k=1000000 c=100000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.085 vs limit -95.000 (+0.085), 0.05s, 3 steps
+[DriveTuningSweep] 1000000,100000,1,0.0000,-0.0007,-95.0850,0.283,32.2,8.595,0.250,134.9994,-94.9194,72.3,1
+[JointLimitMonitor] 종료: 위반 1, 근처 5, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 드라이브 덮어쓰기 k=1E+07 c=1000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -96.004 vs limit -95.000 (+1.004), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.924 vs limit 135.000 (+0.924), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.121 vs limit -95.000 (+0.120), 0.05s, 3 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.148 vs limit 135.000 (+0.148), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.028 vs limit 135.000 (+0.028), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.004 vs limit 135.000 (+0.004), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.000), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.68s, 41 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.026 vs limit 135.000 (+0.026), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.003 vs limit 135.000 (+0.003), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.10s, 6 steps
+[DriveTuningSweep] 1E+07,1000,1,0.0000,0.9241,-96.0040,0.150,199.0,1.447,0.017,135.0260,-94.9246,84.3,11
+[JointLimitMonitor] 종료: 위반 11, 근처 16, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 드라이브 덮어쓰기 k=1E+07 c=10000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.949 vs limit -95.000 (+0.949), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.902 vs limit 135.000 (+0.902), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.099 vs limit -95.000 (+0.099), 0.05s, 3 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.129 vs limit 135.000 (+0.129), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.023 vs limit 135.000 (+0.023), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.003 vs limit 135.000 (+0.003), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.67s, 40 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.026 vs limit 135.000 (+0.026), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.003 vs limit 135.000 (+0.003), 0.10s, 6 steps
+[DriveTuningSweep] 1E+07,10000,1,0.0000,0.9017,-95.9488,0.150,188.9,1.523,0.017,135.0259,-94.9242,84.2,10
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 1.15s, 70 steps
+[JointLimitMonitor] 종료: 위반 11, 근처 15, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] maxJointVelocity 적용 (rad/s): joint_1=3.142, joint_2=3.142, joint_3=3.142, joint_4=3.927, joint_5=3.927, joint_6=3.927, rh_l1=6.500, rh_l2=6.500, rh_p12_rn=6.500, rh_r2=6.500
+[JointStateMirror] 드라이브 덮어쓰기 k=1E+07 c=100000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.601 vs limit -95.000 (+0.601), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.526 vs limit 135.000 (+0.525), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.009 vs limit -95.000 (+0.009), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.044 vs limit 135.000 (+0.044), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.004 vs limit 135.000 (+0.004), 0.10s, 6 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.12s, 7 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.67s, 40 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.022 vs limit 135.000 (+0.022), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.001), 0.12s, 7 steps
+[DriveTuningSweep] 1E+07,100000,1,0.0000,0.5255,-95.6015,0.167,125.1,2.262,0.017,135.0216,-94.9239,82.9,9
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 1.05s, 64 steps
+[JointLimitMonitor] 종료: 위반 10, 근처 14, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] 드라이브 덮어쓰기 k=100000 c=1000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.580 vs limit -95.000 (+0.580), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.491 vs limit 135.000 (+0.491), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.029 vs limit -95.000 (+0.029), 0.05s, 3 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.043 vs limit 135.000 (+0.043), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.005 vs limit 135.000 (+0.005), 0.10s, 6 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.000), 0.12s, 7 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.022 vs limit 135.000 (+0.022), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.002 vs limit 135.000 (+0.002), 0.12s, 7 steps
+[DriveTuningSweep] 100000,1000,0,0.0000,0.4909,-95.5802,0.183,124.1,2.266,0.017,135.0223,-94.9253,82.9,8
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 1.03s, 63 steps
+[JointLimitMonitor] 종료: 위반 9, 근처 13, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] 드라이브 덮어쓰기 k=100000 c=10000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.085 vs limit -95.000 (+0.085), 0.05s, 3 steps
+[DriveTuningSweep] 100000,10000,0,0.0000,-0.0007,-95.0848,0.283,32.1,8.600,0.250,134.9994,-94.9194,72.3,1
+[JointLimitMonitor] 종료: 위반 1, 근처 5, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] 드라이브 덮어쓰기 k=100000 c=100000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[DriveTuningSweep] 100000,100000,0,0.0000,-1.1588,-94.9536,NaN,4.7,27.540,NaN,133.9367,-94.9226,27.2,0
+[JointLimitMonitor] 종료: 위반 0, 근처 1, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] 드라이브 덮어쓰기 k=1000000 c=1000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.953 vs limit -95.000 (+0.953), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.952 vs limit 135.000 (+0.952), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.117 vs limit -95.000 (+0.117), 0.05s, 3 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.136 vs limit 135.000 (+0.136), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.025 vs limit 135.000 (+0.025), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.004 vs limit 135.000 (+0.004), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.026 vs limit 135.000 (+0.026), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.003 vs limit 135.000 (+0.003), 0.10s, 6 steps
+[DriveTuningSweep] 1000000,1000,0,0.0000,0.9524,-95.9526,0.167,189.0,1.523,0.017,135.0258,-94.9243,84.2,10
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 1.15s, 70 steps
+[JointLimitMonitor] 종료: 위반 11, 근처 14, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] 드라이브 덮어쓰기 k=1000000 c=10000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.603 vs limit -95.000 (+0.603), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.523 vs limit 135.000 (+0.523), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.010 vs limit -95.000 (+0.010), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.044 vs limit 135.000 (+0.043), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.004 vs limit 135.000 (+0.004), 0.10s, 6 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.12s, 7 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.02s, 1 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.022 vs limit 135.000 (+0.022), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.001), 0.12s, 7 steps
+[DriveTuningSweep] 1000000,10000,0,0.0000,0.5231,-95.6032,0.167,125.2,2.263,0.017,135.0216,-94.9240,82.9,9
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 1.05s, 64 steps
+[JointLimitMonitor] 종료: 위반 10, 근처 14, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] 드라이브 덮어쓰기 k=1000000 c=100000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.085 vs limit -95.000 (+0.085), 0.05s, 3 steps
+[DriveTuningSweep] 1000000,100000,0,0.0000,-0.0007,-95.0850,0.283,32.2,8.595,0.250,134.9994,-94.9194,72.3,1
+[JointLimitMonitor] 종료: 위반 1, 근처 5, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] 드라이브 덮어쓰기 k=1E+07 c=1000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -96.004 vs limit -95.000 (+1.004), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 136.026 vs limit 135.000 (+1.026), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.148 vs limit -95.000 (+0.148), 0.05s, 3 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.168 vs limit 135.000 (+0.168), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.032 vs limit 135.000 (+0.032), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.005 vs limit 135.000 (+0.004), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.001), 0.10s, 6 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.68s, 41 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.026 vs limit 135.000 (+0.026), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.003 vs limit 135.000 (+0.003), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.10s, 6 steps
+[DriveTuningSweep] 1E+07,1000,0,0.0000,1.0258,-96.0040,0.150,199.0,1.447,0.017,135.0260,-94.9246,84.3,11
+[JointLimitMonitor] 종료: 위반 11, 근처 15, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] 드라이브 덮어쓰기 k=1E+07 c=10000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.949 vs limit -95.000 (+0.949), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.967 vs limit 135.000 (+0.967), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.117 vs limit -95.000 (+0.117), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.134 vs limit 135.000 (+0.134), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.025 vs limit 135.000 (+0.025), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.003 vs limit 135.000 (+0.003), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.67s, 40 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.026 vs limit 135.000 (+0.026), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.003 vs limit 135.000 (+0.003), 0.10s, 6 steps
+[DriveTuningSweep] 1E+07,10000,0,0.0000,0.9667,-95.9488,0.150,188.9,1.523,0.017,135.0259,-94.9242,84.2,10
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 1.15s, 70 steps
+[JointLimitMonitor] 종료: 위반 11, 근처 14, 운용 경고 0, wrap=False
+[JointStateMirror] 관절 10개 매핑: joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, rh_l1, rh_l2, rh_p12_rn, rh_r2
+[JointStateMirror] 모드 Mirror → Command (ForcedMode)
+[JointStateMirror] 드라이브 덮어쓰기 k=1E+07 c=100000 f=
+[JointLimitMonitor] 감시 10개 관절, 여유 0 (D-3), 근처 0.5°. CSV: /home/oceanshape/e0509_unity_sim/logs/limit_violations.csv, /home/oceanshape/e0509_unity_sim/logs/limit_near.csv
+[TcpTrail] TCP 영점 world=(0.0000, 1.3590, 0.0000) (ROS (0,0,1.359) ↔ Unity y 1.359 기대, 시작 자세면 다름)
+[JointStateMirror] SkipRos — ROS 구독 안 함 (mode=Command)
+[StrawberryPublisher] /isaac_sim/strawberries 발행 시작: 익은 과실 8개 정적 목록, 1.0 s 주기, frame 'world'
+[JointStatePublisher] /dsr01/joint_states 발행 시작 (물리 스텝마다, Isaac 순서: joint_1,joint_2,joint_3,joint_4,joint_5,joint_6,rh_l1,rh_p12_rn,rh_l2,rh_r2)
+[JointLimitMonitor] 첫 메시지 수신 — 8 스텝 동안 속도 판정 보류(첫 점프 제외)
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.601 vs limit -95.000 (+0.601), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.526 vs limit 135.000 (+0.525), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_2: peak -95.009 vs limit -95.000 (+0.009), 0.03s, 2 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.044 vs limit 135.000 (+0.044), 0.08s, 5 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.004 vs limit 135.000 (+0.004), 0.10s, 6 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.12s, 7 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.000 vs limit 135.000 (+0.000), 0.67s, 40 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.022 vs limit 135.000 (+0.022), 0.07s, 4 steps
+[JointLimitMonitor] VIOLATION position joint_3: peak 135.001 vs limit 135.000 (+0.001), 0.12s, 7 steps
+[DriveTuningSweep] 1E+07,100000,0,0.0000,0.5255,-95.6015,0.167,125.1,2.262,0.017,135.0216,-94.9239,82.9,9
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

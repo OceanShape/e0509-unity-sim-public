@@ -1,0 +1,25 @@
+[run_endpoint] 127.0.0.1:10000  ROS_DOMAIN_ID=77  RMW=rmw_fastrtps_cpp
+[INFO] [1792575216.074145253] [UnityEndpoint]: Starting server on 127.0.0.1:10000
+[INFO] [1792575220.636301641] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1792575220.726601176] [UnityEndpoint]: RegisterSubscriber(/dsr01/joint_states, <class 'sensor_msgs.msg._joint_state.JointState'>) OK
+[ERROR] [1792575533.545437957] [UnityEndpoint]: Exception: No more data available
+[INFO] [1792575533.545842684] [UnityEndpoint]: Disconnected from 127.0.0.1
+[ERROR] [1792575533.558036642] [UnityEndpoint]: Exception [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "/home/oceanshape/e0509_unity_sim/ros/install/ros_tcp_endpoint/lib/ros_tcp_endpoint/default_server_endpoint", line 33, in <module>
+    sys.exit(load_entry_point('ros-tcp-endpoint==0.0.1', 'console_scripts', 'default_server_endpoint')())
+  File "/home/oceanshape/e0509_unity_sim/ros/install/ros_tcp_endpoint/lib/python3.10/site-packages/ros_tcp_endpoint/default_server_endpoint.py", line 14, in main
+    tcp_server.setup_executor()
+  File "/home/oceanshape/e0509_unity_sim/ros/install/ros_tcp_endpoint/lib/python3.10/site-packages/ros_tcp_endpoint/server.py", line 167, in setup_executor
+    executor.spin()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 323, in spin
+    self.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 867, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 848, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 784, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 657, in _wait_for_ready_callbacks
+    wait_set = _rclpy.WaitSet(
+rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/wait.c:130
